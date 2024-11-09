@@ -213,7 +213,7 @@ const Footer = () => {
               <div className="footer-bottom-content">
                 <div className="footer-bottom-content-copy">
                   <p>
-                    © 2024 <span>Consen</span> all rights reserved. Design By Dream-IT.
+                    © 2024 <span>Prime Logic Solutions</span> all rights reserved.
                   </p>
                 </div>
               </div>
