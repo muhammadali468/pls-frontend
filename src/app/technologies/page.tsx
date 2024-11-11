@@ -4,7 +4,7 @@ import LandingHeader from "@/components/ui/LandingHeader";
 import Link from "next/link";
 import ProgressBar from "@/components/Progressbar";
 
-const Services = () => {
+const Technologies = () => {
   return (
     <>
       <LandingHeader />
@@ -17,7 +17,7 @@ const Services = () => {
       {/*==================================================*/}
       <div className="service-area mt-80">
         <div className="container mx-auto">
-          <div className="row flex justify-between align-items-center flex-col sm:flex-row mb-90">
+          <div className="row flex justify-between align-items-center mb-90">
             <div className="col-lg-7 col-md-8 pl-0">
               <div className="consen-section-title mobile-center">
                 <h2> We Run All Kinds Of Services</h2>
@@ -51,7 +51,7 @@ const Services = () => {
                     />
                   </div>
                   <div className="em-service-title">
-                    <h2> Web Application </h2>
+                    <h2> Web Technology </h2>
                   </div>
                   <div className="service-number">
                     <h1> 01 </h1>
@@ -82,7 +82,7 @@ const Services = () => {
                     />
                   </div>
                   <div className="em-service-title">
-                    <h2> Mobile Application </h2>
+                    <h2> Backend Technology </h2>
                   </div>
                   <div className="service-number">
                     <h1> 02 </h1>
@@ -113,7 +113,7 @@ const Services = () => {
                     />
                   </div>
                   <div className="em-service-title">
-                    <h2> Data Analysis </h2>
+                    <h2> Database </h2>
                   </div>
                   <div className="service-number">
                     <h1> 03 </h1>
@@ -144,7 +144,7 @@ const Services = () => {
                     />
                   </div>
                   <div className="em-service-title">
-                    <h2> E-commerce </h2>
+                    <h2> Cloud Infrastructure </h2>
                   </div>
                   <div className="service-number">
                     <h1> 04 </h1>
@@ -166,7 +166,7 @@ const Services = () => {
               </div>
             </div>
           </div>
-          <div className="row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <div className="row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <div className="col-lg-3 col-sm-6 p-0">
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
@@ -177,7 +177,7 @@ const Services = () => {
                     />
                   </div>
                   <div className="em-service-title">
-                    <h2> SaaS Development </h2>
+                    <h2> Blockchain </h2>
                   </div>
                   <div className="service-number">
                     <h1> 05 </h1>
@@ -208,7 +208,7 @@ const Services = () => {
                     />
                   </div>
                   <div className="em-service-title">
-                    <h2> Digital Marketing </h2>
+                    <h2> Cyber Security </h2>
                   </div>
                   <div className="service-number">
                     <h1> 06 </h1>
@@ -239,41 +239,10 @@ const Services = () => {
                     />
                   </div>
                   <div className="em-service-title">
-                    <h2> Production Services </h2>
+                    <h2> E-Commerce </h2>
                   </div>
                   <div className="service-number">
                     <h1> 07 </h1>
-                  </div>
-                  <div className="em-service-text">
-                    <p> Dramatically cultivate from quality user centric growth strateges emerging </p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a>
-                        {" "}
-                        Read More <i className="bi bi-plus" />{" "}
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-sm-6 p-0">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon flex justify-center items-center">
-                    <img
-                      src="assets/images/resource/service-icon.png"
-                      alt=""
-                    />
-                  </div>
-                  <div className="em-service-title">
-                    <h2> Graphics Design </h2>
-                  </div>
-                  <div className="service-number">
-                    <h1> 08 </h1>
                   </div>
                   <div className="em-service-text">
                     <p> Dramatically cultivate from quality user centric growth strateges emerging </p>
@@ -550,4 +519,4 @@ const Services = () => {
     </>
   );
 };
-export default Services;
+export default Technologies;
