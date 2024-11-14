@@ -958,10 +958,10 @@ ul.sub-menu li:hover a span {
   text-transform: capitalize;
   font-weight: 500;
   color: #ff3c00;
-  margin: 0 0 16px;
+  /* margin: 0 0 16px; */
   position: relative;
-  margin-left: 53px;
-  display: inline-block;
+  /* margin-left: 53px; */
+  /* display: inline-block; */
 }
 
 .consen-section-title h5:before {

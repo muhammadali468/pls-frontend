@@ -1,29 +1,16 @@
-// import { Button } from "@/components/ui/button";
-// import { testimonial_list_slider } from "@/components/ui/sliderProps";
 "use client";
-import ProgressBar from "@/components/Progressbar";
-import CaseStudies from "@/components/sections/casestudies";
-import Counter from "@/components/ui/Counter";
-import LandingHeader from "@/components/ui/LandingHeader";
 import { testimonial_list_slider } from "@/components/ui/sliderProps";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-// import { useState } from "react";
+import Counter from "@/components/ui/Counter";
+import ProgressBar from "@/components/Progressbar";
 import Footer from "@/components/sections/Footer";
+import CaseStudies from "@/components/sections/casestudies";
+import LandingHeader from "@/components/ui/LandingHeader";
 import Preloader from "@/components/sections/Preloader";
 
 export default function Home() {
-  // const faqsData = [
-  //   {
-  //     id: 1,
-  //     title: "What is Finance Consultant?",
-  //   },
-  //   { id: 2, title: "How to Book a New Consultant?" },
-  //   { id: 3, title: "What is the Benifits of Busines ?" },
-  //   { id: 4, title: "How to Book a New Consultant?" },
-  // ];
-  // const [active, setActive] = useState(faqsData[0]?.id);
   return (
     <>
       <Preloader />
@@ -34,12 +21,12 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="flex flex-col items-center">
             <div className="w-full">
-              <div className="slider-content text-center">
-                <h1 className="text-4xl font-bold">The Financial</h1>
-                <h1 className="text-4xl font-bold">
+              <div className="slider-content">
+                <h1 className="text-4xl font-bold !text-center sm:text-left">The Financial</h1>
+                <h1 className="text-4xl font-bold !text-center sm:text-left">
                   Planning <span className="text-primary">Guide</span>
                 </h1>
-                <p className="mt-4 text-lg">Without Consulting Plans, Plans not Growing fashion user friendly architectures synergistic resources.</p>
+                <p className="mt-4 mx-auto text-lg !text-center sm:text-left">Without Consulting Plans, Plans not Growing fashion user friendly architectures synergistic resources.</p>
               </div>
               <div className="slider-button mt-8">
                 <Link
@@ -213,12 +200,12 @@ export default function Home() {
       {/* Section 3 */}
 
       <div
-        className="about-area style-three"
+        className="about-area style-three !px-4 sm:px-0"
         id="about">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 md:w-full mb-8 lg:mb-0">
-              <div className="dreamit-about-thumb">
+              <div className="dreamit-about-thumb p-16 md:p-0">
                 <img
                   src="assets/images/about/about-2.png"
                   alt="About Us"
@@ -240,12 +227,12 @@ export default function Home() {
             </div>
             <div className="lg:w-1/2 md:w-full">
               <div className="consen-section-title mb-6">
-                <h5 className="text-lg font-semibold">About Consen</h5>
-                <h2 className="text-3xl font-bold">We Are Global Stakeholder</h2>
-                <h2 className="text-3xl font-bold">
+                <h5 className="text-lg font-semibold !text-center">About Prime Logic Solutions</h5>
+                <h2 className="text-3xl font-bold !text-center">We Are Global Stakeholder</h2>
+                <h2 className="text-3xl font-bold !text-center">
                   Over 2000+ <span className="text-primary">Companies</span>
                 </h2>
-                <p className="about-text1 mt-4">
+                <p className="about-text1 mt-4 !text-center">
                   Appropriately enhance principle-centered innovation rather than high standards in platforms. Credibly orchestrate functional.
                 </p>
               </div>
@@ -299,7 +286,7 @@ export default function Home() {
         className="service-area style-three"
         id="service">
         <div className="container mx-auto">
-          <div className="flex">
+          <div className="flex justify-center sm:justify-start">
             <div className="lg:w-7/12 md:w-6/12 mb-4">
               <div className="consen-section-title text-white pb-12 mb-1">
                 <h5 className="text-lg font-semibold">What We Do?</h5>
@@ -312,7 +299,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Service Box 1 */}
-            <div className="pl-1">
+            <div className="px-4 sm:pl-1">
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1 upper">
@@ -341,7 +328,7 @@ export default function Home() {
               </div>
             </div>
             {/* Service Box 2 */}
-            <div className="pl-1">
+            <div className="px-4 sm:pl-1">
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1">
@@ -370,7 +357,7 @@ export default function Home() {
               </div>
             </div>
             {/* Service Box 3 */}
-            <div className="pl-1">
+            <div className="px-4 sm:pl-1">
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1">
@@ -399,7 +386,7 @@ export default function Home() {
               </div>
             </div>
             {/* Service Box 4 */}
-            <div className="pl-1">
+            <div className="px-4 sm:pl-1">
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1">
@@ -428,7 +415,7 @@ export default function Home() {
               </div>
             </div>
             {/* Service Box 5 */}
-            <div className="pl-1">
+            <div className="px-4 sm:pl-1">
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1">
@@ -457,7 +444,7 @@ export default function Home() {
               </div>
             </div>
             {/* Service Box 6 */}
-            <div className="pl-1">
+            <div className="px-4 sm:pl-1">
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1">
@@ -515,7 +502,7 @@ export default function Home() {
 
       {/* Section 5 */}
 
-      <div className="why-choose-us-area">
+      <div className="why-choose-us-area !px-4 sm:px-0">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 mb-6 lg:mb-0">

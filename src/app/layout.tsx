@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Poppins, Fira_Sans } from "next/font/google";
 import "./globals.css";
-import "../../public/assets/css/responsive.css";
 import "../../public/assets/css/theme-default.css";
 import "../../public/assets/css/magnific-popup.css";
 // import "../../public/assets/css/owl.carousel.min.css";
 import "../../public/assets/css/owl.transitions.css";
 import "../../public/assets/css/style.css";
 import "../../public/assets/css/bootstrap-icons.css";
+import "../../public/assets/css/responsive.css";
 
 // import "../../public/assets/css/flaticon.css";
 

@@ -1,12 +1,10 @@
 "use client";
-
 import React from "react";
 // import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import SidebarItem from "../../../components/dashboard/Sidebar/SidebarItem";
 import ClickOutside from "../../../components/dashboard/ClickOutside";
-import useLocalStorage from "@/hooks/useLocalStorage";
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -315,7 +313,6 @@ const menuGroups = [
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   // const pathname = usePathname();
-  const [pageName, setPageName] = useLocalStorage("selectedMenu", "dashboard");
 
   return (
     <ClickOutside onClick={() => setSidebarOpen(false)}>
@@ -367,8 +364,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <SidebarItem
                       key={menuIndex}
                       item={menuItem}
-                      pageName={pageName}
-                      setPageName={setPageName}
+                      // pageName={pageName}
+                      // setPageName={setPageName}
                     />
                   ))}
                 </ul>

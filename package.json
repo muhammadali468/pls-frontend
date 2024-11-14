@@ -34,7 +34,9 @@
     "react-visibility-sensor": "^5.1.1",
     "swiper": "^11.1.14",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "tsc": "^2.0.4",
+    "tsx": "^4.19.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",

@@ -1,45 +1,47 @@
-// import Link from "next/link";
-import Isotope from "isotope-layout";
+// import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
+// const Isotope = dynamic(() => import("isotope-layout"), { ssr: false });
+
 const CaseStudies = () => {
-  // Isotope
-  const isotope = useRef();
+  const isotope = useRef<any>(null);
   const [filterKey, setFilterKey] = useState("*");
+
   useEffect(() => {
-    setTimeout(() => {
-      // @ts-ignore
-      isotope.current = new Isotope(".image_load", {
+    const initIsotope = async () => {
+      const IsotopeModule = await import("isotope-layout");
+      isotope.current = new IsotopeModule.default(".image_load", {
         itemSelector: ".grid-item",
-        //    layoutMode: "fitRows",
         percentPosition: true,
         masonry: {
-          columnWidth: ".grid-item"
+          columnWidth: ".grid-item",
         },
         // @ts-ignore
         animationOptions: {
           duration: 750,
           easing: "linear",
-          queue: false
-        }
+          queue: false,
+        },
       });
-    }, 1000);
-    //     return () => isotope.current.destroy();
+    };
+    initIsotope();
   }, []);
+
   useEffect(() => {
     if (isotope.current) {
       filterKey === "*"
-        ? // @ts-ignore
-          isotope.current.arrange({ filter: `*` })
-        : // @ts-ignore
-          isotope.current.arrange({ filter: `.${filterKey}` });
+        ? isotope.current.arrange({ filter: `*` })
+        : isotope.current.arrange({ filter: `.${filterKey}` });
     }
   }, [filterKey]);
-  const handleFilterKeyChange = (key: any) => () => {
+
+  const handleFilterKeyChange = (key: string) => () => {
     setFilterKey(key);
   };
-  const activeBtn = (value: any) => (value === filterKey ? "current_menu_item" : "");
+
+  const activeBtn = (value: string) => (value === filterKey ? "current_menu_item" : "");
+
   return (
     <>
       <div className="case-study-bg">
@@ -360,4 +362,5 @@ const CaseStudies = () => {
     </>
   );
 };
+
 export default CaseStudies;
