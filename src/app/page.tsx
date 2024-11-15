@@ -9,12 +9,23 @@ import Footer from "@/components/sections/Footer";
 import CaseStudies from "@/components/sections/casestudies";
 import LandingHeader from "@/components/ui/LandingHeader";
 import Preloader from "@/components/sections/Preloader";
+import Image from "next/image";
+import { InlineWidget } from "react-calendly";
+import BasicModal from "@/components/ui/BasicModal";
+import { useState } from "react";
 
 export default function Home() {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
   return (
     <>
       <Preloader />
       <LandingHeader />
+      <BasicModal isOpen={isModalOpen} onClose={closeModal}>
+        <InlineWidget url="https://calendly.com/ali-renesistech" />
+      </BasicModal>
       <div
         className="slider-area slider2 flex items-center"
         id="home">
@@ -22,64 +33,94 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <div className="w-full">
               <div className="slider-content">
-                <h1 className="text-4xl font-bold !text-center sm:text-left">The Financial</h1>
-                <h1 className="text-4xl font-bold !text-center sm:text-left">
+                <h1 className="text-4xl font-bold !text-center sm:!text-left">The Financial</h1>
+                <h1 className="text-4xl font-bold !text-center sm:!text-left">
                   Planning <span className="text-primary">Guide</span>
                 </h1>
-                <p className="mt-4 mx-auto text-lg !text-center sm:text-left">Without Consulting Plans, Plans not Growing fashion user friendly architectures synergistic resources.</p>
+                <p className="mt-4 mx-auto sm:mx-0 text-lg !text-center sm:!text-left">
+                  Without Consulting Plans, Plans not Growing fashion user friendly architectures synergistic resources.
+                </p>
               </div>
-              <div className="slider-button mt-8">
+              <div className="slider-button mt-8 flex flex-col sm:items-start items-center">
                 <Link
                   legacyBehavior
                   href="/service">
-                  <a className="inline-flex items-center gap-2 text-lg text-primary hover:underline">
+                  <span
+                    className="flex items-center bg-primary gap-2 text-lg text-white rounded-[32px] w-max px-6 py-4 hover:underline"
+                  >
                     <i className="bi bi-gear" /> Discover More
-                  </a>
+                  </span>
                 </Link>
+                <button
+                  onClick={openModal}
+                  type="button"
+                  className="flex items-center gap-2 text-lg text-primary"
+                >
+                  <span
+                    className="mt-4 flex items-center bg-white gap-2 text-lg text-primary rounded-[32px] w-max px-6 py-4"
+
+                  >
+                    <i className="bi bi-pencil" /> Free Consultation
+                  </span>
+                </button>
               </div>
             </div>
             {/* Slider shapes */}
             <div className="slider-shape  mt-8">
-              <div className="slider-shape-thumb2">
-                <img
-                  src="assets/images/slider/shape2.png"
-                  alt=""
+              <div className="slider-shape-thumb2 w-full h-full">
+                <Image
+                  src="/assets/images/slider/shape2.png"
+                  height={480}
+                  width={460}
+                  alt="shape-2"
                 />
               </div>
               <div className="slider-shape-thumb4">
-                <img
-                  src="assets/images/slider/shape3.png"
-                  alt=""
+                <Image
+                  src="/assets/images/slider/shape3.png"
+                  height={404}
+                  width={286}
+                  alt="shape-3"
                 />
               </div>
               <div className="slider-shape-thumb5 dance">
-                <img
-                  src="assets/images/slider/circle1.png"
-                  alt=""
+                <Image
+                  src="/assets/images/slider/circle1.png"
+                  height={54}
+                  width={54}
+                  alt="circle-1"
                 />
               </div>
               <div className="slider-shape-thumb6 bounce-animate">
-                <img
-                  src="assets/images/slider/circle2.png"
-                  alt=""
+                <Image
+                  src="/assets/images/slider/circle2.png"
+                  height={12}
+                  width={12}
+                  alt="circle-2"
                 />
               </div>
               <div className="slider-shape-thumb7 bounce-animate2">
-                <img
-                  src="assets/images/slider/circle3.png"
-                  alt=""
+                <Image
+                  src="/assets/images/slider/circle3.png"
+                  height={28}
+                  width={28}
+                  alt="shape-3"
                 />
               </div>
               <div className="slider-shape-thumb8 bounce-animate3">
-                <img
-                  src="assets/images/slider/white-dot.png"
-                  alt=""
+                <Image
+                  src="/assets/images/slider/white-dot.png"
+                  height={118}
+                  width={118}
+                  alt="white-dots"
                 />
               </div>
               <div className="slider-shape-thumb9">
-                <img
-                  src="assets/images/slider/line.png"
-                  alt=""
+                <Image
+                  src="/assets/images/slider/line.png"
+                  height={1300}
+                  width={600}
+                  alt="shape-3"
                 />
               </div>
             </div>
@@ -93,9 +134,11 @@ export default function Home() {
             <div className="single-feature-box">
               <div className="feature-box-inner p-6 border rounded-lg shadow">
                 <div className="feature-icon1 mb-4">
-                  <img
-                    src="assets/images/resource/main1.png"
-                    alt="Business Planning"
+                  <Image
+                    src="/assets/images/resource/main1.png"
+                    height={60}
+                    width={60}
+                    alt=""
                   />
                 </div>
                 <div className="feature-title mb-2">
@@ -125,9 +168,11 @@ export default function Home() {
             <div className="single-feature-box">
               <div className="feature-box-inner p-6 border rounded-lg shadow">
                 <div className="feature-icon1 mb-4">
-                  <img
-                    src="assets/images/resource/main3.png"
-                    alt="Cloud Solutions"
+                  <Image
+                    src="/assets/images/resource/main3.png"
+                    height={60}
+                    width={60}
+                    alt=""
                   />
                 </div>
                 <div className="feature-title mb-2">
@@ -157,9 +202,12 @@ export default function Home() {
             <div className="single-feature-box">
               <div className="feature-box-inner p-6 border rounded-lg shadow">
                 <div className="feature-icon1 mb-4">
-                  <img
-                    src="assets/images/resource/main2.png"
-                    alt="Customers Support"
+
+                  <Image
+                    src="/assets/images/resource/main2.png"
+                    height={60}
+                    width={60}
+                    alt=""
                   />
                 </div>
                 <div className="feature-title mb-2">
@@ -188,9 +236,11 @@ export default function Home() {
 
             {/* feature shape */}
             <div className="feature-shape bounce-animate2 mt-8 col-span-1">
-              <img
-                src="assets/images/resource/all-shape4.png"
-                alt="Feature Shapes"
+              <Image
+                src="/assets/images/resource/all-shape4.png"
+                height={100}
+                width={100}
+                alt=""
               />
             </div>
           </div>
@@ -206,21 +256,25 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 md:w-full mb-8 lg:mb-0">
               <div className="dreamit-about-thumb p-16 md:p-0">
-                <img
-                  src="assets/images/about/about-2.png"
-                  alt="About Us"
+                <Image
+                  src="/assets/images/about/about-2.png"
+                  height={585}
+                  width={530}
+                  alt=""
                 />
                 {/* about-shape */}
-                <div className="about-shape-thumb1 bounce-animate2 ">
+                {/* <div className="about-shape-thumb1 bounce-animate2 ">
                   <img
                     src="assets/images/about/about-shpe.png"
                     alt="About Shape 1"
                   />
-                </div>
+                </div> */}
                 <div className="about-shape-thumb3 bounce-animate4">
-                  <img
-                    src="assets/images/about/about-shape4.png"
-                    alt="About Shape 2"
+                  <Image
+                    src="/assets/images/about/about-shape4.png"
+                    height={100}
+                    width={100}
+                    alt=""
                   />
                 </div>
               </div>
@@ -251,20 +305,18 @@ export default function Home() {
                 </div>
               </div>
               {/* Progress bar */}
-              <div className="progress-box mb-6">
-                <ProgressBar value={85} />
-                <div className="circle-progress-title">
-                  <h4 className="text-lg font-semibold">
+              <div className="progress-box mb-6 flex gap-8 flex-col sm:flex-row">
+                <div className="flex items-center">
+                  <ProgressBar value={85} />
+                  <h4 className="text-lg font-semibold leading-[1.5]">
                     Clients <br /> Satisfactions
                   </h4>
                 </div>
-                <div className="extra-progress mt-4">
+                <div className="flex items-center">
                   <ProgressBar value={95} />
-                  <div className="circle-progress-title">
-                    <h4 className="text-lg font-semibold">
-                      Finance <br /> Consulting
-                    </h4>
-                  </div>
+                  <h4 className="text-lg font-semibold">
+                    Finance <br /> Consulting
+                  </h4>
                 </div>
               </div>
               <div className="about-button">
@@ -303,9 +355,11 @@ export default function Home() {
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1 upper">
-                    <img
-                      src="assets/images/resource/service-icon8.png"
-                      alt="Cyber Security"
+                    <Image
+                      src="/assets/images/resource/service-icon8.png"
+                      height={50}
+                      width={50}
+                      alt=""
                     />
                   </div>
                   <div className="em-service-title">
@@ -332,9 +386,11 @@ export default function Home() {
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1">
-                    <img
-                      src="assets/images/resource/service-icon5.png"
-                      alt="Content Strategy"
+                    <Image
+                      src="/assets/images/resource/service-icon5.png"
+                      height={50}
+                      width={50}
+                      alt=""
                     />
                   </div>
                   <div className="em-service-title">
@@ -361,9 +417,11 @@ export default function Home() {
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1">
-                    <img
-                      src="assets/images/resource/service-icon6.png"
-                      alt="Web Development"
+                    <Image
+                      src="/assets/images/resource/service-icon6.png"
+                      height={50}
+                      width={50}
+                      alt=""
                     />
                   </div>
                   <div className="em-service-title">
@@ -390,9 +448,11 @@ export default function Home() {
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1">
-                    <img
-                      src="assets/images/resource/service-icon7.png"
-                      alt="Leadership Work"
+                    <Image
+                      src="/assets/images/resource/service-icon7.png"
+                      height={50}
+                      width={50}
+                      alt=""
                     />
                   </div>
                   <div className="em-service-title">
@@ -419,9 +479,12 @@ export default function Home() {
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1">
-                    <img
-                      src="assets/images/resource/service-icon7.png"
-                      alt="Leadership Work"
+
+                    <Image
+                      src="/assets/images/resource/service-icon7.png"
+                      height={50}
+                      width={50}
+                      alt=""
                     />
                   </div>
                   <div className="em-service-title">
@@ -448,9 +511,11 @@ export default function Home() {
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1">
-                    <img
-                      src="assets/images/resource/service-icon7.png"
-                      alt="Leadership Work"
+                    <Image
+                      src="/assets/images/resource/service-icon7.png"
+                      height={50}
+                      width={50}
+                      alt=""
                     />
                   </div>
                   <div className="em-service-title">
@@ -486,15 +551,19 @@ export default function Home() {
             </div>
           </div>
           <div className="service-shape">
-            <img
-              src="assets/images/resource/all-shape3.png"
-              alt="Service Shape 1"
+            <Image
+              src="/assets/images/resource/all-shape3.png"
+              width={310}
+              height={280}
+              alt=""
             />
           </div>
           <div className="service-shape1 bounce-animate2">
-            <img
-              src="assets/images/resource/all-shape6.png"
-              alt="Service Shape 2"
+            <Image
+              src="/assets/images/resource/all-shape6.png"
+              height={280}
+              width={134}
+              alt=""
             />
           </div>
         </div>
@@ -557,31 +626,38 @@ export default function Home() {
             </div>
             <div className="lg:w-1/2 md:w-full">
               <div className="why-choose-us-thumb">
-                <img
-                  src="assets/images/resource/why-choose.avif"
-                  alt="Why Choose Us"
+                <Image
+                  src="/assets/images/resource/why-choose.avif"
+                  width={845}
+                  height={570}
+                  alt=""
                 />
                 {/* Choose shape thumb */}
                 <div className="why-choose-us-image relative">
                   <div className="why-choose-us-shape-thumb bounce-animate">
-                    <img
-                      src="assets/images/resource/all-shape2.png"
-                      alt="Shape 1"
+
+                    <Image
+                      src="/assets/images/resource/all-shape2.png"
+                      width={111}
+                      height={111}
+                      alt=""
                     />
                   </div>
-                  {/* <div className="why-choose-us-shape-thumb2 rotateme">
-                    <img src="assets/images/resource/case-shape.avif" alt="Shape 2" />
-                  </div> */}
+
                   <div className="why-choose-us-shape-thumb3 bounce-animate2">
-                    <img
-                      src="assets/images/resource/case-shape2.png"
-                      alt="Shape 3"
+                    <Image
+                      src="/assets/images/resource/case-shape2.png"
+                      width={475}
+                      height={230}
+                      alt=""
                     />
                   </div>
                   <div className="why-choose-us-shape-thumb4">
-                    <img
-                      src="assets/images/about/about-shape4.png"
-                      alt="Shape 4"
+                    <Image
+                      src="/assets/images/about/about-shape4.png"
+                      width={100}
+                      height={100}
+                      alt=""
                     />
                   </div>
                 </div>
@@ -594,7 +670,7 @@ export default function Home() {
       {/* Section 5 */}
       <div className="testimonial-area overflow-hidden">
         <div className="container mx-auto">
-          <div className="flex flex-wrap testi-rotate items-center">
+          <div className="flex flex-wrap justify-center testi-rotate items-center">
             <div className="lg:w-7/12 md:w-6/12 mb-6 md:mb-0">
               <div className="consen-section-title text-white pb-12">
                 <h5 className="text-lg font-semibold">Testimonials</h5>
@@ -631,9 +707,11 @@ export default function Home() {
               </div>
             </div>
             <div className="testi-shape-thumb1 rotateme">
-              <img
-                src="assets/images/resource/testimonial-map.png"
-                alt="Testimonial Map"
+              <Image
+                src="/assets/images/resource/testimonial-map.png"
+                width={747}
+                height={714}
+                alt=""
               />
             </div>
           </div>
@@ -645,25 +723,25 @@ export default function Home() {
                 {
                   name: "Philip Anthorpy",
                   role: "UI Designer",
-                  image: "assets/images/resource/testi1.png",
+                  image: "/assets/images/resource/testi1.png",
                   review: "Holisticly pursue market-more synerg through innovative paradi. Enthusia productivate media."
                 },
                 {
                   name: "Shilpa Shethy",
                   role: "CEO, Founder",
-                  image: "assets/images/resource/testi3.png",
+                  image: "/assets/images/resource/testi3.png",
                   review: "Holisticly pursue market-more synerg through innovative paradi. Enthusia productivate media."
                 },
                 {
                   name: "David Alexon",
                   role: "MH Manager",
-                  image: "assets/images/resource/testi2.png",
+                  image: "/assets/images/resource/testi2.png",
                   review: "Holisticly pursue market-more synerg through innovative paradi. Enthusia productivate media."
                 },
                 {
                   name: "Shilpa Shethy",
                   role: "CEO, Founder",
-                  image: "assets/images/resource/testi3.png",
+                  image: "/assets/images/resource/testi3.png",
                   review: "Holisticly pursue market-more synerg through innovative paradi. Enthusia productivate media."
                 }
               ].map((testimonial, index) => (
@@ -674,9 +752,12 @@ export default function Home() {
                     <div className="testimonial-content1">
                       <div className="single-quote-icon flex items-center mb-4">
                         <div className="quote-thumb mr-3">
-                          <img
+
+                          <Image
                             src={testimonial.image}
-                            alt={testimonial.name}
+                            width={76}
+                            height={76}
+                            alt=""
                           />
                         </div>
                         <div className="quote-title">
@@ -704,9 +785,11 @@ export default function Home() {
             </Swiper>
             <div className="testi-shape">
               <div className="testi-shape-thumb">
-                <img
-                  src="assets/images/resource/all-shape5.png"
-                  alt="Shape"
+                <Image
+                  src="/assets/images/resource/all-shape5.png"
+                  width={309}
+                  height={280}
+                  alt=""
                 />
               </div>
             </div>
@@ -747,29 +830,35 @@ export default function Home() {
           {/* process shape */}
           <div className="process-shape">
             <div className="service-shape">
-              <img
-                src="assets/images/resource/all-shape3.png"
+              <Image
+                src="/assets/images/resource/all-shape3.png"
+                width={330}
+                height={280}
                 alt=""
               />
             </div>
             <div className="process-shape-thumb bounce-animate2">
-              <img
-                src="assets/images/resource/all-shape6.png"
+              <Image
+                src="/assets/images/resource/all-shape6.png"
+                width={133}
+                height={280}
                 alt=""
               />
             </div>
           </div>
         </div>
       </div>
-
       <div className="process-extra-area style-two">
         <div className="container mx-auto">
-          <div className="row justify-content-center process-bg flex">
+          <div className="row justify-content-center process-bg flex flex-col sm:flex-row">
             <div className="col-lg-4 col-sm-6 px-4">
               <div className="process-single-box2">
                 <div className="process-icon-thumb flex justify-center">
-                  <img
-                    src="assets/images/resource/a.png"
+
+                  <Image
+                    src="/assets/images/resource/a.png"
+                    width={70}
+                    height={70}
                     alt=""
                   />
                 </div>
@@ -782,8 +871,10 @@ export default function Home() {
             <div className="col-lg-4 col-sm-6 px-4">
               <div className="process-single-box2 responsive">
                 <div className="process-icon-thumb flex justify-center">
-                  <img
-                    src="assets/images/resource/b.png"
+                  <Image
+                    src="/assets/images/resource/b.png"
+                    width={70}
+                    height={70}
                     alt=""
                   />
                 </div>
@@ -796,8 +887,10 @@ export default function Home() {
             <div className="col-lg-4 col-sm-6 px-4">
               <div className="process-single-box2 upper">
                 <div className="process-icon-thumb flex justify-center after:!hidden ">
-                  <img
-                    src="assets/images/resource/c.png"
+                  <Image
+                    src="/assets/images/resource/c.png"
+                    width={70}
+                    height={70}
                     alt=""
                   />
                 </div>
@@ -836,9 +929,12 @@ export default function Home() {
             <div className="col-lg-4 col-sm-6 px-4">
               <div className="single_team">
                 <div className="single_team_thumb1">
-                  <img
-                    src="assets/images/resource/team-1.jpg"
-                    alt="logo"
+
+                  <Image
+                    src="/assets/images/resource/team-1.jpg"
+                    width={370}
+                    height={400}
+                    alt=""
                   />
                 </div>
                 <div className="single_team_content">
@@ -869,9 +965,11 @@ export default function Home() {
             <div className="col-lg-4 col-sm-6 px-4">
               <div className="single_team">
                 <div className="single_team_thumb1">
-                  <img
-                    src="assets/images/resource/team-2.jpg"
-                    alt="image"
+                  <Image
+                    src="/assets/images/resource/team-2.jpg"
+                    width={370}
+                    height={400}
+                    alt=""
                   />
                 </div>
                 <div className="single_team_content">
@@ -902,9 +1000,11 @@ export default function Home() {
             <div className="col-lg-4 col-sm-6 px-4">
               <div className="single_team">
                 <div className="single_team_thumb1">
-                  <img
-                    src="assets/images/resource/team-3.jpg"
-                    alt="image"
+                  <Image
+                    src="/assets/images/resource/team-3.jpg"
+                    width={370}
+                    height={400}
+                    alt=""
                   />
                 </div>
                 <div className="single_team_content">
@@ -940,7 +1040,7 @@ export default function Home() {
         className="faq-area"
         id="contact">
         <div className="container mx-auto">
-          <div className="row flex gap-8">
+          <div className="row flex gap-8 flex-col sm:flex-row">
             <div className="col-lg-6 col-md-6 pl-0">
               {/* Start Accordion */}
               <div className="tab_container">
@@ -1055,12 +1155,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="row flex gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4">
             <div className="col-lg-4 col-md-6">
               <div className="single-blog-box">
                 <div className="single-blog-thumb">
-                  <img
-                    src="assets/images/resource/blog1.png"
+
+                  <Image
+                    src="/assets/images/resource/blog1.png"
+                    width={370}
+                    height={250}
                     alt=""
                   />
                   <div className="blog-top-button">
@@ -1083,8 +1186,10 @@ export default function Home() {
                   </div>
                   <div className="em-blog-icon">
                     <div className="em-blog-thumb">
-                      <img
-                        src="assets/images/resource/blog-icon.png"
+                      <Image
+                        src="/assets/images/resource/blog-icon.png"
+                        width={24}
+                        height={24}
                         alt=""
                       />
                     </div>
@@ -1108,8 +1213,10 @@ export default function Home() {
             <div className="col-lg-4 col-md-6">
               <div className="single-blog-box">
                 <div className="single-blog-thumb">
-                  <img
-                    src="assets/images/resource/blog2.png"
+                  <Image
+                    src="/assets/images/resource/blog2.png"
+                    width={370}
+                    height={250}
                     alt=""
                   />
                   <div className="blog-top-button">
@@ -1132,8 +1239,11 @@ export default function Home() {
                   </div>
                   <div className="em-blog-icon">
                     <div className="em-blog-thumb">
-                      <img
-                        src="assets/images/resource/blog-icon.png"
+
+                      <Image
+                        src="/assets/images/resource/blog-icon.png"
+                        width={24}
+                        height={24}
                         alt=""
                       />
                     </div>
@@ -1157,8 +1267,11 @@ export default function Home() {
             <div className="col-lg-4 col-md-6">
               <div className="single-blog-box">
                 <div className="single-blog-thumb">
-                  <img
-                    src="assets/images/resource/blog3.png"
+
+                  <Image
+                    src="/assets/images/resource/blog3.png"
+                    width={370}
+                    height={250}
                     alt=""
                   />
                   <div className="blog-top-button">
@@ -1181,8 +1294,11 @@ export default function Home() {
                   </div>
                   <div className="em-blog-icon">
                     <div className="em-blog-thumb">
-                      <img
-                        src="assets/images/resource/blog-icon.png"
+
+                      <Image
+                        src="/assets/images/resource/blog-icon.png"
+                        width={24}
+                        height={24}
                         alt=""
                       />
                     </div>
@@ -1205,8 +1321,11 @@ export default function Home() {
             </div>
             <div className="blog-shape">
               <div className="port-shape-thumb2 bounce-animate2">
-                <img
-                  src="assets/images/resource/all-shape6.png"
+
+                <Image
+                  src="/assets/images/resource/all-shape6.png"
+                  width={133}
+                  height={280}
                   alt=""
                 />
               </div>

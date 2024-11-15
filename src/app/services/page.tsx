@@ -8,12 +8,6 @@ const Services = () => {
   return (
     <>
       <LandingHeader />
-      {/* <section className="py-40">
-                <div className="container mx-auto">
-                    <h1 className="text-center">About us</h1>
-                </div>
-            </section> */}
-      {/* Start consen service Area */}
       {/*==================================================*/}
       <div className="service-area mt-80">
         <div className="container mx-auto">

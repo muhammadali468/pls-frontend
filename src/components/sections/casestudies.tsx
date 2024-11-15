@@ -1,4 +1,5 @@
 // import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -15,14 +16,14 @@ const CaseStudies = () => {
         itemSelector: ".grid-item",
         percentPosition: true,
         masonry: {
-          columnWidth: ".grid-item",
+          columnWidth: ".grid-item"
         },
         // @ts-ignore
         animationOptions: {
           duration: 750,
           easing: "linear",
-          queue: false,
-        },
+          queue: false
+        }
       });
     };
     initIsotope();
@@ -30,9 +31,7 @@ const CaseStudies = () => {
 
   useEffect(() => {
     if (isotope.current) {
-      filterKey === "*"
-        ? isotope.current.arrange({ filter: `*` })
-        : isotope.current.arrange({ filter: `.${filterKey}` });
+      filterKey === "*" ? isotope.current.arrange({ filter: `*` }) : isotope.current.arrange({ filter: `.${filterKey}` });
     }
   }, [filterKey]);
 
@@ -56,14 +55,18 @@ const CaseStudies = () => {
         </div>
         <div className="portfolio-shape relative">
           <div className="port-shape-thumb rotateme">
-            <img
-              src="assets/images/resource/red-dot.png"
+            <Image
+              src="/assets/images/resource/red-dot.png"
+              width={174}
+              height={174}
               alt=""
             />
           </div>
           <div className="port-shape-thumb2 bounce-animate2 ">
-            <img
-              src="assets/images/resource/all-shape6.png"
+            <Image
+              src="/assets/images/resource/all-shape6.png"
+              width={134}
+              height={280}
               alt=""
             />
           </div>
@@ -71,7 +74,7 @@ const CaseStudies = () => {
         <div className="w-full">
           <div className="portfolio_nav">
             <div className="portfolio_menu text-center">
-              <ul className="menu-filtering flex justify-center gap-4">
+              <ul className="menu-filtering flex justify-center gap-4 flex-wrap sm:flex-nowrap">
                 <li
                   className={`cursor-pointer ${activeBtn("*")}`}
                   onClick={handleFilterKeyChange("*")}>
@@ -99,14 +102,17 @@ const CaseStudies = () => {
       </div>
       {/* Section 2 */}
 
-      <div className="row image_load">
+      <div className="row image_load left-4 sm:left-0">
         <div className="col-lg-4 col-md-6 grid-item gap-2 physics english">
           <div className="case-study-single-box">
             <div className="case-study-thumb2">
-              <img
-                src="assets/images/project/study1.png"
+              <Image
+                src="/assets/images/project/study1.png"
+                width={371}
+                height={330}
                 alt=""
               />
+
               {/* port icon */}
               <div className="single_portfolio_icon">
                 <a
@@ -146,8 +152,11 @@ const CaseStudies = () => {
         <div className="col-lg-4 col-md-6 grid-item physics chemistry math">
           <div className="case-study-single-box">
             <div className="case-study-thumb2">
-              <img
-                src="assets/images/project/study2.png"
+             
+              <Image
+                src="/assets/images/project/study2.png"
+                width={371}
+                height={330}
                 alt=""
               />
               {/* port icon */}
@@ -189,8 +198,11 @@ const CaseStudies = () => {
         <div className="col-lg-4 col-md-6 grid-item chemistry english">
           <div className="case-study-single-box">
             <div className="case-study-thumb2">
-              <img
-                src="assets/images/project/study3.png"
+              
+              <Image
+                src="/assets/images/project/study3.png"
+                width={371}
+                height={330}
                 alt=""
               />
               {/* port icon */}
@@ -232,8 +244,11 @@ const CaseStudies = () => {
         <div className="col-lg-4 col-md-6 grid-item math english">
           <div className="case-study-single-box">
             <div className="case-study-thumb2">
-              <img
-                src="assets/images/project/study4.png"
+              
+              <Image
+                src="/assets/images/project/study4.png"
+                width={371}
+                height={330}
                 alt=""
               />
               {/* port icon */}
@@ -275,8 +290,11 @@ const CaseStudies = () => {
         <div className="col-lg-4 col-md-6 grid-item math physics">
           <div className="case-study-single-box">
             <div className="case-study-thumb2">
-              <img
-                src="assets/images/project/study5.png"
+              
+              <Image
+                src="/assets/images/project/study5.png"
+                width={371}
+                height={330}
                 alt=""
               />
               {/* port icon */}
@@ -318,8 +336,10 @@ const CaseStudies = () => {
         <div className="col-lg-4 col-md-6 grid-item chemistry physics">
           <div className="case-study-single-box">
             <div className="case-study-thumb2">
-              <img
-                src="assets/images/project/study6.png"
+              <Image
+                src="/assets/images/project/study6.png"
+                width={371}
+                height={330}
                 alt=""
               />
               {/* port icon */}

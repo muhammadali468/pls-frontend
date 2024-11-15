@@ -25,24 +25,24 @@ const LandingHeader = () => {
                 <div className="header_top_menu_icon_inner">
                   <ul>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         <i className="bi bi-facebook" />
-                      </a>
+                      </Link>
                     </li>
                     <li className="menu-icon">
-                      <a href="#">
+                      <Link href="#">
                         <i className="bi bi-dribbble" />
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link href="#">
                         <i className="bi bi-twitter" />
-                      </a>
+                      </Link>
                     </li>
                     <li className="menu-icon">
-                      <a href="#">
+                      <Link href="#">
                         <i className="bi bi-instagram" />
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -89,28 +89,28 @@ const LandingHeader = () => {
               <nav className="consen_menu">
                 <ul className="nav_scroll">
                   <li>
-                    <a href="/">Home</a>
+                    <Link href="/">Home</Link>
                   </li>
                   <li>
-                    <a href="/about-us">About</a>
+                    <Link href="/about-us">About</Link>
                   </li>
                   <li>
-                    <a href="/services">Services </a>
+                    <Link href="/services">Services </Link>
                   </li>
                   <li>
-                    <a href="#portfolio">Portfolio</a>
+                    <Link href="#portfolio">Portfolio</Link>
                   </li>
                   {/* <li>
-                    <a href="#team">Team</a>
+                    <Link href="#team">Team</Link>
                   </li> */}
                   <li>
-                    <a href="/technologies">Technology</a>
+                    <Link href="/technologies">Technology</Link>
                   </li>
                   <li>
-                    <a href="/Industries">Industry</a>
+                    <Link href="/Industries">Industry</Link>
                   </li>
                   <li>
-                    <a href="/contact">Contact</a>
+                    <Link href="/contact">Contact</Link>
                   </li>
                 </ul>
 
@@ -156,18 +156,17 @@ const LandingHeader = () => {
               <div className="sidebar-info-contents">
                 <div className="content-inner">
                   <div className="nav-logo">
-                    <a href="index.html">
+                    <Link href="index.html">
                       <img
                         src="assets/images/logo.png"
                         alt="logo"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="content-box">
                     <h2>About Us</h2>
                     <p className="text">
-                      The argument in favor of using filler text goes something like this: If you use real content in the Consulting Process, anytime
-                      you reach a review point you’ll end up reviewing and negotiating the content itself and not the design.
+                      {"The argument in favor of using filler text goes something like this: If you use real content in the Consulting Process, anytime you reach a review point you'll end up reviewing and negotiating the content itself and not the design."}
                     </p>
                     <a
                       href="index"

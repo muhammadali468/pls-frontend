@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -152,19 +153,22 @@ const Footer = () => {
                   <div className="recent-post-item mt-4 flex space-x-4">
                     <div className="recent-post-thumb1">
                       <a href="#">
-                        <img
-                          src="assets/images/resource/google-play.png"
+
+                        <Image
+                          src="/assets/images/resource/google-play.png"
+                          width={48}
+                          height={16}
                           alt=""
-                          className="w-12"
                         />
                       </a>
                     </div>
                     <div className="recent-post-thumb">
                       <a href="#">
-                        <img
-                          src="assets/images/resource/app-store.png"
+                        <Image
+                          src="/assets/images/resource/app-store.png"
+                          width={48}
+                          height={16}
                           alt=""
-                          className="w-12"
                         />
                       </a>
                     </div>
@@ -176,14 +180,18 @@ const Footer = () => {
 
           <div className="foorer-shape">
             <div className="footer-thumb">
-              <img
-                src="assets/images/resource/red-dot.png"
+              <Image
+                src="/assets/images/resource/red-dot.png"
+                width={174}
+                height={174}
                 alt=""
               />
             </div>
             <div className="footer-thumb1 bounce-animate2">
-              <img
-                src="assets/images/resource/all-shape.png"
+              <Image
+                src="/assets/images/resource/all-shape.png"
+                width={247}
+                height={213}
                 alt=""
               />
             </div>
@@ -198,14 +206,12 @@ const Footer = () => {
                 <Link
                   legacyBehavior
                   href="/">
-                  <a
-                    className="logo_thumb"
-                    title="consen">
-                    <img
-                      src="assets/images/logo.png"
-                      alt="logo"
-                    />
-                  </a>
+                  <Image
+                    src="/assets/images/logo.png"
+                    width={56}
+                    height={48}
+                    alt=""
+                  />
                 </Link>
               </div>
             </div>
