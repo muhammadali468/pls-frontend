@@ -2,11 +2,125 @@
 import Link from "next/link";
 import { useState } from "react";
 import MobileMenu from "../sections/MobileMenu";
+import BasicModal from "./BasicModal";
+
 
 const LandingHeader = () => {
   const [toggle, setToggle] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+  const servicesData = [
+    "Web Development",
+    "Mobile Application",
+    "Data Analysis",
+    "E-commerce",
+    "SaaS Development",
+    "Digital Marketing",
+    "Production Services",
+    "Graphic Design",
+    "Sound Engineering",
+  ]
+  const industryData = [
+    "Information Technology (IT)",
+    "Healthcare",
+    "Finance & Banking",
+    "Retail & E-commerce",
+    "Tourism & Hospitaility",
+    "Education",
+    "Media & entertainment",
+    "Construction",
+    "Energy & Utility",
+    "Logistics & Transport",
+    "Legal & Compliance",
+  ]
+  const technologyData = [
+    "Web Technology",
+    "Mobile Technology",
+    "Backend Technology",
+    "Database",
+    "Cloud Infrastructure",
+    "Blockchain",
+    "Cybersecurity",
+    "E-Commerce",
+  ];
   return (
     <>
+      <BasicModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      >
+        <div className="contact_from_box py-40">
+          <div className="contact_title pb-4">
+            <h3>Get In Touch</h3>
+          </div>
+          <form
+            // onSubmit={(e) => e.preventDefault()}
+            action="#"
+            method="POST"
+            id="dreamit-form">
+            <div className="row">
+              <div className="col-lg-6">
+                <div className="form_box mb-30">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="form_box mb-30">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="form_box mb-30">
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Phone Number"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="form_box mb-30">
+                  <input
+                    type="text"
+                    name="web"
+                    placeholder="Website"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-12">
+                <div className="form_box mb-30">
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols={30}
+                    rows={10}
+                    placeholder="Your Message"
+                    defaultValue={""}
+                  />
+                </div>
+                <div className="quote_button">
+                  <button
+                    className="btn"
+                    type="submit">
+                    {" "}
+                    <i className="bi bi-gear" /> Free Consultant
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div id="status" />
+        </div>
+      </BasicModal>
       <div className="header_top_menu flex items-center justify-between landing_header ">
         <div className="container mx-auto">
           <div className="row flex items-center justify-between">
@@ -57,7 +171,7 @@ const LandingHeader = () => {
         className="consen_nav_manu style-two header____">
         <div className="container mx-auto">
           <div className="row header-bg flex justify-between items-center">
-            <div className="w-1/4">
+            <div className="w-[20%]">
               <div className="logo">
                 <Link
                   legacyBehavior
@@ -88,26 +202,44 @@ const LandingHeader = () => {
             <div className="col-lg-9 pl-0 pr-0 flex items-center justify-around">
               <nav className="consen_menu">
                 <ul className="nav_scroll">
-                  <li>
+                  < li >
                     <Link href="/">Home</Link>
                   </li>
                   <li>
                     <Link href="/about-us">About</Link>
                   </li>
-                  <li>
-                    <Link href="/services">Services </Link>
+                  <li className="relative group">
+                    <Link href="/services" >Services <i className="bi bi-chevron-down"></i></Link>
+                    <ul className="absolute bg-white w-64 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300  ">
+                      {servicesData.map((service, i) => (
+                        <li key={i} className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== service.length ? "border-b" : ""} border-gray-200`}>
+                          {service}
+                          <i className="bi bi-arrow-right"></i></li>
+                      ))}
+                    </ul>
+                  </li>
+                  <li className="relative group">
+                    <Link href="/industry" >Industry <i className="bi bi-chevron-down"></i></Link>
+                    <ul className="absolute bg-white w-72 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300  ">
+                      {industryData.map((industry, i) => (
+                        <li key={i} className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== industry.length ? "border-b" : ""} border-gray-200`}>
+                          {industry}
+                          <i className="bi bi-arrow-right"></i></li>
+                      ))}
+                    </ul>
+                  </li>
+                  <li className="relative group">
+                    <Link href="/technology" >Technology <i className="bi bi-chevron-down"></i></Link>
+                    <ul className="absolute bg-white w-64 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300  ">
+                      {technologyData.map((technology, i) => (
+                        <li key={i} className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== technology.length ? "border-b" : ""} border-gray-200`}>
+                          {technology}
+                          <i className="bi bi-arrow-right"></i></li>
+                      ))}
+                    </ul>
                   </li>
                   <li>
                     <Link href="#portfolio">Portfolio</Link>
-                  </li>
-                  {/* <li>
-                    <Link href="#team">Team</Link>
-                  </li> */}
-                  <li>
-                    <Link href="/technologies">Technology</Link>
-                  </li>
-                  <li>
-                    <Link href="/Industries">Industry</Link>
                   </li>
                   <li>
                     <Link href="/contact">Contact</Link>
@@ -124,17 +256,18 @@ const LandingHeader = () => {
                   </div>
                 </div>
                 <div className="header-button">
-                  <Link
-                    legacyBehavior
-                    href="contact">
+                  <button
+                    onClick={openModal}
+                    className="!bg-white !text-primary px-6 py-4 rounded-3xl hover:!bg-primary hover:!text-white hover:!border-white border duration-300"
+                  >
                     Request a Quote
-                  </Link>
+                  </button>
                 </div>
               </nav>
             </div>
           </div>
         </div>
-      </div>
+      </div >
 
       <div className={`xs-sidebar-group info-group ${toggle ? "isActive" : ""}`}>
         <div
@@ -166,7 +299,9 @@ const LandingHeader = () => {
                   <div className="content-box">
                     <h2>About Us</h2>
                     <p className="text">
-                      {"The argument in favor of using filler text goes something like this: If you use real content in the Consulting Process, anytime you reach a review point you'll end up reviewing and negotiating the content itself and not the design."}
+                      {
+                        "The argument in favor of using filler text goes something like this: If you use real content in the Consulting Process, anytime you reach a review point you'll end up reviewing and negotiating the content itself and not the design."
+                      }
                     </p>
                     <a
                       href="index"

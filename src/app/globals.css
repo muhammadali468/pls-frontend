@@ -257,7 +257,7 @@ a.meanmenu-reveal {
   top: 18px;
 }
 /* Modal */
-.overlay{
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -269,9 +269,8 @@ a.meanmenu-reveal {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-
 }
-.modal{
+.modal {
   background-color: "#fff";
   padding: "20px";
   border-radius: "8px";

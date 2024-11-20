@@ -2,7 +2,26 @@
 import Footer from "@/components/sections/Footer";
 import LandingHeader from "@/components/ui/LandingHeader";
 import Link from "next/link";
+import { useState } from "react";
 const ServiceDetail = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    contactNumber: "",
+    websiteCategory: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Submitted:", formData);
+    alert("Quote request submitted successfully!");
+  };
   return (
     <>
       <LandingHeader />
@@ -127,28 +146,8 @@ const ServiceDetail = () => {
                     />
                   </div>
                 </div>
-                <div className="col-lg-7 col-md-6">
-                  <div className="service-details-icon-box">
-                    <div className="service-page-title2">
-                      <h1>What You Benifits</h1>
-                    </div>
-                    <div className="widget-service-details-icon">
-                      <p>
-                        <i className="bi bi-check-lg" /> <span> Efficiently reintermediate pandemic engine</span>
-                      </p>
-                      <p>
-                        <i className="bi bi-check-lg" /> <span> Driven technologies enthusiastically carburetors </span>
-                      </p>
-                      <p>
-                        <i className="bi bi-check-lg" /> <span> Authoritatively target exceptional heets</span>
-                      </p>
-                      <p>
-                        <i className="bi bi-check-lg" /> <span> Covalent testing procedures </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="">
+                
+                {/* <div className="">
                   <div className="service-details-content pt-40">
                     <div className="service-page-title2">
                       <h1>Working Process</h1>
@@ -160,9 +159,9 @@ const ServiceDetail = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
-              <div className="pb-32">
+              {/* <div className="pb-32">
                 <div className="flex flex-col lg:flex-row justify-between lg:absolute gap-8">
                   <div className="col-lg-4 col-sm-6">
                     <div className="service-work-process-box p-4">
@@ -204,11 +203,11 @@ const ServiceDetail = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="col-lg-4 col-md-12">
               {/* widget search */}
-              <div className="widget_search mt-5 mt-lg-0">
+              {/* <div className="widget_search mt-5 mt-lg-0">
                 <form
                   onSubmit={(e) => e.preventDefault()}
                   action="#"
@@ -225,11 +224,11 @@ const ServiceDetail = () => {
                     <i className="fa fa-search" />
                   </button>
                 </form>
-              </div>
+              </div> */}
               <div className="widget-categories-box">
                 {/* categories title */}
                 <div className="categories-title">
-                  <h4> Category </h4>
+                  <h4> Service Name </h4>
                 </div>
                 {/* widget categories menu */}
                 <div className="widget-categories-menu">
@@ -280,37 +279,113 @@ const ServiceDetail = () => {
                 </div>
               </div>
               {/* categoreis thumb */}
-              <div className="widget-categories-thumb">
-                {/* widget categories content  */}
-                <div className="widget-categories-content text-center">
-                  <div className="logo-thumb">
-                    <Link
-                      legacyBehavior
-                      href="/index">
-                      <a>
-                        {" "}
-                        <img
-                          src="assets/images/logo.png"
-                          alt=""
-                        />{" "}
-                      </a>
-                    </Link>
+              <div className="mx-auto bg-white shadow-md rounded-lg p-6 mt-10">
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">Get a Quote</h2>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label className="block text-gray-700 font-medium mb-1">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder="Enter your first name"
+                      className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
                   </div>
-                  <div className="widget-title2">
-                    <h3>Need Service?</h3>
+                  <div>
+                    <label className="block text-gray-700 font-medium mb-1">
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      placeholder="Enter your last name"
+                      className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
                   </div>
-                  <div className="widget-button">
-                    <Link
-                      legacyBehavior
-                      href="/contact">
-                      <a>
-                        {" "}
-                        <i className="bi bi-envelope" /> Contact Us{" "}
-                      </a>
-                    </Link>
+                  <div>
+                    <label className="block text-gray-700 font-medium mb-1">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Enter your email"
+                      className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-700 font-medium mb-1">
+                      Contact Number
+                    </label>
+                    <input
+                      type="tel"
+                      name="contactNumber"
+                      value={formData.contactNumber}
+                      onChange={handleChange}
+                      placeholder="Enter your contact number"
+                      className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-700 font-medium mb-1">
+                      Website Category
+                    </label>
+                    <select
+                      name="websiteCategory"
+                      value={formData.websiteCategory}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    >
+                      <option value="" disabled>
+                        Select a category
+                      </option>
+                      <option value="ecommerce">E-commerce</option>
+                      <option value="portfolio">Portfolio</option>
+                      <option value="blog">Blog</option>
+                      <option value="business">Business</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <button
+                    type="submit"
+                    className=" bg-primary text-white py-2 px-6 w-40 rounded-md hover:border-primary hover:bg-white hover:text-primary border transition duration-300"
+                  >
+                    Get Quote
+                  </button>
+                </form>
+              </div>
+              <div className="col-lg-7 col-md-6 mt-8">
+                  <div className="service-details-icon-box">
+                    <div className="service-page-title2">
+                      <h1>What You Benifits</h1>
+                    </div>
+                    <div className="widget-service-details-icon">
+                      <p>
+                        <i className="bi bi-check-lg" /> <span> Efficiently reintermediate pandemic engine</span>
+                      </p>
+                      <p>
+                        <i className="bi bi-check-lg" /> <span> Driven technologies enthusiastically carburetors </span>
+                      </p>
+                      <p>
+                        <i className="bi bi-check-lg" /> <span> Authoritatively target exceptional heets</span>
+                      </p>
+                      <p>
+                        <i className="bi bi-check-lg" /> <span> Covalent testing procedures </span>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>

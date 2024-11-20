@@ -1,7 +1,6 @@
 "use client";
 import Footer from "@/components/sections/Footer";
 import LandingHeader from "@/components/ui/LandingHeader";
-import { Nav, Tab } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { testimonial_list_slider } from "@/components/ui/sliderProps";
 import Counter from "@/components/ui/Counter";
@@ -20,7 +19,7 @@ const AboutUs = () => {
       {/* ========================================================= */}
       <div className="abouts_areas">
         <div className="container mx-auto pt-40">
-          <div className="row flex justify-between">
+          <div className="row flex justify-between flex-col sm:flex-row">
             <div className="col-lg-6 col-md-6">
               <div className="singles_abouts_boxs">
                 <div className="abouts_thumb">
@@ -67,7 +66,7 @@ const AboutUs = () => {
       {/*=================================================*/}
       <div className="feature-area style-two">
         <div className="container mx-auto">
-          <div className="row flex">
+          <div className="row flex flex-col sm:flex-row p-4 sm:p-0">
             <div className="w-full lg:w-1/2">
               <div className="consen-section-title">
                 <h5> Features </h5>
@@ -94,8 +93,8 @@ const AboutUs = () => {
                 </ul>
               </div>
             </div>
-            <div className="w-full lg:w-1/2">
-              {/* Hero */}
+            {/* <div className="w-full lg:w-1/2">
+              
               <Tab.Container defaultActiveKey={"t1"}>
                 <div className="tab">
                   <Nav
@@ -114,7 +113,7 @@ const AboutUs = () => {
                         className="c-pointer"
                         as="a"
                         eventKey={"t2"}>
-                        Expart Team
+                        Expert Team
                       </Nav.Link>
                     </li>
                     <li>
@@ -126,7 +125,7 @@ const AboutUs = () => {
                       </Nav.Link>
                     </li>
                   </Nav>{" "}
-                  {/* / tabs */}
+                  
                   <Tab.Content className="tab_content">
                     <Tab.Pane
                       eventKey={"t1"}
@@ -158,7 +157,7 @@ const AboutUs = () => {
                         </li>
                       </ul>
                     </Tab.Pane>{" "}
-                    {/* / tabs_item */}
+                    
                     <Tab.Pane
                       eventKey={"t2"}
                       className="tabs_item">
@@ -189,7 +188,7 @@ const AboutUs = () => {
                         </li>
                       </ul>
                     </Tab.Pane>{" "}
-                    {/* / tabs_item */}
+                    
                     <Tab.Pane
                       eventKey={"t3"}
                       className="tabs_item">
@@ -220,13 +219,13 @@ const AboutUs = () => {
                         </li>
                       </ul>
                     </Tab.Pane>{" "}
-                    {/* / tabs_item */}
+                    
                   </Tab.Content>{" "}
-                  {/* / tab_content */}
+                  
                 </div>
               </Tab.Container>
-              {/* / tab */}
-            </div>
+              
+            </div> */}
           </div>
         </div>
       </div>
@@ -235,7 +234,7 @@ const AboutUs = () => {
       {/*==================================================*/}
       <div className="testimonial-area overflow-hidden">
         <div className="container mx-auto">
-          <div className="flex flex-wrap testi-rotate items-center">
+          <div className="flex flex-wrap flex-col sm:flex-row testi-rotate items-center">
             <div className="lg:w-7/12 md:w-6/12 mb-6 md:mb-0">
               <div className="consen-section-title text-white pb-12">
                 <h5 className="text-lg font-semibold">Testimonials</h5>
@@ -290,7 +289,7 @@ const AboutUs = () => {
                   review: "Holisticly pursue market-more synerg through innovative paradi. Enthusia productivate media."
                 },
                 {
-                  name: "Shilpa Shethy",
+                  name: "Ryan Williams",
                   role: "CEO, Founder",
                   image: "assets/images/resource/testi3.png",
                   review: "Holisticly pursue market-more synerg through innovative paradi. Enthusia productivate media."
@@ -302,7 +301,7 @@ const AboutUs = () => {
                   review: "Holisticly pursue market-more synerg through innovative paradi. Enthusia productivate media."
                 },
                 {
-                  name: "Shilpa Shethy",
+                  name: "Ryan Williams",
                   role: "CEO, Founder",
                   image: "assets/images/resource/testi3.png",
                   review: "Holisticly pursue market-more synerg through innovative paradi. Enthusia productivate media."
@@ -363,7 +362,7 @@ const AboutUs = () => {
       <div className="counter-section style-33 pt-30 pb-80">
         <div className="container mx-auto">
           <div className="counter-container">
-            <div className="row hr pt-40 flex justify-between">
+            <div className="row hr pt-40 flex justify-between p-4 sm:p-0">
               <div className="col-md-6 col-lg-4">
                 <div className="counter-single-item-inner">
                   <div className="counter-content">
@@ -547,7 +546,7 @@ const AboutUs = () => {
       {/*==================================================*/}
       {/* Start  FAQ Section */}
       {/*===================================================*/}
-      <div className="faq-sectiions ">
+      <div className="faq-sectiions p-4 sm:p-0">
         <div className="container mx-auto">
           <div className="row">
             <div className="col-lg-6 col-md-12">
@@ -555,7 +554,7 @@ const AboutUs = () => {
                 <h5> process </h5>
                 <h2>
                   {" "}
-                  Freequently Asked <span> Question </span>
+                  Frequently Asked <span> Question </span>
                 </h2>
                 <p className="study-text1">
                   {" "}
@@ -611,7 +610,7 @@ const AboutUs = () => {
       <div className="subscribe-area style-two mt-5 mt-sm-0">
         <div className="container mx-auto">
           <div className="subscribe">
-            <div className="row flex items-center">
+            <div className="row flex flex-col sm:flex-row items-center">
               <div className="col-lg-4 col-md-12">
                 <div className="subscribe-title">
                   <h1>Get your Free Business Consolution</h1>

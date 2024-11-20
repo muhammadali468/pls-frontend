@@ -4,7 +4,7 @@ import LandingHeader from "@/components/ui/LandingHeader";
 import Link from "next/link";
 import ProgressBar from "@/components/Progressbar";
 
-const Technologies = () => {
+const Technology = () => {
   return (
     <>
       <LandingHeader />
@@ -27,7 +27,7 @@ const Technologies = () => {
                 </h2>
               </div>
             </div>
-            <div className="col-lg-5 col-md-4">
+            {/* <div className="col-lg-5 col-md-4">
               <div className="consen-button text-right">
                 <Link
                   legacyBehavior
@@ -38,7 +38,7 @@ const Technologies = () => {
                   </a>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             <div className="col-lg-3 col-sm-6 p-0">
@@ -447,7 +447,7 @@ const Technologies = () => {
                       />
                     </div>
                     <div className="quote-title">
-                      <h4> Shilpa Shethy </h4>
+                      <h4> Ryan Williams </h4>
                       <p> CEO, Founder </p>
                     </div>
                   </div>
@@ -519,4 +519,4 @@ const Technologies = () => {
     </>
   );
 };
-export default Technologies;
+export default Technology;

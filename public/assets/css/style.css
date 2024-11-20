@@ -298,7 +298,7 @@ nav.consen_menu span {
 }
 
 .style-two .consen_menu > ul > li > a {
-  color: #232323;
+  color: white;
 }
 
 .style-two .header-button {
@@ -1031,7 +1031,8 @@ ul.sub-menu li:hover a span {
   bottom: 0;
   width: 80px;
   height: 80px;
-  background: url(../images/resource/box-bg.png);
+  /* background: url(../images/resource/box-bg.png); */
+  background: linear-gradient(180deg, #050A1E, #29335f);
   transition: 0.5s;
   opacity: 0;
   z-index: -1;
@@ -1084,7 +1085,7 @@ ul.sub-menu li:hover a span {
 
 .service-number h1 {
   font-size: 55px;
-  opacity: 10%;
+  color: #FF3C00;
   position: absolute;
   top: 0;
   left: 10px;
@@ -3517,6 +3518,7 @@ p.choose-text1 {
   right: 0;
   margin: auto;
   bottom: 0;
+  display: none;
 }
 
 /*team title*/
@@ -3767,7 +3769,7 @@ a.active {
 }
 
 .faq-sectiions {
-  background: url(../images/resource/faq-bg.jpg);
+  background: url(../images/resource/faq-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

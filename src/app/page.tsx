@@ -23,7 +23,9 @@ export default function Home() {
     <>
       <Preloader />
       <LandingHeader />
-      <BasicModal isOpen={isModalOpen} onClose={closeModal}>
+      <BasicModal
+        isOpen={isModalOpen}
+        onClose={closeModal}>
         <InlineWidget url="https://calendly.com/ali-renesistech" />
       </BasicModal>
       <div
@@ -45,21 +47,17 @@ export default function Home() {
                 <Link
                   legacyBehavior
                   href="/service">
-                  <span
-                    className="flex items-center bg-primary gap-2 text-lg text-white rounded-[32px] w-max px-6 py-4 hover:underline"
-                  >
-                    <i className="bi bi-gear" /> Discover More
+                                    <span className="flex items-center bg-white gap-2 text-lg text-primary rounded-[32px] w-max px-6 py-4">
+                    <i className="bi bi-gear" /> Hire Us
                   </span>
                 </Link>
                 <button
                   onClick={openModal}
                   type="button"
-                  className="flex items-center gap-2 text-lg text-primary"
-                >
-                  <span
-                    className="mt-4 flex items-center bg-white gap-2 text-lg text-primary rounded-[32px] w-max px-6 py-4"
+                  className="flex items-center gap-2 text-lg text-primary">
 
-                  >
+                  <span className="mt-4 flex items-center bg-primary gap-2 text-lg text-white rounded-[32px] w-max px-6 py-4 hover:underline">
+
                     <i className="bi bi-pencil" /> Free Consultation
                   </span>
                 </button>
@@ -202,7 +200,6 @@ export default function Home() {
             <div className="single-feature-box">
               <div className="feature-box-inner p-6 border rounded-lg shadow">
                 <div className="feature-icon1 mb-4">
-
                   <Image
                     src="/assets/images/resource/main2.png"
                     height={60}
@@ -479,7 +476,6 @@ export default function Home() {
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon1">
-
                     <Image
                       src="/assets/images/resource/service-icon7.png"
                       height={50}
@@ -635,7 +631,6 @@ export default function Home() {
                 {/* Choose shape thumb */}
                 <div className="why-choose-us-image relative">
                   <div className="why-choose-us-shape-thumb bounce-animate">
-
                     <Image
                       src="/assets/images/resource/all-shape2.png"
                       width={111}
@@ -727,7 +722,7 @@ export default function Home() {
                   review: "Holisticly pursue market-more synerg through innovative paradi. Enthusia productivate media."
                 },
                 {
-                  name: "Shilpa Shethy",
+                  name: "Ryan Williams",
                   role: "CEO, Founder",
                   image: "/assets/images/resource/testi3.png",
                   review: "Holisticly pursue market-more synerg through innovative paradi. Enthusia productivate media."
@@ -739,7 +734,7 @@ export default function Home() {
                   review: "Holisticly pursue market-more synerg through innovative paradi. Enthusia productivate media."
                 },
                 {
-                  name: "Shilpa Shethy",
+                  name: "Ryan Williams",
                   role: "CEO, Founder",
                   image: "/assets/images/resource/testi3.png",
                   review: "Holisticly pursue market-more synerg through innovative paradi. Enthusia productivate media."
@@ -752,7 +747,6 @@ export default function Home() {
                     <div className="testimonial-content1">
                       <div className="single-quote-icon flex items-center mb-4">
                         <div className="quote-thumb mr-3">
-
                           <Image
                             src={testimonial.image}
                             width={76}
@@ -854,7 +848,6 @@ export default function Home() {
             <div className="col-lg-4 col-sm-6 px-4">
               <div className="process-single-box2">
                 <div className="process-icon-thumb flex justify-center">
-
                   <Image
                     src="/assets/images/resource/a.png"
                     width={70}
@@ -929,7 +922,6 @@ export default function Home() {
             <div className="col-lg-4 col-sm-6 px-4">
               <div className="single_team">
                 <div className="single_team_thumb1">
-
                   <Image
                     src="/assets/images/resource/team-1.jpg"
                     width={370}
@@ -1159,7 +1151,6 @@ export default function Home() {
             <div className="col-lg-4 col-md-6">
               <div className="single-blog-box">
                 <div className="single-blog-thumb">
-
                   <Image
                     src="/assets/images/resource/blog1.png"
                     width={370}
@@ -1239,7 +1230,6 @@ export default function Home() {
                   </div>
                   <div className="em-blog-icon">
                     <div className="em-blog-thumb">
-
                       <Image
                         src="/assets/images/resource/blog-icon.png"
                         width={24}
@@ -1267,7 +1257,6 @@ export default function Home() {
             <div className="col-lg-4 col-md-6">
               <div className="single-blog-box">
                 <div className="single-blog-thumb">
-
                   <Image
                     src="/assets/images/resource/blog3.png"
                     width={370}
@@ -1294,7 +1283,6 @@ export default function Home() {
                   </div>
                   <div className="em-blog-icon">
                     <div className="em-blog-thumb">
-
                       <Image
                         src="/assets/images/resource/blog-icon.png"
                         width={24}
@@ -1321,7 +1309,6 @@ export default function Home() {
             </div>
             <div className="blog-shape">
               <div className="port-shape-thumb2 bounce-animate2">
-
                 <Image
                   src="/assets/images/resource/all-shape6.png"
                   width={133}

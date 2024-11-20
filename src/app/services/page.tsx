@@ -21,7 +21,7 @@ const Services = () => {
                 </h2>
               </div>
             </div>
-            <div className="col-lg-5 col-md-4">
+            {/* <div className="col-lg-5 col-md-4">
               <div className="consen-button text-right">
                 <Link
                   legacyBehavior
@@ -32,7 +32,7 @@ const Services = () => {
                   </a>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             <div className="col-lg-3 col-sm-6 p-0">
@@ -51,7 +51,7 @@ const Services = () => {
                     <h1> 01 </h1>
                   </div>
                   <div className="em-service-text">
-                    <p> Dramatically cultivate from quality user centric growth strateges emerging </p>
+                    <p> Developing advanced web applications for optimal digital solutions </p>
                   </div>
                   <div className="service-button">
                     <Link
@@ -82,7 +82,7 @@ const Services = () => {
                     <h1> 02 </h1>
                   </div>
                   <div className="em-service-text">
-                    <p> Dramatically cultivate from quality user centric growth strateges emerging </p>
+                    <p> Building high-performance mobile applications for dynamic experiences. </p>
                   </div>
                   <div className="service-button">
                     <Link
@@ -113,7 +113,7 @@ const Services = () => {
                     <h1> 03 </h1>
                   </div>
                   <div className="em-service-text">
-                    <p> Dramatically cultivate from quality user centric growth strateges emerging </p>
+                    <p>Leveraging advanced data analysis for actionable insights and sustainable growth.</p>
                   </div>
                   <div className="service-button">
                     <Link
@@ -144,7 +144,7 @@ const Services = () => {
                     <h1> 04 </h1>
                   </div>
                   <div className="em-service-text">
-                    <p> Dramatically cultivate from quality user centric growth strateges emerging </p>
+                    <p> Empowering e-commerce development with innovative, robust solutions. </p>
                   </div>
                   <div className="service-button">
                     <Link
@@ -177,7 +177,7 @@ const Services = () => {
                     <h1> 05 </h1>
                   </div>
                   <div className="em-service-text">
-                    <p> Dramatically cultivate from quality user centric growth strateges emerging </p>
+                    <p> Transforming businesses with scalable, secure SaaS development </p>
                   </div>
                   <div className="service-button">
                     <Link
@@ -208,7 +208,7 @@ const Services = () => {
                     <h1> 06 </h1>
                   </div>
                   <div className="em-service-text">
-                    <p> Dramatically cultivate from quality user centric growth strateges emerging </p>
+                    <p> Driving growth with data-driven, results-focused digital marketing </p>
                   </div>
                   <div className="service-button">
                     <Link
@@ -239,7 +239,7 @@ const Services = () => {
                     <h1> 07 </h1>
                   </div>
                   <div className="em-service-text">
-                    <p> Dramatically cultivate from quality user centric growth strateges emerging </p>
+                    <p>Pioneering high-tech video, audio production for modern excellence</p>
                   </div>
                   <div className="service-button">
                     <Link
@@ -270,7 +270,7 @@ const Services = () => {
                     <h1> 08 </h1>
                   </div>
                   <div className="em-service-text">
-                    <p> Dramatically cultivate from quality user centric growth strateges emerging </p>
+                    <p> Innovative, precision-driven graphic design for impactful visuals </p>
                   </div>
                   <div className="service-button">
                     <Link
@@ -298,7 +298,7 @@ const Services = () => {
         className="about-area style-three"
         id="about">
         <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row items-center">
+          <div className="flex flex-col lg:flex-row items-center p-4 sm:p-0">
             <div className="lg:w-1/2 md:w-full mb-8 lg:mb-0">
               <div className="dreamit-about-thumb p-16 md:p-0">
                 <img
@@ -472,7 +472,7 @@ const Services = () => {
                       />
                     </div>
                     <div className="quote-title">
-                      <h4> Shilpa Shethy </h4>
+                      <h4> Ryan Williams </h4>
                       <p> CEO, Founder </p>
                     </div>
                   </div>

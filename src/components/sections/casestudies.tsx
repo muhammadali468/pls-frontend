@@ -152,7 +152,6 @@ const CaseStudies = () => {
         <div className="col-lg-4 col-md-6 grid-item physics chemistry math">
           <div className="case-study-single-box">
             <div className="case-study-thumb2">
-             
               <Image
                 src="/assets/images/project/study2.png"
                 width={371}
@@ -198,7 +197,6 @@ const CaseStudies = () => {
         <div className="col-lg-4 col-md-6 grid-item chemistry english">
           <div className="case-study-single-box">
             <div className="case-study-thumb2">
-              
               <Image
                 src="/assets/images/project/study3.png"
                 width={371}
@@ -244,7 +242,6 @@ const CaseStudies = () => {
         <div className="col-lg-4 col-md-6 grid-item math english">
           <div className="case-study-single-box">
             <div className="case-study-thumb2">
-              
               <Image
                 src="/assets/images/project/study4.png"
                 width={371}
@@ -290,7 +287,6 @@ const CaseStudies = () => {
         <div className="col-lg-4 col-md-6 grid-item math physics">
           <div className="case-study-single-box">
             <div className="case-study-thumb2">
-              
               <Image
                 src="/assets/images/project/study5.png"
                 width={371}
