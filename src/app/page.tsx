@@ -47,7 +47,7 @@ export default function Home() {
                 <Link
                   legacyBehavior
                   href="/service">
-                                    <span className="flex items-center bg-white gap-2 text-lg text-primary rounded-[32px] w-max px-6 py-4">
+                  <span className="flex items-center bg-white gap-2 text-lg text-primary rounded-[32px] w-max px-6 py-4">
                     <i className="bi bi-gear" /> Hire Us
                   </span>
                 </Link>
@@ -55,9 +55,7 @@ export default function Home() {
                   onClick={openModal}
                   type="button"
                   className="flex items-center gap-2 text-lg text-primary">
-
                   <span className="mt-4 flex items-center bg-primary gap-2 text-lg text-white rounded-[32px] w-max px-6 py-4 hover:underline">
-
                     <i className="bi bi-pencil" /> Free Consultation
                   </span>
                 </button>

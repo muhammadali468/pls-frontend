@@ -9,15 +9,15 @@ const ServiceDetail = () => {
     lastName: "",
     email: "",
     contactNumber: "",
-    websiteCategory: "",
+    websiteCategory: ""
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
     alert("Quote request submitted successfully!");
@@ -146,7 +146,7 @@ const ServiceDetail = () => {
                     />
                   </div>
                 </div>
-                
+
                 {/* <div className="">
                   <div className="service-details-content pt-40">
                     <div className="service-page-title2">
@@ -281,11 +281,11 @@ const ServiceDetail = () => {
               {/* categoreis thumb */}
               <div className="mx-auto bg-white shadow-md rounded-lg p-6 mt-10">
                 <h2 className="text-2xl font-bold mb-4 text-gray-800">Get a Quote</h2>
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-4">
                   <div>
-                    <label className="block text-gray-700 font-medium mb-1">
-                      First Name
-                    </label>
+                    <label className="block text-gray-700 font-medium mb-1">First Name</label>
                     <input
                       type="text"
                       name="firstName"
@@ -297,9 +297,7 @@ const ServiceDetail = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-1">
-                      Last Name
-                    </label>
+                    <label className="block text-gray-700 font-medium mb-1">Last Name</label>
                     <input
                       type="text"
                       name="lastName"
@@ -323,9 +321,7 @@ const ServiceDetail = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-1">
-                      Contact Number
-                    </label>
+                    <label className="block text-gray-700 font-medium mb-1">Contact Number</label>
                     <input
                       type="tel"
                       name="contactNumber"
@@ -337,17 +333,16 @@ const ServiceDetail = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-1">
-                      Website Category
-                    </label>
+                    <label className="block text-gray-700 font-medium mb-1">Website Category</label>
                     <select
                       name="websiteCategory"
                       value={formData.websiteCategory}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      required
-                    >
-                      <option value="" disabled>
+                      required>
+                      <option
+                        value=""
+                        disabled>
                         Select a category
                       </option>
                       <option value="ecommerce">E-commerce</option>
@@ -359,33 +354,32 @@ const ServiceDetail = () => {
                   </div>
                   <button
                     type="submit"
-                    className=" bg-primary text-white py-2 px-6 w-40 rounded-md hover:border-primary hover:bg-white hover:text-primary border transition duration-300"
-                  >
+                    className=" bg-primary text-white py-2 px-6 w-40 rounded-md hover:border-primary hover:bg-white hover:text-primary border transition duration-300">
                     Get Quote
                   </button>
                 </form>
               </div>
               <div className="col-lg-7 col-md-6 mt-8">
-                  <div className="service-details-icon-box">
-                    <div className="service-page-title2">
-                      <h1>What You Benifits</h1>
-                    </div>
-                    <div className="widget-service-details-icon">
-                      <p>
-                        <i className="bi bi-check-lg" /> <span> Efficiently reintermediate pandemic engine</span>
-                      </p>
-                      <p>
-                        <i className="bi bi-check-lg" /> <span> Driven technologies enthusiastically carburetors </span>
-                      </p>
-                      <p>
-                        <i className="bi bi-check-lg" /> <span> Authoritatively target exceptional heets</span>
-                      </p>
-                      <p>
-                        <i className="bi bi-check-lg" /> <span> Covalent testing procedures </span>
-                      </p>
-                    </div>
+                <div className="service-details-icon-box">
+                  <div className="service-page-title2">
+                    <h1>What You Benifits</h1>
+                  </div>
+                  <div className="widget-service-details-icon">
+                    <p>
+                      <i className="bi bi-check-lg" /> <span> Efficiently reintermediate pandemic engine</span>
+                    </p>
+                    <p>
+                      <i className="bi bi-check-lg" /> <span> Driven technologies enthusiastically carburetors </span>
+                    </p>
+                    <p>
+                      <i className="bi bi-check-lg" /> <span> Authoritatively target exceptional heets</span>
+                    </p>
+                    <p>
+                      <i className="bi bi-check-lg" /> <span> Covalent testing procedures </span>
+                    </p>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>

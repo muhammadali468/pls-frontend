@@ -34,7 +34,9 @@ const HireFreelancer = () => {
             </div> */}
           </div>
           <div className="row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <Link href="/contact-freelancer" className="col-lg-3 col-sm-6 p-0">
+            <Link
+              href="/contact-freelancer"
+              className="col-lg-3 col-sm-6 p-0">
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
                   <div className="em-service-icon flex justify-center items-center">
@@ -49,7 +51,6 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 01 </h1>
                   </div>
-                  
                 </div>
               </div>
             </Link>
@@ -68,7 +69,6 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 02 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -87,7 +87,6 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 03 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -107,7 +106,6 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 04 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -127,7 +125,6 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 05 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -147,11 +144,9 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 06 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
-
 
             <div className="col-lg-3 col-sm-6 p-0">
               <div className="dreamit-service-box">
@@ -168,7 +163,6 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 07 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -188,7 +182,6 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 08 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -208,7 +201,6 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 09 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -228,7 +220,6 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 10 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -248,7 +239,6 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 11 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -287,7 +277,6 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 13 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -307,7 +296,6 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 14 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -327,12 +315,10 @@ const HireFreelancer = () => {
                   <div className="service-number text-center">
                     <h1> 15 </h1>
                   </div>
-                  
                 </div>
               </div>
             </div>
           </div>
-          
         </div>
       </div>
       {/*==================================================*/}

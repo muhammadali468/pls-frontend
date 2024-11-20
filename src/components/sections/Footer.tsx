@@ -150,7 +150,11 @@ const Footer = () => {
                       </button>
                     </form>
                   </div> */}
-                  <Link href="/hire-freelancer" className="bg-primary text-white rounded-3xl px-6 py-2 mt-4 sm:mt-0">Contact Freelancer</Link>
+                  <Link
+                    href="/hire-freelancer"
+                    className="bg-primary text-white rounded-3xl px-6 py-2 mt-4 sm:mt-0">
+                    Contact Freelancer
+                  </Link>
                   {/* <div className="recent-post-item mt-4 flex space-x-4">
                     <div className="recent-post-thumb1">
                       <a href="#">

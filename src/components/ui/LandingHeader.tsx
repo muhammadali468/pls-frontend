@@ -4,7 +4,6 @@ import { useState } from "react";
 import MobileMenu from "../sections/MobileMenu";
 import BasicModal from "./BasicModal";
 
-
 const LandingHeader = () => {
   const [toggle, setToggle] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
@@ -19,8 +18,8 @@ const LandingHeader = () => {
     "Digital Marketing",
     "Production Services",
     "Graphic Design",
-    "Sound Engineering",
-  ]
+    "Sound Engineering"
+  ];
   const industryData = [
     "Information Technology (IT)",
     "Healthcare",
@@ -32,8 +31,8 @@ const LandingHeader = () => {
     "Construction",
     "Energy & Utility",
     "Logistics & Transport",
-    "Legal & Compliance",
-  ]
+    "Legal & Compliance"
+  ];
   const technologyData = [
     "Web Technology",
     "Mobile Technology",
@@ -42,14 +41,13 @@ const LandingHeader = () => {
     "Cloud Infrastructure",
     "Blockchain",
     "Cybersecurity",
-    "E-Commerce",
+    "E-Commerce"
   ];
   return (
     <>
       <BasicModal
         isOpen={isModalOpen}
-        onClose={closeModal}
-      >
+        onClose={closeModal}>
         <div className="contact_from_box py-40">
           <div className="contact_title pb-4">
             <h3>Get In Touch</h3>
@@ -202,39 +200,54 @@ const LandingHeader = () => {
             <div className="col-lg-9 pl-0 pr-0 flex items-center justify-around">
               <nav className="consen_menu">
                 <ul className="nav_scroll">
-                  < li >
+                  <li>
                     <Link href="/">Home</Link>
                   </li>
                   <li>
                     <Link href="/about-us">About</Link>
                   </li>
                   <li className="relative group">
-                    <Link href="/services" >Services <i className="bi bi-chevron-down"></i></Link>
+                    <Link href="/services">
+                      Services <i className="bi bi-chevron-down"></i>
+                    </Link>
                     <ul className="absolute bg-white w-64 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300  ">
                       {servicesData.map((service, i) => (
-                        <li key={i} className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== service.length ? "border-b" : ""} border-gray-200`}>
+                        <li
+                          key={i}
+                          className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== service.length ? "border-b" : ""} border-gray-200`}>
                           {service}
-                          <i className="bi bi-arrow-right"></i></li>
+                          <i className="bi bi-arrow-right"></i>
+                        </li>
                       ))}
                     </ul>
                   </li>
                   <li className="relative group">
-                    <Link href="/industry" >Industry <i className="bi bi-chevron-down"></i></Link>
+                    <Link href="/industry">
+                      Industry <i className="bi bi-chevron-down"></i>
+                    </Link>
                     <ul className="absolute bg-white w-72 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300  ">
                       {industryData.map((industry, i) => (
-                        <li key={i} className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== industry.length ? "border-b" : ""} border-gray-200`}>
+                        <li
+                          key={i}
+                          className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== industry.length ? "border-b" : ""} border-gray-200`}>
                           {industry}
-                          <i className="bi bi-arrow-right"></i></li>
+                          <i className="bi bi-arrow-right"></i>
+                        </li>
                       ))}
                     </ul>
                   </li>
                   <li className="relative group">
-                    <Link href="/technology" >Technology <i className="bi bi-chevron-down"></i></Link>
+                    <Link href="/technology">
+                      Technology <i className="bi bi-chevron-down"></i>
+                    </Link>
                     <ul className="absolute bg-white w-64 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300  ">
                       {technologyData.map((technology, i) => (
-                        <li key={i} className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== technology.length ? "border-b" : ""} border-gray-200`}>
+                        <li
+                          key={i}
+                          className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== technology.length ? "border-b" : ""} border-gray-200`}>
                           {technology}
-                          <i className="bi bi-arrow-right"></i></li>
+                          <i className="bi bi-arrow-right"></i>
+                        </li>
                       ))}
                     </ul>
                   </li>
@@ -258,8 +271,7 @@ const LandingHeader = () => {
                 <div className="header-button">
                   <button
                     onClick={openModal}
-                    className="!bg-white !text-primary px-6 py-4 rounded-3xl hover:!bg-primary hover:!text-white hover:!border-white border duration-300"
-                  >
+                    className="!bg-white !text-primary px-6 py-4 rounded-3xl hover:!bg-primary hover:!text-white hover:!border-white border duration-300">
                     Request a Quote
                   </button>
                 </div>
@@ -267,7 +279,7 @@ const LandingHeader = () => {
             </div>
           </div>
         </div>
-      </div >
+      </div>
 
       <div className={`xs-sidebar-group info-group ${toggle ? "isActive" : ""}`}>
         <div
