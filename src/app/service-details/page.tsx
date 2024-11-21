@@ -161,7 +161,7 @@ const ServiceDetail = () => {
                   </div>
                 </div> */}
               </div>
-              {/* <div className="pb-32">
+              <div className="pb-32 mt-8">
                 <div className="flex flex-col lg:flex-row justify-between lg:absolute gap-8">
                   <div className="col-lg-4 col-sm-6">
                     <div className="service-work-process-box p-4">
@@ -203,7 +203,7 @@ const ServiceDetail = () => {
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
             <div className="col-lg-4 col-md-12">
               {/* widget search */}
@@ -279,11 +279,11 @@ const ServiceDetail = () => {
                 </div>
               </div>
               {/* categoreis thumb */}
-              <div className="mx-auto bg-white shadow-md rounded-lg p-6 mt-10">
-                <h2 className="text-2xl font-bold mb-4 text-gray-800">Get a Quote</h2>
+              <div className="mx-auto shadow-md rounded-lg p-6 mt-10 form-blue-bg">
+                <h2 className="text-2xl font-bold mb-4 text-white">Get a Quote</h2>
                 <form
                   onSubmit={handleSubmit}
-                  className="space-y-4">
+                  className="space-y-4 ">
                   <div>
                     <label className="block text-gray-700 font-medium mb-1">First Name</label>
                     <input

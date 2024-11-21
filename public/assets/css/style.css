@@ -215,9 +215,12 @@ nav.consen_menu {
   margin: 30px 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  color: #fff;
+  color: black;
   /* font-family: "Fira Sans"; */
   font-weight: 400;
+}
+.consen_menu > ul > li > a:hover {
+  color: white;
 }
 
 nav.consen_menu span {
@@ -1039,7 +1042,9 @@ ul.sub-menu li:hover a span {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+.form-blue-bg{
+  background: linear-gradient(180deg, #050a1e, #29335f);
+}
 .em-service-title h2 {
   font-size: 20px;
   font-weight: 500;
@@ -3518,7 +3523,6 @@ p.choose-text1 {
   right: 0;
   margin: auto;
   bottom: 0;
-  display: none;
 }
 
 /*team title*/

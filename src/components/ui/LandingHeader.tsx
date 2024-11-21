@@ -204,19 +204,19 @@ const LandingHeader = () => {
                     <Link href="/">Home</Link>
                   </li>
                   <li>
-                    <Link href="/about-us">About</Link>
+                    <Link href="/about-us">About Us</Link>
                   </li>
                   <li className="relative group">
                     <Link href="/services">
                       Services <i className="bi bi-chevron-down"></i>
                     </Link>
-                    <ul className="absolute bg-white w-64 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300  ">
-                      {servicesData.map((service, i) => (
+                    <ul className="absolute bg-white w-64 shadow-lg rounded-lg !hidden group-hover:!block transition-opacity duration-300  ">
+                      {servicesData.map((service, i:any) => (
                         <li
                           key={i}
                           className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== service.length ? "border-b" : ""} border-gray-200`}>
                           {service}
-                          <i className="bi bi-arrow-right"></i>
+                          
                         </li>
                       ))}
                     </ul>
@@ -225,13 +225,13 @@ const LandingHeader = () => {
                     <Link href="/industry">
                       Industry <i className="bi bi-chevron-down"></i>
                     </Link>
-                    <ul className="absolute bg-white w-72 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300  ">
-                      {industryData.map((industry, i) => (
+                    <ul className="absolute bg-white w-72 shadow-lg rounded-lg !hidden group-hover:!block transition-opacity duration-300  ">
+                      {industryData.map((industry, i:any) => (
                         <li
                           key={i}
                           className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== industry.length ? "border-b" : ""} border-gray-200`}>
                           {industry}
-                          <i className="bi bi-arrow-right"></i>
+                          
                         </li>
                       ))}
                     </ul>
@@ -240,19 +240,19 @@ const LandingHeader = () => {
                     <Link href="/technology">
                       Technology <i className="bi bi-chevron-down"></i>
                     </Link>
-                    <ul className="absolute bg-white w-64 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300  ">
-                      {technologyData.map((technology, i) => (
+                    <ul className="absolute bg-white w-64 shadow-lg rounded-lg !hidden group-hover:!block transition-opacity duration-300  ">
+                      {technologyData.map((technology, i:any) => (
                         <li
                           key={i}
                           className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== technology.length ? "border-b" : ""} border-gray-200`}>
                           {technology}
-                          <i className="bi bi-arrow-right"></i>
+                          
                         </li>
                       ))}
                     </ul>
                   </li>
                   <li>
-                    <Link href="#portfolio">Portfolio</Link>
+                    <Link href="/portfolio">Portfolio</Link>
                   </li>
                   <li>
                     <Link href="/contact">Contact</Link>

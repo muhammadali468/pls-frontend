@@ -13,7 +13,12 @@ import Image from "next/image";
 import { InlineWidget } from "react-calendly";
 import BasicModal from "@/components/ui/BasicModal";
 import { useState } from "react";
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 export default function Home() {
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -44,21 +49,22 @@ export default function Home() {
                 </p>
               </div>
               <div className="slider-button mt-8 flex flex-col sm:items-start items-center">
-                <Link
-                  legacyBehavior
-                  href="/service">
-                  <span className="flex items-center bg-white gap-2 text-lg text-primary rounded-[32px] w-max px-6 py-4">
-                    <i className="bi bi-gear" /> Hire Us
-                  </span>
-                </Link>
+
                 <button
                   onClick={openModal}
                   type="button"
                   className="flex items-center gap-2 text-lg text-primary">
-                  <span className="mt-4 flex items-center bg-primary gap-2 text-lg text-white rounded-[32px] w-max px-6 py-4 hover:underline">
+                  <span className=" flex items-center bg-primary gap-2 text-lg text-white rounded-[32px] w-max px-6 py-4 hover:underline">
                     <i className="bi bi-pencil" /> Free Consultation
                   </span>
                 </button>
+                <Link
+                  legacyBehavior
+                  href="/service">
+                  <span className="mt-4 flex items-center bg-white gap-2 text-lg text-primary rounded-[32px] w-max px-6 py-4">
+                    <i className="bi bi-gear" /> Hire Us
+                  </span>
+                </Link>
               </div>
             </div>
             {/* Slider shapes */}
@@ -792,7 +798,7 @@ export default function Home() {
       <div
         className="case-study-area style-three"
         id="portfolio">
-        <div className="container mx-auto">
+        <div className="container mx-auto h-screen">
           <CaseStudies />
         </div>
       </div>
@@ -916,10 +922,60 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="row flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-0">
+            <div className="relative rounded-3xl overflow-hidden">
+              <div className="h-[400px] w-full relative">
+                <Image
+                  src="/assets/images/resource/team-1.jpg"
+                  fill={true}
+                  alt=""
+                  className="object-cover"
+                />
+              </div>
+              <div className="bg-primary absolute py-2 bottom-0 w-full">
+                <h4 className=" text-white text-center w-full">Ryan White</h4>
+                <p className="text-white text-center">CEO</p>
+              </div>
+            </div>
+
+            <div className="relative rounded-3xl overflow-hidden">
+              <div className="h-[400px] w-full relative">
+                <Image
+                  src="/assets/images/resource/team-2.jpg"
+                  fill={true}
+                  alt=""
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute bottom-0 w-full">
+                <div className="bg-primary absolute py-2 bottom-0 w-full">
+                  <h4 className=" text-white text-center w-full">Silva Garden</h4>
+                  <p className="text-white text-center">PMO</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative rounded-3xl overflow-hidden">
+              <div className="h-[400px] w-full relative">
+                <Image
+                  src="/assets/images/resource/team-3.jpg"
+                  fill={true}
+                  alt=""
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute bottom-0 w-full">
+                <div className="bg-primary absolute py-2 bottom-0 w-full">
+                  <h4 className=" text-white text-center w-full">Stacey White</h4>
+                  <p className="text-white text-center">CFO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <div className="row flex justify-center">
             <div className="col-lg-4 col-sm-6 px-4">
               <div className="single_team">
-                <div className="single_team_thumb1">
+                <div className="single_team_thumb1 ">
                   <Image
                     src="/assets/images/resource/team-1.jpg"
                     width={370}
@@ -1022,7 +1078,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* Section 9 */}
@@ -1031,7 +1087,7 @@ export default function Home() {
         id="contact">
         <div className="container mx-auto">
           <div className="row flex gap-8 flex-col sm:flex-row">
-            <div className="col-lg-6 col-md-6 pl-0">
+            <div className="sm:w-1/2 col-lg-6 col-md-6 pl-0">
               {/* Start Accordion */}
               <div className="tab_container">
                 <div className="consen-section-title white pb-40 mb-1">
@@ -1041,13 +1097,32 @@ export default function Home() {
                     Frequently Asked <span> Question </span>
                   </h2>
                 </div>
-                <div
-                  id="tab1"
-                  className="tab_content"></div>
+                <Accordion type="single" collapsible className="w-full min-w-[20rem]">
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger className="text-2xl text-white">Is it accessible?</AccordionTrigger>
+                    <AccordionContent className="text-white text-lg">
+                      Yes. It adheres to the WAI-ARIA design pattern.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger className="text-2xl text-white">Is it styled?</AccordionTrigger>
+                    <AccordionContent className="text-white text-lg">
+                      Yes. It comes with default styles that matches the other
+                      components&apos; aesthetic.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-3">
+                    <AccordionTrigger className="text-2xl text-white">Is it animated?</AccordionTrigger>
+                    <AccordionContent className="text-white text-lg">
+                      Yes. It&apos;s animated by default, but you can disable it if you
+                      prefer.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </div>
               {/* End Accordion */}
             </div>
-            <div className="col-lg-6 col-md-6">
+            <div className="sm:w-1/2 col-lg-6 col-md-6">
               <div className="contract-form-bg">
                 <div className="contact-form-title">
                   <h4> Free Consultant </h4>
