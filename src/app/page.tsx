@@ -13,12 +13,7 @@ import Image from "next/image";
 import { InlineWidget } from "react-calendly";
 import BasicModal from "@/components/ui/BasicModal";
 import { useState } from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 export default function Home() {
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -49,7 +44,6 @@ export default function Home() {
                 </p>
               </div>
               <div className="slider-button mt-8 flex flex-col sm:items-start items-center">
-
                 <button
                   onClick={openModal}
                   type="button"
@@ -1097,25 +1091,24 @@ export default function Home() {
                     Frequently Asked <span> Question </span>
                   </h2>
                 </div>
-                <Accordion type="single" collapsible className="w-full min-w-[20rem]">
+                <Accordion
+                  type="single"
+                  collapsible
+                  className="w-full min-w-[20rem]">
                   <AccordionItem value="item-1">
                     <AccordionTrigger className="text-2xl text-white">Is it accessible?</AccordionTrigger>
-                    <AccordionContent className="text-white text-lg">
-                      Yes. It adheres to the WAI-ARIA design pattern.
-                    </AccordionContent>
+                    <AccordionContent className="text-white text-lg">Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-2">
                     <AccordionTrigger className="text-2xl text-white">Is it styled?</AccordionTrigger>
                     <AccordionContent className="text-white text-lg">
-                      Yes. It comes with default styles that matches the other
-                      components&apos; aesthetic.
+                      Yes. It comes with default styles that matches the other components&apos; aesthetic.
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem value="item-3">
                     <AccordionTrigger className="text-2xl text-white">Is it animated?</AccordionTrigger>
                     <AccordionContent className="text-white text-lg">
-                      Yes. It&apos;s animated by default, but you can disable it if you
-                      prefer.
+                      Yes. It&apos;s animated by default, but you can disable it if you prefer.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

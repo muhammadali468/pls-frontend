@@ -211,12 +211,11 @@ const LandingHeader = () => {
                       Services <i className="bi bi-chevron-down"></i>
                     </Link>
                     <ul className="absolute bg-white w-64 shadow-lg rounded-lg !hidden group-hover:!block transition-opacity duration-300  ">
-                      {servicesData.map((service, i:any) => (
+                      {servicesData.map((service, i: any) => (
                         <li
                           key={i}
                           className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== service.length ? "border-b" : ""} border-gray-200`}>
                           {service}
-                          
                         </li>
                       ))}
                     </ul>
@@ -226,12 +225,11 @@ const LandingHeader = () => {
                       Industry <i className="bi bi-chevron-down"></i>
                     </Link>
                     <ul className="absolute bg-white w-72 shadow-lg rounded-lg !hidden group-hover:!block transition-opacity duration-300  ">
-                      {industryData.map((industry, i:any) => (
+                      {industryData.map((industry, i: any) => (
                         <li
                           key={i}
                           className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== industry.length ? "border-b" : ""} border-gray-200`}>
                           {industry}
-                          
                         </li>
                       ))}
                     </ul>
@@ -241,12 +239,11 @@ const LandingHeader = () => {
                       Technology <i className="bi bi-chevron-down"></i>
                     </Link>
                     <ul className="absolute bg-white w-64 shadow-lg rounded-lg !hidden group-hover:!block transition-opacity duration-300  ">
-                      {technologyData.map((technology, i:any) => (
+                      {technologyData.map((technology, i: any) => (
                         <li
                           key={i}
                           className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== technology.length ? "border-b" : ""} border-gray-200`}>
                           {technology}
-                          
                         </li>
                       ))}
                     </ul>
