@@ -18,14 +18,14 @@ export default function Home() {
 
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
-  const [modalName, setModalName] = useState("")
+  const [modalName, setModalName] = useState("");
   return (
     <>
       <LandingHeader />
       <BasicModal
         isOpen={isModalOpen}
         onClose={closeModal}>
-        {modalName === "hireUs" ?
+        {modalName === "hireUs" ? (
           <div className="max-w-5xl grid grid-cols-2">
             <div>
               <img
@@ -113,10 +113,12 @@ export default function Home() {
               </form>
               <div id="status" />
             </div>
-          </div> :
+          </div>
+        ) : (
           <div className="scrollbar-hidden">
             <InlineWidget url="https://calendly.com/ali-renesistech" />
-          </div>}
+          </div>
+        )}
       </BasicModal>
       <div
         className="slider-area slider2 flex items-center"
@@ -135,11 +137,10 @@ export default function Home() {
               </div>
               <div className="slider-button mt-8 flex flex-col sm:items-start items-center">
                 <button
-                  onClick={()=>{
-                    setModalName("")
-                    openModal()
-                  }
-                  }
+                  onClick={() => {
+                    setModalName("");
+                    openModal();
+                  }}
                   type="button"
                   className="flex items-center gap-2 text-lg text-primary">
                   <span className=" flex items-center bg-primary gap-2 text-lg text-white rounded-[32px] w-max px-6 py-4 hover:underline">
@@ -147,11 +148,10 @@ export default function Home() {
                   </span>
                 </button>
                 <button
-                  onClick={()=>{
-                    openModal()
-                    setModalName("hireUs")
-                  }}
-                  >
+                  onClick={() => {
+                    openModal();
+                    setModalName("hireUs");
+                  }}>
                   <span className="mt-4 flex items-center bg-white gap-2 text-lg text-primary rounded-[32px] w-max px-6 py-4">
                     <i className="bi bi-gear" /> Hire Us
                   </span>
