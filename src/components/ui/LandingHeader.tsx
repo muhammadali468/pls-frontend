@@ -48,75 +48,84 @@ const LandingHeader = () => {
       <BasicModal
         isOpen={isModalOpen}
         onClose={closeModal}>
-        <div className="contact_from_box py-40">
-          <div className="contact_title pb-4">
-            <h3>Get In Touch</h3>
+        <div className="max-w-5xl grid grid-cols-2 py-16">
+          <div>
+            <img
+              className="h-full object-cover"
+              src="./assets/images/resource/request-quote-modal.jpeg"
+              alt="request quote"
+            />
           </div>
-          <form
-            // onSubmit={(e) => e.preventDefault()}
-            action="#"
-            method="POST"
-            id="dreamit-form">
-            <div className="row">
-              <div className="col-lg-6">
-                <div className="form_box mb-30">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                  />
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="form_box mb-30">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                  />
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="form_box mb-30">
-                  <input
-                    type="text"
-                    name="phone"
-                    placeholder="Phone Number"
-                  />
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="form_box mb-30">
-                  <input
-                    type="text"
-                    name="web"
-                    placeholder="Website"
-                  />
-                </div>
-              </div>
-              <div className="col-lg-12">
-                <div className="form_box mb-30">
-                  <textarea
-                    name="message"
-                    id="message"
-                    cols={30}
-                    rows={10}
-                    placeholder="Your Message"
-                    defaultValue={""}
-                  />
-                </div>
-                <div className="quote_button">
-                  <button
-                    className="btn"
-                    type="submit">
-                    {" "}
-                    <i className="bi bi-gear" /> Free Consultant
-                  </button>
-                </div>
-              </div>
+          <div className="contact_from_box py-40">
+            <div className="contact_title pb-4">
+              <h3>Get In Touch</h3>
             </div>
-          </form>
-          <div id="status" />
+            <form
+              // onSubmit={(e) => e.preventDefault()}
+              action="#"
+              method="POST"
+              id="dreamit-form">
+              <div className="row">
+                <div className="col-lg-6">
+                  <div className="form_box mb-30">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Name"
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="form_box mb-30">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email Address"
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="form_box mb-30">
+                    <input
+                      type="text"
+                      name="phone"
+                      placeholder="Phone Number"
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="form_box mb-30">
+                    <input
+                      type="text"
+                      name="web"
+                      placeholder="Website"
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-12">
+                  <div className="form_box mb-30">
+                    <textarea
+                      name="message"
+                      id="message"
+                      cols={30}
+                      rows={10}
+                      placeholder="Your Message"
+                      defaultValue={""}
+                    />
+                  </div>
+                  <div className="quote_button">
+                    <button
+                      className="btn"
+                      type="submit">
+                      {" "}
+                      <i className="bi bi-gear" /> Free Consultant
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div id="status" />
+          </div>
         </div>
       </BasicModal>
       <div className="header_top_menu flex items-center justify-between landing_header ">
@@ -214,7 +223,7 @@ const LandingHeader = () => {
                       {servicesData.map((service, i: any) => (
                         <li
                           key={i}
-                          className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== service.length ? "border-b" : ""} border-gray-200`}>
+                          className={`flex gap-2 items-center px-4 py-2 text-primary hover:bg-primary hover:text-white duration-300 cursor-default ${i !== service.length ? "border-b" : ""} border-gray-200`}>
                           {service}
                         </li>
                       ))}
@@ -228,7 +237,7 @@ const LandingHeader = () => {
                       {industryData.map((industry, i: any) => (
                         <li
                           key={i}
-                          className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== industry.length ? "border-b" : ""} border-gray-200`}>
+                          className={`flex gap-2 items-center px-4 py-2 text-primary hover:bg-primary hover:text-white duration-300 cursor-default ${i !== industry.length ? "border-b" : ""} border-gray-200`}>
                           {industry}
                         </li>
                       ))}
@@ -242,7 +251,7 @@ const LandingHeader = () => {
                       {technologyData.map((technology, i: any) => (
                         <li
                           key={i}
-                          className={`flex gap-2 items-center px-4 py-2 text-primary ${i !== technology.length ? "border-b" : ""} border-gray-200`}>
+                          className={`flex gap-2 items-center px-4 py-2 text-primary hover:bg-primary hover:text-white duration-300 cursor-default ${i !== technology.length ? "border-b" : ""} border-gray-200`}>
                           {technology}
                         </li>
                       ))}

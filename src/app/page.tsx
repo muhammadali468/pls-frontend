@@ -8,7 +8,6 @@ import ProgressBar from "@/components/Progressbar";
 import Footer from "@/components/sections/Footer";
 import CaseStudies from "@/components/sections/casestudies";
 import LandingHeader from "@/components/ui/LandingHeader";
-import Preloader from "@/components/sections/Preloader";
 import Image from "next/image";
 import { InlineWidget } from "react-calendly";
 import BasicModal from "@/components/ui/BasicModal";
@@ -19,14 +18,105 @@ export default function Home() {
 
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
+  const [modalName, setModalName] = useState("")
   return (
     <>
-      <Preloader />
       <LandingHeader />
       <BasicModal
         isOpen={isModalOpen}
         onClose={closeModal}>
-        <InlineWidget url="https://calendly.com/ali-renesistech" />
+        {modalName === "hireUs" ?
+          <div className="max-w-5xl grid grid-cols-2">
+            <div>
+              <img
+                className="h-full object-cover"
+                src="./assets/images/resource/abouts_1_new.png"
+                alt="hire us"
+              />
+            </div>
+            <div className="contact_from_box py-40">
+              <div className="contact_title pb-4">
+                <h3>Hire Us</h3>
+              </div>
+              <form
+                // onSubmit={(e) => e.preventDefault()}
+                action="#"
+                method="POST"
+                id="dreamit-form">
+                <div className="row">
+                  <div className="col-lg-6">
+                    <div className="form_box mb-30">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="form_box mb-30">
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="form_box mb-30">
+                      <input
+                        type="text"
+                        name="phone"
+                        placeholder="Phone Number"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="form_box mb-30">
+                      <input
+                        type="text"
+                        name="details"
+                        placeholder="Details"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="form_box mb-30">
+                      <input
+                        type="text"
+                        name="address"
+                        placeholder="Address"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-12">
+                    <div className="form_box mb-30">
+                      <textarea
+                        name="message"
+                        id="message"
+                        cols={30}
+                        rows={10}
+                        placeholder="Your Message"
+                        defaultValue={""}
+                      />
+                    </div>
+                    <div className="quote_button">
+                      <button
+                        className="btn"
+                        type="submit">
+                        {" "}
+                        <i className="bi bi-gear" /> Hire Now!
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div id="status" />
+            </div>
+          </div> :
+          <div className="scrollbar-hidden">
+            <InlineWidget url="https://calendly.com/ali-renesistech" />
+          </div>}
       </BasicModal>
       <div
         className="slider-area slider2 flex items-center"
@@ -45,20 +135,27 @@ export default function Home() {
               </div>
               <div className="slider-button mt-8 flex flex-col sm:items-start items-center">
                 <button
-                  onClick={openModal}
+                  onClick={()=>{
+                    setModalName("")
+                    openModal()
+                  }
+                  }
                   type="button"
                   className="flex items-center gap-2 text-lg text-primary">
                   <span className=" flex items-center bg-primary gap-2 text-lg text-white rounded-[32px] w-max px-6 py-4 hover:underline">
                     <i className="bi bi-pencil" /> Free Consultation
                   </span>
                 </button>
-                <Link
-                  legacyBehavior
-                  href="/service">
+                <button
+                  onClick={()=>{
+                    openModal()
+                    setModalName("hireUs")
+                  }}
+                  >
                   <span className="mt-4 flex items-center bg-white gap-2 text-lg text-primary rounded-[32px] w-max px-6 py-4">
                     <i className="bi bi-gear" /> Hire Us
                   </span>
-                </Link>
+                </button>
               </div>
             </div>
             {/* Slider shapes */}

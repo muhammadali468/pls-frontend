@@ -265,6 +265,7 @@ a.meanmenu-reveal {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,4 +278,9 @@ a.meanmenu-reveal {
   box-shadow: "0 4px 6px rgba(0, 0, 0, 0.1)";
   text-align: "center";
   width: "300px";
+}
+@media screen and (min-width: 640px) {
+  .calendly-inline-widget {
+    width: 640px !important;
+  }
 }

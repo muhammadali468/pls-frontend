@@ -40,47 +40,40 @@ const ServiceDetail = () => {
                     </div>
                     <div className="service-details-content">
                       <div className="service-page-title">
-                        <h1>Innovative <span className="text-primary"> Web Application Services </span> With Next-Gen Technologies, Tailored for Your Business Needs</h1>
+                        <h1>
+                          Innovative <span className="text-primary"> Web Application Services </span> With Next-Gen Technologies, Tailored for Your
+                          Business Needs
+                        </h1>
                       </div>
                       <div className="serivce-details-desc">
                         {/* <h2 className="text-3xl">
                           Elevating Businesses with Next-Gen Technologies
                         </h2> */}
-                        <p >Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving digital success with a <span className="font-bold !text-[#686868]">robust technology stack.</span></p>
+                        <p>
+                          Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving
+                          digital success with a <span className="font-bold !text-[#686868]">robust technology stack.</span>
+                        </p>
                         <ul className="mt-4">
                           <li>
-                            <span className="text-primary font-bold"> Web Technologies:</span> <span className="italic"> React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js</span>
+                            <span className="text-primary font-bold"> Web Technologies:</span>{" "}
+                            <span className="italic"> React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js</span>
                           </li>
                           <li>
-                            <span className="text-primary font-bold">
-                              Backend Technologies:&nbsp;
-                            </span>
+                            <span className="text-primary font-bold">Backend Technologies:&nbsp;</span>
 
                             <span className="italic">
                               Node.js, Laravel (PHP), Django (Python), ASP .Net Core (C#), Springboot (Java), and Rails (Ruby)
                             </span>
-
                           </li>
                           <li>
-                            <span className="text-primary font-bold">
-                              Cloud Platforms:&nbsp;
-                            </span>
-                            <span className="italic">
-                              Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)
-                            </span>
+                            <span className="text-primary font-bold">Cloud Platforms:&nbsp;</span>
+                            <span className="italic">Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)</span>
                           </li>
                           <li>
-                            <span className="text-primary font-bold">
-                              CMS Platforms:&nbsp;
-                            </span>
-                            <span className="italic">
-                              WordPress,
-                              Drupal,
-                              Custom CMS Solutions
-                            </span>
+                            <span className="text-primary font-bold">CMS Platforms:&nbsp;</span>
+                            <span className="italic">WordPress, Drupal, Custom CMS Solutions</span>
                           </li>
                         </ul>
-
 
                         {/* <h3 className="text-2xl">
                             Featured Services:
@@ -149,7 +142,7 @@ const ServiceDetail = () => {
                         <h4> Performance </h4>
                       </div>
                       <div className="services-detials-desc">
-                        <p>Enable fast and  responsive web applications.</p>
+                        <p>Enable fast and responsive web applications.</p>
                       </div>
                     </div>
                   </div>
@@ -189,12 +182,15 @@ const ServiceDetail = () => {
                 <div className="col-lg-12">
                   <div className="service-details-content">
                     <div className="service-page-title2">
-                      <h2>Our Web Development Process
-                      </h2>
+                      <h2>Our Web Development Process</h2>
                     </div>
                     <div className="serivce-details-desc mt-2">
                       <p className="pb-35 max-w-2xl">
-                        At Prime Logic Solutions, we follow a strategic, streamlined process designed to ensure that your custom web development project is completed successfully, on time, and within your budget. Our dedicated team works closely with you at every stage, ensuring clear communication and collaboration throughout the entire development cycle. We focus on providing transparent, innovative solutions tailored to your unique business needs. From initial planning to final launch and ongoing support, our goal is to help you achieve long-term success with high-quality web applications.
+                        At Prime Logic Solutions, we follow a strategic, streamlined process designed to ensure that your custom web development
+                        project is completed successfully, on time, and within your budget. Our dedicated team works closely with you at every stage,
+                        ensuring clear communication and collaboration throughout the entire development cycle. We focus on providing transparent,
+                        innovative solutions tailored to your unique business needs. From initial planning to final launch and ongoing support, our
+                        goal is to help you achieve long-term success with high-quality web applications.
                       </p>
                     </div>
                   </div>
@@ -214,7 +210,6 @@ const ServiceDetail = () => {
                   </div>
                 </div> */}
               </div>
-
             </div>
             <div className="col-lg-4 col-md-12">
               {/* widget search */}
@@ -256,7 +251,6 @@ const ServiceDetail = () => {
                         legacyBehavior
                         href="/service-details">
                         Cloud-Based Web Application
-
                       </Link>
                     </li>
                     <li>
@@ -374,44 +368,37 @@ const ServiceDetail = () => {
               <div className="col-lg-7 col-md-6 mt-8">
                 <div className="service-details-icon-box">
                   <div className="service-page-title2">
-                    <h2>Why Choose <span className="text-primary"> PLS? </span></h2>
+                    <h2>
+                      Why Choose <span className="text-primary"> PLS? </span>
+                    </h2>
                   </div>
                   <div className="widget-service-details-icon mt-4">
                     <p>
-                      <i className="bi bi-check-lg" /> <span> Complete control over design, features, and functionality of website.
-                      </span>
+                      <i className="bi bi-check-lg" /> <span> Complete control over design, features, and functionality of website.</span>
                     </p>
                     <p>
-                      <i className="bi bi-check-lg" /> <span> Websites built to scale and grow with your business.
-                      </span>
+                      <i className="bi bi-check-lg" /> <span> Websites built to scale and grow with your business.</span>
                     </p>
                     <p>
-                      <i className="bi bi-check-lg" /> <span> Tailored experiences that align perfectly with your brand identity.
-                      </span>
+                      <i className="bi bi-check-lg" /> <span> Tailored experiences that align perfectly with your brand identity.</span>
                     </p>
                     <p>
-                      <i className="bi bi-check-lg" /> <span> Applying top-tier security measures to protect your website users.
-                      </span>
+                      <i className="bi bi-check-lg" /> <span> Applying top-tier security measures to protect your website users.</span>
                     </p>
                     <p>
-                      <i className="bi bi-check-lg" /> <span> Built-in SEO features to improve search engine rankings
-                      </span>
+                      <i className="bi bi-check-lg" /> <span> Built-in SEO features to improve search engine rankings</span>
                     </p>
                     <p>
-                      <i className="bi bi-check-lg" /> <span> Optimized websites for faster loading and better performance
-                      </span>
+                      <i className="bi bi-check-lg" /> <span> Optimized websites for faster loading and better performance</span>
                     </p>
                     <p>
-                      <i className="bi bi-check-lg" /> <span> Websites built to adapt and evolve with changing technologies.
-                      </span>
+                      <i className="bi bi-check-lg" /> <span> Websites built to adapt and evolve with changing technologies.</span>
                     </p>
                     <p>
-                      <i className="bi bi-check-lg" /> <span> Ensuring seamless user experience across all mobile devices.
-                      </span>
+                      <i className="bi bi-check-lg" /> <span> Ensuring seamless user experience across all mobile devices.</span>
                     </p>
                     <p>
-                      <i className="bi bi-check-lg" /> <span> Seamless integration with third-party tools and services.
-                      </span>
+                      <i className="bi bi-check-lg" /> <span> Seamless integration with third-party tools and services.</span>
                     </p>
                   </div>
                 </div>
@@ -431,7 +418,9 @@ const ServiceDetail = () => {
                     <h4> Plan Project </h4>
                   </div>
                   <div className="service-work-process-desc">
-                    <p className="font-bold my-4">We Begin with Understanding <br /> Your Business & Goals</p>
+                    <p className="font-bold my-4">
+                      We Begin with Understanding <br /> Your Business & Goals
+                    </p>
                     {/* <p>Actions:
                     In-depth consultation with stakeholders.
                     Research and analysis of business objectives.
@@ -441,12 +430,11 @@ const ServiceDetail = () => {
                     Clear project vision, defined goals, and a roadmap for success.</p> */}
 
                     <p className="!text-left">
-                      <span className="font-bold"> Actions:</span> In-depth consultation with stakeholders, business analysis, and defining project milestones, timelines, and objectives.
+                      <span className="font-bold"> Actions:</span> In-depth consultation with stakeholders, business analysis, and defining project
+                      milestones, timelines, and objectives.
                     </p>
                     <p className="mt-2 !text-left">
-                      <span className="font-bold">
-                        Outcome:&nbsp;
-                      </span>
+                      <span className="font-bold">Outcome:&nbsp;</span>
                       Clear project vision, defined goals, and a comprehensive roadmap for success.
                     </p>
                   </div>
@@ -464,16 +452,12 @@ const ServiceDetail = () => {
 
                   <div className="service-work-process-desc">
                     <p className="!text-left">
-                      <span className="font-bold">
-                        Actions:&nbsp;
-                      </span>
+                      <span className="font-bold">Actions:&nbsp;</span>
                       Wireframing, UI/UX design, backend development, frontend interfaces, and regular client feedback loops.
                     </p>
                     <p className="!text-left mt-2">
-                      <span className="font-bold ">
-                        Outcome:&nbsp;
-                      </span>
-                      A fully functional web application, designed to meet business goals.</p>
+                      <span className="font-bold ">Outcome:&nbsp;</span>A fully functional web application, designed to meet business goals.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -490,16 +474,12 @@ const ServiceDetail = () => {
                   </div>
                   <div className="service-work-process-desc">
                     <p className="!text-left">
-                      <span className="font-bold">
-                        Actions:&nbsp;
-                      </span>
+                      <span className="font-bold">Actions:&nbsp;</span>
                       Comprehensive testing (functional, usability, performance), bug fixing, refining features, and final deployment.
                     </p>
                     <p className="!text-left mt-2">
-                      <span className="font-bold ">
-                        Outcome:&nbsp;
-                      </span>
-                      A polished and live web application, ready for users.</p>
+                      <span className="font-bold ">Outcome:&nbsp;</span>A polished and live web application, ready for users.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -516,16 +496,12 @@ const ServiceDetail = () => {
 
                   <div className="service-work-process-desc">
                     <p className="!text-left">
-                      <span className="font-bold">
-                        Actions:&nbsp;
-                      </span>
+                      <span className="font-bold">Actions:&nbsp;</span>
                       Routine updates, security patches, new features from feedback, and website optimization for performance.
                     </p>
                     <p className="!text-left mt-2">
-                      <span className="font-bold ">
-                        Outcome:&nbsp;
-                      </span>
-                      A reliable, secure, and high-performing website.</p>
+                      <span className="font-bold ">Outcome:&nbsp;</span>A reliable, secure, and high-performing website.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -533,8 +509,16 @@ const ServiceDetail = () => {
             <div className="container mx-auto">
               <h3 className="mt-32 text-primary text-right">Ready to Build Your Custom Web Application?</h3>
               <div className="flex justify-end gap-4 items-center mt-8">
-                <Link className="bg-primary text-white hover:bg-white hover:text-primary px-4 py-2 rounded-2xl border border-transparent hover:border-primary duration-300" href="/service-details">Start Your Project Today</Link>
-                <Link className="bg-white text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-2xl border border-primary hover:border-transparent duration-300" href="/service-details">Request a Free Consultation</Link>
+                <Link
+                  className="bg-primary text-white hover:bg-white hover:text-primary px-4 py-2 rounded-2xl border border-transparent hover:border-primary duration-300"
+                  href="/service-details">
+                  Start Your Project Today
+                </Link>
+                <Link
+                  className="bg-white text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-2xl border border-primary hover:border-transparent duration-300"
+                  href="/service-details">
+                  Request a Free Consultation
+                </Link>
               </div>
             </div>
           </div>
