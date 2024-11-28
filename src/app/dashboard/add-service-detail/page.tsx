@@ -23,42 +23,44 @@ const AddServiceDetails = () => {
   useEffect(() => {
     // Function to handle setting a character limit for editable elements
     const setMaxLengthForEditableElements = () => {
-      const editableElements = document.querySelectorAll<HTMLElement>('.editable');
+      const editableElements = document.querySelectorAll<HTMLElement>(".editable");
 
       editableElements.forEach((element) => {
-        const maxLength = parseInt(element.getAttribute('data-maxlength') || '0', 10);
+        const maxLength = parseInt(element.getAttribute("data-maxlength") || "0", 10);
 
         // Function to handle keydown and prevent typing beyond the max length, except for backspace
         const handleKeyDown = (e: KeyboardEvent) => {
           const target = e.target as HTMLElement; // Type assertion for target
 
           // Check if the key is backspace or delete, which should always be allowed
-          if (e.key !== 'Backspace' && e.key !== 'Delete' && target && target.innerText.length >= maxLength) {
+          if (e.key !== "Backspace" && e.key !== "Delete" && target && target.innerText.length >= maxLength) {
             // Prevent further typing if the max length is reached
             e.preventDefault();
           }
         };
 
-        element.addEventListener('keydown', handleKeyDown);
+        element.addEventListener("keydown", handleKeyDown);
 
         // Cleanup event listener on component unmount
         return () => {
-          element.removeEventListener('keydown', handleKeyDown);
+          element.removeEventListener("keydown", handleKeyDown);
         };
       });
     };
 
     // Initialize the function
     setMaxLengthForEditableElements();
-
   }, []);
   return (
     <>
       <section className="py-16">
         <div className="mx-auto max-w-screen-2xl service-detials-area !p-0">
-          <Link href="/dashboard" className="font-bold text-black">
+          <Link
+            href="/dashboard"
+            className="font-bold text-black">
             <i className="bi bi-arrow-left mr-2"></i>
-            Back To Dashboard</Link>
+            Back To Dashboard
+          </Link>
           <div className="mt-8">
             <Tabs className="row grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="col-lg-8 col-md-12">
@@ -88,140 +90,347 @@ const AddServiceDetails = () => {
                       />
                       <TabPanel className="service-details-content">
                         <div className="service-page-title">
-                          <h1 contentEditable suppressContentEditableWarning data-maxlength={87} className="line-clamp-3 overflow-hidden">
+                          <h1
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={87}
+                            className="line-clamp-3 overflow-hidden">
                             Innovative <span className="text-primary"> Web Application Services </span> With Next-Gen Technologies, Tailored for Your
                             Business Needs
                           </h1>
                         </div>
                         <div className="serivce-details-desc">
-                          <p contentEditable suppressContentEditableWarning data-maxlength={187}>
+                          <p
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={187}>
                             Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving
                             digital success with a <span className="font-bold !text-[#686868]">robust technology stack.</span>
                           </p>
                           <ul className="mt-4">
-                            <li className="editable" contentEditable suppressContentEditableWarning data-maxlength={50}>
+                            <li
+                              className="editable"
+                              contentEditable
+                              suppressContentEditableWarning
+                              data-maxlength={50}>
                               <span className="text-primary font-bold"> Web Technologies:</span>{" "}
                               <span className="italic"> React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js</span>
                             </li>
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold">Backend Technologies:&nbsp;</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                Backend Technologies:&nbsp;
+                              </span>
 
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic">
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
                                 Node.js, Laravel (PHP), Django (Python), ASP .Net Core (C#), Springboot (Java), and Rails (Ruby)
                               </span>
                             </li>
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold">Cloud Platforms:&nbsp;</span>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic">Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                Cloud Platforms:&nbsp;
+                              </span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
+                                Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)
+                              </span>
                             </li>
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold">CMS Platforms:&nbsp;</span>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic">WordPress, Drupal, Custom CMS Solutions</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                CMS Platforms:&nbsp;
+                              </span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
+                                WordPress, Drupal, Custom CMS Solutions
+                              </span>
                             </li>
                           </ul>
                         </div>
                       </TabPanel>
                       <TabPanel className="service-details-content">
                         <div className="service-page-title">
-                          <h1 contentEditable suppressContentEditableWarning data-maxlength={50}>
+                          <h1
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
                             Innovative <span className="text-primary"> Cloud Based Services </span> With Next-Gen Technologies, Tailored for Your
                             Business Needs
                           </h1>
                         </div>
                         <div className="serivce-details-desc">
-                          <p contentEditable suppressContentEditableWarning data-maxlength={50}>
+                          <p
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
                             Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving
                             digital success with a <span className="font-bold !text-[#686868]">robust technology stack.</span>
                           </p>
                           <ul className="mt-4">
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold"> Web Technologies:</span>{" "}
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic"> React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                {" "}
+                                Web Technologies:
+                              </span>{" "}
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
+                                {" "}
+                                React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js
+                              </span>
                             </li>
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold">Backend Technologies:&nbsp;</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                Backend Technologies:&nbsp;
+                              </span>
 
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic">
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
                                 Node.js, Laravel (PHP), Django (Python), ASP .Net Core (C#), Springboot (Java), and Rails (Ruby)
                               </span>
                             </li>
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold">Cloud Platforms:&nbsp;</span>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic">Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                Cloud Platforms:&nbsp;
+                              </span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
+                                Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)
+                              </span>
                             </li>
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold">CMS Platforms:&nbsp;</span>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic">WordPress, Drupal, Custom CMS Solutions</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                CMS Platforms:&nbsp;
+                              </span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
+                                WordPress, Drupal, Custom CMS Solutions
+                              </span>
                             </li>
                           </ul>
                         </div>
                       </TabPanel>
                       <TabPanel className="service-details-content">
                         <div className="service-page-title">
-                          <h1 contentEditable suppressContentEditableWarning data-maxlength={50}>
+                          <h1
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
                             Innovative <span className="text-primary"> Cloud Based Services </span> With Next-Gen Technologies, Tailored for Your
                             Business Needs
                           </h1>
                         </div>
                         <div className="serivce-details-desc">
-                          <p contentEditable suppressContentEditableWarning data-maxlength={50}>
+                          <p
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
                             Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving
                             digital success with a <span className="font-bold !text-[#686868]">robust technology stack.</span>
                           </p>
                           <ul className="mt-4">
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold"> Web Technologies:</span>{" "}
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic"> React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                {" "}
+                                Web Technologies:
+                              </span>{" "}
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
+                                {" "}
+                                React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js
+                              </span>
                             </li>
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold">Backend Technologies:&nbsp;</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                Backend Technologies:&nbsp;
+                              </span>
 
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic">
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
                                 Node.js, Laravel (PHP), Django (Python), ASP .Net Core (C#), Springboot (Java), and Rails (Ruby)
                               </span>
                             </li>
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold">Cloud Platforms:&nbsp;</span>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic">Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                Cloud Platforms:&nbsp;
+                              </span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
+                                Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)
+                              </span>
                             </li>
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold">CMS Platforms:&nbsp;</span>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic">WordPress, Drupal, Custom CMS Solutions</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                CMS Platforms:&nbsp;
+                              </span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
+                                WordPress, Drupal, Custom CMS Solutions
+                              </span>
                             </li>
                           </ul>
                         </div>
                       </TabPanel>
                       <TabPanel className="service-details-content">
                         <div className="service-page-title">
-                          <h1 contentEditable suppressContentEditableWarning data-maxlength={50}>
+                          <h1
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
                             Innovative <span className="text-primary"> Cloud Based Services </span> With Next-Gen Technologies, Tailored for Your
                             Business Needs
                           </h1>
                         </div>
                         <div className="serivce-details-desc">
-                          <p contentEditable suppressContentEditableWarning data-maxlength={50}>
+                          <p
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
                             Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving
                             digital success with a <span className="font-bold !text-[#686868]">robust technology stack.</span>
                           </p>
                           <ul className="mt-4">
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold"> Web Technologies:</span>{" "}
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic"> React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                {" "}
+                                Web Technologies:
+                              </span>{" "}
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
+                                {" "}
+                                React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js
+                              </span>
                             </li>
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold">Backend Technologies:&nbsp;</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                Backend Technologies:&nbsp;
+                              </span>
 
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic">
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
                                 Node.js, Laravel (PHP), Django (Python), ASP .Net Core (C#), Springboot (Java), and Rails (Ruby)
                               </span>
                             </li>
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold">Cloud Platforms:&nbsp;</span>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic">Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                Cloud Platforms:&nbsp;
+                              </span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
+                                Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)
+                              </span>
                             </li>
                             <li>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="text-primary font-bold">CMS Platforms:&nbsp;</span>
-                              <span contentEditable suppressContentEditableWarning data-maxlength={50} className="italic">WordPress, Drupal, Custom CMS Solutions</span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="text-primary font-bold">
+                                CMS Platforms:&nbsp;
+                              </span>
+                              <span
+                                contentEditable
+                                suppressContentEditableWarning
+                                data-maxlength={50}
+                                className="italic">
+                                WordPress, Drupal, Custom CMS Solutions
+                              </span>
                             </li>
                           </ul>
                         </div>
@@ -275,10 +484,21 @@ const AddServiceDetails = () => {
                           />
                         </div>
                         <div className="service-details-title mt-4">
-                          <h4 contentEditable suppressContentEditableWarning data-maxlength={50}> Scalibility </h4>
+                          <h4
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
+                            {" "}
+                            Scalibility{" "}
+                          </h4>
                         </div>
                         <div className="services-detials-desc">
-                          <p contentEditable suppressContentEditableWarning data-maxlength={50}>Ensure your application scales seamlessly.</p>
+                          <p
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
+                            Ensure your application scales seamlessly.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -294,10 +514,21 @@ const AddServiceDetails = () => {
                           />
                         </div>
                         <div className="service-details-title mt-4">
-                          <h4 contentEditable suppressContentEditableWarning data-maxlength={50}> Performance </h4>
+                          <h4
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
+                            {" "}
+                            Performance{" "}
+                          </h4>
                         </div>
                         <div className="services-detials-desc">
-                          <p contentEditable suppressContentEditableWarning data-maxlength={50}>Enable fast and responsive web applications.</p>
+                          <p
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
+                            Enable fast and responsive web applications.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -312,10 +543,20 @@ const AddServiceDetails = () => {
                           />
                         </div>
                         <div className="service-details-title">
-                          <h4 contentEditable suppressContentEditableWarning data-maxlength={50}>Security</h4>
+                          <h4
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
+                            Security
+                          </h4>
                         </div>
                         <div className="services-detials-desc">
-                          <p contentEditable suppressContentEditableWarning data-maxlength={50}>Provide robust, secure and server-side solutions.</p>
+                          <p
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
+                            Provide robust, secure and server-side solutions.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -330,10 +571,21 @@ const AddServiceDetails = () => {
                           />
                         </div>
                         <div className="service-details-title mt-4">
-                          <h4 contentEditable suppressContentEditableWarning data-maxlength={50}> Customization </h4>
+                          <h4
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
+                            {" "}
+                            Customization{" "}
+                          </h4>
                         </div>
                         <div className="services-detials-desc">
-                          <p contentEditable suppressContentEditableWarning data-maxlength={50}>Personalized user experiences and mobile-first design.</p>
+                          <p
+                            contentEditable
+                            suppressContentEditableWarning
+                            data-maxlength={50}>
+                            Personalized user experiences and mobile-first design.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -341,10 +593,19 @@ const AddServiceDetails = () => {
                   <div className="col-lg-12">
                     <div className="service-details-content">
                       <div className="service-page-title2">
-                        <h2 contentEditable suppressContentEditableWarning data-maxlength={50} className="text-4xl font-bold">Our Web Development Process</h2>
+                        <h2
+                          contentEditable
+                          suppressContentEditableWarning
+                          data-maxlength={50}
+                          className="text-4xl font-bold">
+                          Our Web Development Process
+                        </h2>
                       </div>
                       <div className="serivce-details-desc mt-2">
-                        <p contentEditable suppressContentEditableWarning className="mb-35 max-w-2xl">
+                        <p
+                          contentEditable
+                          suppressContentEditableWarning
+                          className="mb-35 max-w-2xl">
                           At Prime Logic Solutions, we follow a strategic, streamlined process designed to ensure that your custom web development
                           project is completed successfully, on time, and within your budget. Our dedicated team works closely with you at every
                           stage, ensuring clear communication and collaboration throughout the entire development cycle. We focus on providing
@@ -354,8 +615,6 @@ const AddServiceDetails = () => {
                       </div>
                     </div>
                   </div>
-
-
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
@@ -368,7 +627,10 @@ const AddServiceDetails = () => {
                   <div className="widget-categories-menu">
                     <TabList as="ul">
                       <Tab as="li">
-                        <p contentEditable suppressContentEditableWarning data-maxlength={50}>
+                        <p
+                          contentEditable
+                          suppressContentEditableWarning
+                          data-maxlength={50}>
                           Custom Web Development
                         </p>
                       </Tab>
@@ -470,37 +732,101 @@ const AddServiceDetails = () => {
                 <div className="col-lg-7 col-md-6 mt-8">
                   <div className="service-details-icon-box">
                     <div className="service-page-title2">
-                      <h2 contentEditable suppressContentEditableWarning className="text-4xl font-bold">
-                        Why Choose <span contentEditable suppressContentEditableWarning className="text-primary"> PLS? </span>
+                      <h2
+                        contentEditable
+                        suppressContentEditableWarning
+                        className="text-4xl font-bold">
+                        Why Choose{" "}
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning
+                          className="text-primary">
+                          {" "}
+                          PLS?{" "}
+                        </span>
                       </h2>
                     </div>
                     <div className="widget-service-details-icon mt-4">
                       <p>
-                        <i className="bi bi-check-lg" /> <span contentEditable suppressContentEditableWarning> Complete control over design, features, and functionality of website.</span>
+                        <i className="bi bi-check-lg" />{" "}
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning>
+                          {" "}
+                          Complete control over design, features, and functionality of website.
+                        </span>
                       </p>
                       <p>
-                        <i className="bi bi-check-lg" /> <span contentEditable suppressContentEditableWarning> Websites built to scale and grow with your business.</span>
+                        <i className="bi bi-check-lg" />{" "}
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning>
+                          {" "}
+                          Websites built to scale and grow with your business.
+                        </span>
                       </p>
                       <p>
-                        <i className="bi bi-check-lg" /> <span contentEditable suppressContentEditableWarning> Tailored experiences that align perfectly with your brand identity.</span>
+                        <i className="bi bi-check-lg" />{" "}
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning>
+                          {" "}
+                          Tailored experiences that align perfectly with your brand identity.
+                        </span>
                       </p>
                       <p>
-                        <i className="bi bi-check-lg" /> <span contentEditable suppressContentEditableWarning> Applying top-tier security measures to protect your website users.</span>
+                        <i className="bi bi-check-lg" />{" "}
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning>
+                          {" "}
+                          Applying top-tier security measures to protect your website users.
+                        </span>
                       </p>
                       <p>
-                        <i className="bi bi-check-lg" /> <span contentEditable suppressContentEditableWarning> Built-in SEO features to improve search engine rankings</span>
+                        <i className="bi bi-check-lg" />{" "}
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning>
+                          {" "}
+                          Built-in SEO features to improve search engine rankings
+                        </span>
                       </p>
                       <p>
-                        <i className="bi bi-check-lg" /> <span contentEditable suppressContentEditableWarning> Optimized websites for faster loading and better performance</span>
+                        <i className="bi bi-check-lg" />{" "}
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning>
+                          {" "}
+                          Optimized websites for faster loading and better performance
+                        </span>
                       </p>
                       <p>
-                        <i className="bi bi-check-lg" /> <span contentEditable suppressContentEditableWarning> Websites built to adapt and evolve with changing technologies.</span>
+                        <i className="bi bi-check-lg" />{" "}
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning>
+                          {" "}
+                          Websites built to adapt and evolve with changing technologies.
+                        </span>
                       </p>
                       <p>
-                        <i className="bi bi-check-lg" /> <span contentEditable suppressContentEditableWarning> Ensuring seamless user experience across all mobile devices.</span>
+                        <i className="bi bi-check-lg" />{" "}
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning>
+                          {" "}
+                          Ensuring seamless user experience across all mobile devices.
+                        </span>
                       </p>
                       <p>
-                        <i className="bi bi-check-lg" /> <span contentEditable suppressContentEditableWarning> Seamless integration with third-party tools and services.</span>
+                        <i className="bi bi-check-lg" />{" "}
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning>
+                          {" "}
+                          Seamless integration with third-party tools and services.
+                        </span>
                       </p>
                     </div>
                   </div>
@@ -517,19 +843,43 @@ const AddServiceDetails = () => {
                       <span>01</span>
                     </div>
                     <div className="service-work-process-title">
-                      <h4 contentEditable suppressContentEditableWarning> Plan Project </h4>
+                      <h4
+                        contentEditable
+                        suppressContentEditableWarning>
+                        {" "}
+                        Plan Project{" "}
+                      </h4>
                     </div>
                     <div className="service-work-process-desc">
-                      <p contentEditable suppressContentEditableWarning className="font-bold my-4">
+                      <p
+                        contentEditable
+                        suppressContentEditableWarning
+                        className="font-bold my-4">
                         We Begin with Understanding <br /> Your Business & Goals
                       </p>
-                      <p contentEditable suppressContentEditableWarning className="!text-left">
-                        <span contentEditable suppressContentEditableWarning className="font-bold"> Actions:</span>
-                        In-depth consultation with stakeholders, business analysis, and defining project
-                        milestones, timelines, and objectives.
+                      <p
+                        contentEditable
+                        suppressContentEditableWarning
+                        className="!text-left">
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning
+                          className="font-bold">
+                          {" "}
+                          Actions:
+                        </span>
+                        In-depth consultation with stakeholders, business analysis, and defining project milestones, timelines, and objectives.
                       </p>
-                      <p contentEditable suppressContentEditableWarning className="mt-2 !text-left">
-                        <span contentEditable suppressContentEditableWarning className="font-bold">Outcome:&nbsp;</span>
+                      <p
+                        contentEditable
+                        suppressContentEditableWarning
+                        className="mt-2 !text-left">
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning
+                          className="font-bold">
+                          Outcome:&nbsp;
+                        </span>
                         Clear project vision, defined goals, and a comprehensive roadmap for success.
                       </p>
                     </div>
@@ -541,17 +891,44 @@ const AddServiceDetails = () => {
                       <span>02</span>
                     </div>
                     <div className="service-work-process-title">
-                      <h4 contentEditable suppressContentEditableWarning> Design & Dev </h4>
+                      <h4
+                        contentEditable
+                        suppressContentEditableWarning>
+                        {" "}
+                        Design & Dev{" "}
+                      </h4>
                     </div>
-                    <p className="font-bold my-4 max-w-80" contentEditable suppressContentEditableWarning>Transforming Ideas into Functional, Stunning Designs </p>
+                    <p
+                      className="font-bold my-4 max-w-80"
+                      contentEditable
+                      suppressContentEditableWarning>
+                      Transforming Ideas into Functional, Stunning Designs{" "}
+                    </p>
 
                     <div className="service-work-process-desc">
-                      <p contentEditable suppressContentEditableWarning className="!text-left">
-                        <span contentEditable suppressContentEditableWarning className="font-bold">Actions:&nbsp;</span>
+                      <p
+                        contentEditable
+                        suppressContentEditableWarning
+                        className="!text-left">
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning
+                          className="font-bold">
+                          Actions:&nbsp;
+                        </span>
                         Wireframing, UI/UX design, backend development, frontend interfaces, and regular client feedback loops.
                       </p>
-                      <p contentEditable suppressContentEditableWarning className="!text-left mt-2">
-                        <span contentEditable suppressContentEditableWarning className="font-bold ">Outcome:&nbsp;</span>A fully functional web application, designed to meet business goals.
+                      <p
+                        contentEditable
+                        suppressContentEditableWarning
+                        className="!text-left mt-2">
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning
+                          className="font-bold ">
+                          Outcome:&nbsp;
+                        </span>
+                        A fully functional web application, designed to meet business goals.
                       </p>
                     </div>
                   </div>
@@ -562,18 +939,45 @@ const AddServiceDetails = () => {
                       <span>03</span>
                     </div>
                     <div className="service-work-process-title">
-                      <h4 contentEditable suppressContentEditableWarning> Testing & Launch </h4>
+                      <h4
+                        contentEditable
+                        suppressContentEditableWarning>
+                        {" "}
+                        Testing & Launch{" "}
+                      </h4>
                     </div>
                     <div className="w-full flex justify-center">
-                      <p contentEditable suppressContentEditableWarning className="font-bold my-4 max-w-56 text-center">Rigorous Testing to Ensure High-Quality Deliverables</p>
+                      <p
+                        contentEditable
+                        suppressContentEditableWarning
+                        className="font-bold my-4 max-w-56 text-center">
+                        Rigorous Testing to Ensure High-Quality Deliverables
+                      </p>
                     </div>
                     <div className="service-work-process-desc">
-                      <p contentEditable suppressContentEditableWarning className="!text-left">
-                        <span contentEditable suppressContentEditableWarning className="font-bold">Actions:&nbsp;</span>
+                      <p
+                        contentEditable
+                        suppressContentEditableWarning
+                        className="!text-left">
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning
+                          className="font-bold">
+                          Actions:&nbsp;
+                        </span>
                         Comprehensive testing (functional, usability, performance), bug fixing, refining features, and final deployment.
                       </p>
-                      <p contentEditable suppressContentEditableWarning className="!text-left mt-2">
-                        <span contentEditable suppressContentEditableWarning className="font-bold ">Outcome:&nbsp;</span>A polished and live web application, ready for users.
+                      <p
+                        contentEditable
+                        suppressContentEditableWarning
+                        className="!text-left mt-2">
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning
+                          className="font-bold ">
+                          Outcome:&nbsp;
+                        </span>
+                        A polished and live web application, ready for users.
                       </p>
                     </div>
                   </div>
@@ -585,16 +989,37 @@ const AddServiceDetails = () => {
                     </div>
 
                     <div className="service-work-process-title">
-                      <h4 contentEditable suppressContentEditableWarning> Ongoing Support </h4>
+                      <h4
+                        contentEditable
+                        suppressContentEditableWarning>
+                        {" "}
+                        Ongoing Support{" "}
+                      </h4>
                     </div>
-                    <p contentEditable suppressContentEditableWarning className="font-bold my-4">Ensuring Continuous Success with Ongoing Support</p>
+                    <p
+                      contentEditable
+                      suppressContentEditableWarning
+                      className="font-bold my-4">
+                      Ensuring Continuous Success with Ongoing Support
+                    </p>
 
                     <div className="service-work-process-desc">
-                      <p contentEditable suppressContentEditableWarning className="!text-left">
-                        <span contentEditable suppressContentEditableWarning className="font-bold">Actions:&nbsp;</span>
+                      <p
+                        contentEditable
+                        suppressContentEditableWarning
+                        className="!text-left">
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning
+                          className="font-bold">
+                          Actions:&nbsp;
+                        </span>
                         Routine updates, security patches, new features from feedback, and website optimization for performance.
                       </p>
-                      <p contentEditable suppressContentEditableWarning className="!text-left mt-2">
+                      <p
+                        contentEditable
+                        suppressContentEditableWarning
+                        className="!text-left mt-2">
                         <span className="font-bold ">Outcome:&nbsp;</span>A reliable, secure, and high-performing website.
                       </p>
                     </div>
@@ -602,7 +1027,12 @@ const AddServiceDetails = () => {
                 </div>
               </div>
               <div className="container mx-auto">
-                <h3 className="mt-32 text-primary text-right" contentEditable suppressContentEditableWarning>Ready to Build Your Custom Web Application?</h3>
+                <h3
+                  className="mt-32 text-primary text-right"
+                  contentEditable
+                  suppressContentEditableWarning>
+                  Ready to Build Your Custom Web Application?
+                </h3>
                 <div className="flex justify-end gap-4 items-center mt-8">
                   <Link
                     className="bg-primary text-white hover:bg-white hover:text-primary px-4 py-2 rounded-2xl border border-transparent hover:border-primary duration-300"

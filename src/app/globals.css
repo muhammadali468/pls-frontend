@@ -584,6 +584,6 @@ a.meanmenu-reveal {
   filter: brightness(0) invert(1);
   opacity: 0.24;
 }
-.react-tabs__tab--selected{
-  @apply !bg-primary !text-white
+.react-tabs__tab--selected {
+  @apply !bg-primary !text-white;
 }
