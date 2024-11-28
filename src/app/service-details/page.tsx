@@ -3,6 +3,8 @@ import Footer from "@/components/sections/Footer";
 import LandingHeader from "@/components/ui/LandingHeader";
 import Link from "next/link";
 import { useState } from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+
 const ServiceDetail = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -27,7 +29,7 @@ const ServiceDetail = () => {
       <LandingHeader />
       <div className="service-detials-area">
         <div className="max-w-screen-2xl mx-auto">
-          <div className="row grid grid-cols-1 lg:grid-cols-2 gap-8 pt-40">
+          <Tabs className="row grid grid-cols-1 lg:grid-cols-2 gap-8 pt-40">
             <div className="col-lg-8 col-md-12">
               <div className="row">
                 <div className="col-lg-12 col-sm-12">
@@ -38,7 +40,7 @@ const ServiceDetail = () => {
                         alt=""
                       />
                     </div>
-                    <div className="service-details-content">
+                    <TabPanel className="service-details-content">
                       <div className="service-page-title">
                         <h1>
                           Innovative <span className="text-primary"> Web Application Services </span> With Next-Gen Technologies, Tailored for Your
@@ -46,9 +48,6 @@ const ServiceDetail = () => {
                         </h1>
                       </div>
                       <div className="serivce-details-desc">
-                        {/* <h2 className="text-3xl">
-                          Elevating Businesses with Next-Gen Technologies
-                        </h2> */}
                         <p>
                           Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving
                           digital success with a <span className="font-bold !text-[#686868]">robust technology stack.</span>
@@ -74,43 +73,148 @@ const ServiceDetail = () => {
                             <span className="italic">WordPress, Drupal, Custom CMS Solutions</span>
                           </li>
                         </ul>
-
-                        {/* <h3 className="text-2xl">
-                            Featured Services:
-                          </h3>
-                          <h4 className="text-xl text-primary">
-                            Custom Web Development:
-                          </h4>
-                          <p>
-                          Build responsive and user-friendly websites tailored to your unique business requirements.
-                          </p>
-
-                          <h4 className="text-xl">
-                          Cloud-Based Web Applications:
-                          </h4>
-                          <p>
-                          Leverage the power of the cloud to create scalable and secure web apps with seamless integrations.
-                          </p>
-                          <h4 className="text-xl">
-                          Enterprise Solutions:
-                          </h4>
-                          <p>
-                          Streamline your business operations with enterprise-grade web applications that enhance productivity.
-                          </p>
-                          <h4 className="text-xl">
-                          Content Management Systems (CMS):
-                          </h4>
-                          <p>
-                          Effortlessly manage your content with CMS platforms like WordPress, Drupal, or custom-built solutions.
-                          </p>
-                          <h4 className="text-xl">
-                          Progressive Web Applications (PWA):
-                          </h4>
-                          <p>
-                          Combine the best of web and mobile technologies to deliver fast and reliable experiences.
-                          </p> */}
                       </div>
-                    </div>
+                    </TabPanel>
+                    <TabPanel className="service-details-content">
+                      <div className="service-page-title">
+                        <h1>
+                          Innovative <span className="text-primary"> Cloud Based Services </span> With Next-Gen Technologies, Tailored for Your
+                          Business Needs
+                        </h1>
+                      </div>
+                      <div className="serivce-details-desc">
+                        <p>
+                          Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving
+                          digital success with a <span className="font-bold !text-[#686868]">robust technology stack.</span>
+                        </p>
+                        <ul className="mt-4">
+                          <li>
+                            <span className="text-primary font-bold"> Web Technologies:</span>{" "}
+                            <span className="italic"> React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js</span>
+                          </li>
+                          <li>
+                            <span className="text-primary font-bold">Backend Technologies:&nbsp;</span>
+
+                            <span className="italic">
+                              Node.js, Laravel (PHP), Django (Python), ASP .Net Core (C#), Springboot (Java), and Rails (Ruby)
+                            </span>
+                          </li>
+                          <li>
+                            <span className="text-primary font-bold">Cloud Platforms:&nbsp;</span>
+                            <span className="italic">Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)</span>
+                          </li>
+                          <li>
+                            <span className="text-primary font-bold">CMS Platforms:&nbsp;</span>
+                            <span className="italic">WordPress, Drupal, Custom CMS Solutions</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </TabPanel>
+                    <TabPanel className="service-details-content">
+                      <div className="service-page-title">
+                        <h1>
+                          Innovative <span className="text-primary"> Cloud Based Services </span> With Next-Gen Technologies, Tailored for Your
+                          Business Needs
+                        </h1>
+                      </div>
+                      <div className="serivce-details-desc">
+                        <p>
+                          Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving
+                          digital success with a <span className="font-bold !text-[#686868]">robust technology stack.</span>
+                        </p>
+                        <ul className="mt-4">
+                          <li>
+                            <span className="text-primary font-bold"> Web Technologies:</span>{" "}
+                            <span className="italic"> React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js</span>
+                          </li>
+                          <li>
+                            <span className="text-primary font-bold">Backend Technologies:&nbsp;</span>
+
+                            <span className="italic">
+                              Node.js, Laravel (PHP), Django (Python), ASP .Net Core (C#), Springboot (Java), and Rails (Ruby)
+                            </span>
+                          </li>
+                          <li>
+                            <span className="text-primary font-bold">Cloud Platforms:&nbsp;</span>
+                            <span className="italic">Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)</span>
+                          </li>
+                          <li>
+                            <span className="text-primary font-bold">CMS Platforms:&nbsp;</span>
+                            <span className="italic">WordPress, Drupal, Custom CMS Solutions</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </TabPanel>
+                    <TabPanel className="service-details-content">
+                      <div className="service-page-title">
+                        <h1>
+                          Innovative <span className="text-primary"> Cloud Based Services </span> With Next-Gen Technologies, Tailored for Your
+                          Business Needs
+                        </h1>
+                      </div>
+                      <div className="serivce-details-desc">
+                        <p>
+                          Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving
+                          digital success with a <span className="font-bold !text-[#686868]">robust technology stack.</span>
+                        </p>
+                        <ul className="mt-4">
+                          <li>
+                            <span className="text-primary font-bold"> Web Technologies:</span>{" "}
+                            <span className="italic"> React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js</span>
+                          </li>
+                          <li>
+                            <span className="text-primary font-bold">Backend Technologies:&nbsp;</span>
+
+                            <span className="italic">
+                              Node.js, Laravel (PHP), Django (Python), ASP .Net Core (C#), Springboot (Java), and Rails (Ruby)
+                            </span>
+                          </li>
+                          <li>
+                            <span className="text-primary font-bold">Cloud Platforms:&nbsp;</span>
+                            <span className="italic">Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)</span>
+                          </li>
+                          <li>
+                            <span className="text-primary font-bold">CMS Platforms:&nbsp;</span>
+                            <span className="italic">WordPress, Drupal, Custom CMS Solutions</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </TabPanel>
+                    <TabPanel className="service-details-content">
+                      <div className="service-page-title">
+                        <h1>
+                          Innovative <span className="text-primary"> Cloud Based Services </span> With Next-Gen Technologies, Tailored for Your
+                          Business Needs
+                        </h1>
+                      </div>
+                      <div className="serivce-details-desc">
+                        <p>
+                          Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving
+                          digital success with a <span className="font-bold !text-[#686868]">robust technology stack.</span>
+                        </p>
+                        <ul className="mt-4">
+                          <li>
+                            <span className="text-primary font-bold"> Web Technologies:</span>{" "}
+                            <span className="italic"> React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js</span>
+                          </li>
+                          <li>
+                            <span className="text-primary font-bold">Backend Technologies:&nbsp;</span>
+
+                            <span className="italic">
+                              Node.js, Laravel (PHP), Django (Python), ASP .Net Core (C#), Springboot (Java), and Rails (Ruby)
+                            </span>
+                          </li>
+                          <li>
+                            <span className="text-primary font-bold">Cloud Platforms:&nbsp;</span>
+                            <span className="italic">Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)</span>
+                          </li>
+                          <li>
+                            <span className="text-primary font-bold">CMS Platforms:&nbsp;</span>
+                            <span className="italic">WordPress, Drupal, Custom CMS Solutions</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </TabPanel>
                   </div>
                 </div>
                 <div className="grid sm:grid-cols-2 mt-8 ">
@@ -238,50 +342,13 @@ const ServiceDetail = () => {
                 </div>
                 {/* widget categories menu */}
                 <div className="widget-categories-menu">
-                  <ul>
-                    <li className="active">
-                      <Link
-                        legacyBehavior
-                        href="/service-details">
-                        Custom Web Development
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        legacyBehavior
-                        href="/service-details">
-                        Cloud-Based Web Application
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        legacyBehavior
-                        href="/service-details">
-                        Enterprise Solutions
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        legacyBehavior
-                        href="/service-details">
-                        Content Management Systems (CMS)
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        legacyBehavior
-                        href="/service-details">
-                        Progressive Web Applications (PWA)
-                      </Link>
-                    </li>
-                    {/* <li>
-                      <Link
-                        legacyBehavior
-                        href="/service-details">
-                         Content Marketing 
-                      </Link>
-                    </li> */}
-                  </ul>
+                  <TabList as="ul">
+                    <Tab as="li">Custom Web Development</Tab>
+                    <Tab as="li">Cloud-Based Web Application</Tab>
+                    <Tab as="li">Enterprise Solutions</Tab>
+                    <Tab as="li">Content Management Systems (CMS)</Tab>
+                    <Tab as="li">Progressive Web Applications (PWA)</Tab>
+                  </TabList>
                 </div>
               </div>
               {/* categoreis thumb */}
@@ -404,7 +471,7 @@ const ServiceDetail = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Tabs>
         </div>
         <div className="pb-16 mt-8">
           <div className="max-w-screen-2xl mx-auto">

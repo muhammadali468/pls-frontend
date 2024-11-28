@@ -9,6 +9,7 @@ import "../../public/assets/css/bootstrap-icons.css";
 import "../../public/assets/css/responsive.css";
 import "../../public/assets/css/animate.css";
 import "../../public/assets/css/animated-text.css";
+// import 'react-tabs/style/react-tabs.css';
 import Preloader from "@/components/sections/Preloader";
 const poppins = Poppins({
   subsets: ["latin"],
@@ -35,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} ${firaSans.className}`}>
+      <body className={`dashboard-body ${poppins.className} ${firaSans.className}`}>
         <Preloader />
         {children}
       </body>
