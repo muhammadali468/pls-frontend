@@ -32,7 +32,7 @@ const MobileMenu = () => {
             <ul
               className="nav_scroll"
               style={{ display: toggle ? "block" : "none" }}>
-              <li>
+              {/* <li>
                 <a href="#">Home </a>
                 <ul
                   className="sub-menu"
@@ -73,8 +73,92 @@ const MobileMenu = () => {
                   style={{ fontSize: 18 }}>
                   {activeBtn("Home")}
                 </a>
+              </li> */}
+              <li>
+                <Link
+                  legacyBehavior
+                  href="/">
+                  Home
+                </Link>
               </li>
               <li>
+                <Link
+                  legacyBehavior
+                  href="/">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/services">Services </Link>
+                <ul
+                  className="sub-menu"
+                  style={activeLi("Services")}>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Web Development</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Mobile Application</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Data Analysis</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">E-commerce</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">SaaS Development</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Digital Marketing</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Production Services</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Graphic Design</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Sound Engineering</li>
+                </ul>
+                <a
+                  className="mean-expand"
+                  href="#"
+                  onClick={() => activeMenuSet("Services")}
+                  style={{ fontSize: 18 }}>
+                  {activeBtn("Services")}
+                </a>
+              </li>
+              <li>
+                <Link href="/industry">Industry </Link>
+                <ul
+                  className="sub-menu"
+                  style={activeLi("Industry")}>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Information Technology (IT)</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Healthcare</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Finance & Banking</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Retail & E-commerce</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Tourism & Hospitaility</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Education</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Media & entertainment</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Construction</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Energy & Utility</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Logistics & Transport</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Legal & Compliance</li>
+                </ul>
+                <a
+                  className="mean-expand"
+                  href="#"
+                  onClick={() => activeMenuSet("Industry")}
+                  style={{ fontSize: 18 }}>
+                  {activeBtn("Industry")}
+                </a>
+              </li>
+              <li>
+                <Link href="/technology">Technology </Link>
+                <ul
+                  className="sub-menu"
+                  style={activeLi("Technology")}>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Web Technology</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Mobile Technology</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Backend Technology</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Database</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Cloud Infrastructure</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Blockchain</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">Cybersecurity</li>
+                  <li className="!bg-white text-primary py-4 px-16 !text-md">E-Commerce</li>
+                </ul>
+                <a
+                  className="mean-expand"
+                  href="#"
+                  onClick={() => activeMenuSet("Technology")}
+                  style={{ fontSize: 18 }}>
+                  {activeBtn("Technology")}
+                </a>
+              </li>
+              {/* <li>
                 <a href="#">Company </a>
                 <ul
                   className="sub-menu"
@@ -143,43 +227,15 @@ const MobileMenu = () => {
                   style={{ fontSize: 18 }}>
                   {activeBtn("Company")}
                 </a>
-              </li>
-              <li>
-                <a href="#">Services </a>
-                <ul
-                  className="sub-menu"
-                  style={activeLi("Services")}>
-                  <li>
-                    <Link
-                      legacyBehavior
-                      href="service">
-                      Our Service
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      legacyBehavior
-                      href="service-details">
-                      Service Details
-                    </Link>
-                  </li>
-                </ul>
-                <a
-                  className="mean-expand"
-                  href="#"
-                  onClick={() => activeMenuSet("Services")}
-                  style={{ fontSize: 18 }}>
-                  {activeBtn("Services")}
-                </a>
-              </li>
+              </li> */}
               <li>
                 <Link
                   legacyBehavior
-                  href="portfolio">
+                  href="/portfolio">
                   Portfolio
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="#">Blog </a>
                 <ul
                   className="sub-menu"
@@ -220,11 +276,11 @@ const MobileMenu = () => {
                   style={{ fontSize: 18 }}>
                   {activeBtn("Portfolio")}
                 </a>
-              </li>
+              </li> */}
               <li className="mean-last">
                 <Link
                   legacyBehavior
-                  href="contact">
+                  href="/contact">
                   Contact
                 </Link>
               </li>

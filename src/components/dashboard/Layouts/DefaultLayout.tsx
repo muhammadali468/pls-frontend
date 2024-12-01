@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Sidebar from "../../../components/dashboard/Sidebar";
 import Header from "../../../components/dashboard/Header";
-
+import "@/app/globals.css";
 export default function DefaultLayout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
@@ -27,7 +27,7 @@ export default function DefaultLayout({ children }: { children: React.ReactNode 
 
           {/* <!-- ===== Main Content Start ===== --> */}
           <main>
-            <div className="mx-auto max-w-screen-2xl px-4 md:px-6 2xl:px-10 pt-28 pb-8">{children}</div>
+            <div className="mx-auto px-4 md:px-6 2xl:px-10 pt-28 pb-8">{children}</div>
           </main>
           {/* <!-- ===== Main Content End ===== --> */}
         </div>

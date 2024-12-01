@@ -288,7 +288,7 @@ a.meanmenu-reveal {
 /* Industry Detail */
 .cs_service_details {
   -webkit-box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
   padding: 40px;
   border-radius: 20px;
 }
@@ -316,7 +316,7 @@ a.meanmenu-reveal {
 }
 .cs_service_details .cs_accordians.cs_style_1 .cs_accordian {
   -webkit-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
   border-color: transparent;
 }
 .cs_service_details .cs_accordians.cs_style_1 .cs_accordian:not(:last-child) {
@@ -341,8 +341,8 @@ a.meanmenu-reveal {
   .cs_reverse_col {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
 }
 
@@ -354,7 +354,7 @@ a.meanmenu-reveal {
 }
 .cs_service_card.cs_style_1:hover .cs_service_card_icon img {
   -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }
 .cs_service_card.cs_style_1:hover .cs_service_card_bg {
   color: var(--accent);
@@ -369,7 +369,7 @@ a.meanmenu-reveal {
   left: 50%;
   margin-left: 6px;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   color: var(--border);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -378,8 +378,8 @@ a.meanmenu-reveal {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 @media (max-width: 1400px) {
   .cs_service_card.cs_style_1 .cs_service_card_bg {
@@ -415,14 +415,14 @@ a.meanmenu-reveal {
   height: 80px;
   width: 80px;
   -webkit-box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
   background-color: #fff;
   position: absolute;
   bottom: 20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -523,26 +523,26 @@ a.meanmenu-reveal {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 @media (max-width: 991px) {
   .cs_service_card_2_details {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 .cs_service_card_2_details .cs_service_card_2_details_thumb {
   -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+  -ms-flex: none;
+  flex: none;
 }
 .cs_service_card_2_details .cs_service_card_2_details_left {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 52px 100px 60px 60px;
 }
 @media (max-width: 1400px) {
@@ -567,7 +567,7 @@ a.meanmenu-reveal {
 
 .slick-current .cs_service_card.cs_style_2 .cs_service_card_icon img {
   -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }
 .slick-current .cs_service_card.cs_style_2 .cs_service_card_title {
   color: #fff;
@@ -581,6 +581,9 @@ a.meanmenu-reveal {
 .slick-current .cs_service_card.cs_style_2 .cs_service_card_shape_1,
 .slick-current .cs_service_card.cs_style_2 .cs_service_card_shape_2 {
   -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
   opacity: 0.24;
+}
+.react-tabs__tab--selected {
+  @apply !bg-primary !text-white;
 }
