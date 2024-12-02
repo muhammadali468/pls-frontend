@@ -11,14 +11,128 @@ import LandingHeader from "@/components/ui/LandingHeader";
 import Image from "next/image";
 import { InlineWidget } from "react-calendly";
 import BasicModal from "@/components/ui/BasicModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 export default function Home() {
   const [isModalOpen, setModalOpen] = useState(false);
 
+  useEffect(() => {
+    if (isModalOpen) {
+      document.documentElement.classList.add("overflow-hidden");
+    } else {
+      document.documentElement.classList.remove("overflow-hidden");
+    }
+
+    // Cleanup when component unmounts
+    return () => {
+      document.documentElement.classList.remove("overflow-hidden");
+    };
+  }, [isModalOpen]);
+
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
   const [modalName, setModalName] = useState("");
+  const servicesData = [
+    {
+      name: "Web Development",
+      description:
+        "Accelerate growth with cutting-edge, scalable web solutions that drive digital transformation and deliver seamless user experiences."
+    },
+    {
+      name: "Mobile Application",
+      description: "Empower businesses with intuitive, high-performance mobile apps that enhance engagement and expand your digital reach.  "
+    },
+    {
+      name: "Data Analysis",
+      description: "Uncover actionable insights from complex data to fuel strategic decisions and optimize operational efficiency."
+    },
+    {
+      name: "E-commerce",
+      description:
+        "Revolutionize your online presence with dynamic e-commerce platforms that maximize sales, enhance customer experience, and drive growth."
+    },
+    {
+      name: "SaaS Development",
+      description: "Innovate with custom SaaS solutions designed to streamline operations, reduce costs, and scale with your business needs."
+    },
+    {
+      name: "Digital Marketing",
+      description:
+        "Elevate your brand with precision-targeted digital marketing strategies that increase visibility, engagement, and conversion rates."
+    },
+    {
+      name: "Production Services",
+      description: "Deliver high-quality, impactful media production services that captivate audiences and enhance brand messaging."
+    },
+    {
+      name: "Graphic Design",
+      description: "Craft visually stunning, brand-aligned designs that resonate with audiences and strengthen your market position."
+    },
+    {
+      name: "Sound Engineering",
+      description: "Create immersive auditory experiences with expert sound engineering services that amplify your brand’s voice."
+    },
+    {
+      name: "DevOps and Automation Services",
+      description:
+        " Streamline workflows and enhance productivity with DevOps practices and automated solutions tailored to accelerate development cycles."
+    },
+    {
+      name: "Big Data Analytics",
+      description: "Harness the power of big data to drive predictive analytics, optimize performance, and unlock new growth opportunities."
+    },
+    {
+      name: "Blockchain Solutions",
+      description: "Disrupt industries with secure, transparent blockchain technologies that foster trust, security, and decentralization."
+    },
+    {
+      name: "Voice Technology Solutions",
+      description: "Transform customer interactions with advanced voice recognition systems that enhance service and streamline communication."
+    },
+    {
+      name: "API Development and Integration",
+      description: "Simplify complex systems with custom APIs that connect, streamline, and scale your digital infrastructure seamlessly."
+    },
+    {
+      name: "AI-Powered Personalization",
+      description: "Harness the power of AI to create hyper-personalized experiences that engage, convert, and retain your audience."
+    },
+    {
+      name: "Green IT and Sustainability Solutions",
+      description: "Drive innovation with sustainable IT solutions that reduce environmental impact and promote eco-friendly practices."
+    },
+    {
+      name: "Cyber Security Services",
+      description: "Drive innovation with sustainable IT solutions that reduce environmental impact and promote eco-friendly practices."
+    },
+    {
+      name: "Social Media Services",
+      description: "Drive innovation with sustainable IT solutions that reduce environmental impact and promote eco-friendly practices."
+    }
+  ];
+  // const industryData = [
+  //   "Information Technology (IT)",
+  //   "Healthcare",
+  //   "Finance & Banking",
+  //   "Retail & E-commerce",
+  //   "Tourism & Hospitaility",
+  //   "Education",
+  //   "Media & entertainment",
+  //   "Construction",
+  //   "Energy & Utility",
+  //   "Logistics & Transport",
+  //   "Legal & Compliance"
+  // ];
+  // const technologyData = [
+  //   "Web Technology",
+  //   "Mobile Technology",
+  //   "Backend Technology",
+  //   "Database",
+  //   "Cloud Infrastructure",
+  //   "Blockchain",
+  //   "Cybersecurity",
+  //   "E-Commerce"
+  // ];
   return (
     <>
       <LandingHeader />
@@ -26,12 +140,14 @@ export default function Home() {
         isOpen={isModalOpen}
         onClose={closeModal}>
         {modalName === "hireUs" ? (
-          <div className="max-w-5xl grid grid-cols-2">
-            <div>
-              <img
+          <div className="grid grid-cols-2">
+            <div className="relative w-full h-full">
+              <Image
                 className="h-full object-cover"
-                src="./assets/images/resource/abouts_1_new.png"
+                src="/assets/images/resource/abouts_1_new.png"
                 alt="hire us"
+                fill
+                blurDataURL="/assets/images/resource/abouts_1_new.png"
               />
             </div>
             <div className="contact_from_box py-40">
@@ -89,6 +205,14 @@ export default function Home() {
                       />
                     </div>
                   </div>
+                  <div className="col-lg-6 mb-30">
+                    {/* <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor="file_input">Upload file</label> */}
+                    <input
+                      className="block w-full text-sm text-gray-900 border border-gray-300 rounded-full cursor-pointer bg-[#F7F4F4] dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 p-4"
+                      id="file_input"
+                      type="file"
+                    />
+                  </div>
                   <div className="col-lg-12">
                     <div className="form_box mb-30">
                       <textarea
@@ -127,12 +251,12 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <div className="w-full">
               <div className="slider-content">
-                <h1 className="text-4xl font-bold !text-center sm:!text-left">The Financial</h1>
+                <h1 className="text-5xl font-bold !text-center sm:!text-left">Your Gateway to Powerful</h1>
                 <h1 className="text-4xl font-bold !text-center sm:!text-left">
-                  Planning <span className="text-primary">Guide</span>
+                  Digital <span className="text-primary"> Experiences</span>
                 </h1>
-                <p className="mt-4 mx-auto sm:mx-0 text-lg !text-center sm:!text-left">
-                  Without Consulting Plans, Plans not Growing fashion user friendly architectures synergistic resources.
+                <p className="mt-4 mx-auto sm:mx-0 !text-3xl !text-center sm:!text-left">
+                  Transforming businesses with intuitive, scalable, and secure technology solutions{" "}
                 </p>
               </div>
               <div className="slider-button mt-8 flex flex-col sm:items-start items-center">
@@ -243,7 +367,7 @@ export default function Home() {
                 <div className="feature-bar h-1 bg-primary" />
               </div>
               {/* feature back */}
-              <div className="consen-feature-back p-4 bg-gray-100 rounded-lg mt-4">
+              {/* <div className="consen-feature-back p-4 bg-gray-100 rounded-lg mt-4">
                 <div className="feature-back-title">
                   <h3 className="text-lg font-medium">Strategy</h3>
                   <h2 className="text-2xl font-bold">Strategy Building</h2>
@@ -255,7 +379,7 @@ export default function Home() {
                     +
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="single-feature-box">
@@ -277,7 +401,7 @@ export default function Home() {
                 <div className="feature-bar h-1 bg-primary" />
               </div>
               {/* feature back */}
-              <div className="consen-feature-back p-4 bg-gray-100 rounded-lg mt-4">
+              {/* <div className="consen-feature-back p-4 bg-gray-100 rounded-lg mt-4">
                 <div className="feature-back-title">
                   <h3 className="text-lg font-medium">Strategy</h3>
                   <h2 className="text-2xl font-bold">Strategy Building</h2>
@@ -289,7 +413,7 @@ export default function Home() {
                     +
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="single-feature-box">
@@ -311,7 +435,7 @@ export default function Home() {
                 <div className="feature-bar h-1 bg-primary" />
               </div>
               {/* feature back */}
-              <div className="consen-feature-back p-4 bg-gray-100 rounded-lg mt-4">
+              {/* <div className="consen-feature-back p-4 bg-gray-100 rounded-lg mt-4">
                 <div className="feature-back-title">
                   <h3 className="text-lg font-medium">Strategy</h3>
                   <h2 className="text-2xl font-bold">Strategy Building</h2>
@@ -323,7 +447,7 @@ export default function Home() {
                     +
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* feature shape */}
@@ -443,191 +567,40 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Service Box 1 */}
-            <div className="px-4 sm:pl-1">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon1 upper">
-                    <Image
-                      src="/assets/images/resource/service-icon8.png"
-                      height={50}
-                      width={50}
-                      alt=""
-                    />
-                  </div>
-                  <div className="em-service-title">
-                    <h3 className="text-xl font-semibold">Cyber Security</h3>
-                  </div>
-                  <div className="service-bar" />
-                  <div className="em-service-text">
-                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a className="flex items-center text-primary hover:underline">
-                        Read More <i className="bi bi-plus ml-1" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Service Box 2 */}
-            <div className="px-4 sm:pl-1">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon1">
-                    <Image
-                      src="/assets/images/resource/service-icon5.png"
-                      height={50}
-                      width={50}
-                      alt=""
-                    />
-                  </div>
-                  <div className="em-service-title">
-                    <h3 className="text-xl font-semibold">IT Management</h3>
-                  </div>
-                  <div className="service-bar" />
-                  <div className="em-service-text">
-                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a className="flex items-center text-primary hover:underline">
-                        Read More <i className="bi bi-plus ml-1" />
-                      </a>
-                    </Link>
+            {servicesData.map((service, i: any) => (
+              <div className="px-4 sm:pl-1 rounded-xl ">
+                <div className="dreamit-service-box min-h-[24.25rem]">
+                  <div className="service-box-inner flex flex-col justify-between gap-6">
+                    <div>
+                      <div className="em-service-icon1 upper">
+                        <Image
+                          src="/assets/images/resource/service-icon8.png"
+                          height={50}
+                          width={50}
+                          alt=""
+                        />
+                      </div>
+                      <div className="em-service-title">
+                        <h3 className="text-xl font-semibold">{service.name}</h3>
+                      </div>
+                      <div className="service-bar" />
+                      <div className="em-service-text">
+                        <p>{service.description}</p>
+                      </div>
+                    </div>
+                    <div className="service-button">
+                      <Link
+                        legacyBehavior
+                        href="/service-details">
+                        <a className="flex items-center text-primary hover:underline">
+                          Read More <i className="bi bi-plus ml-1" />
+                        </a>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* Service Box 3 */}
-            <div className="px-4 sm:pl-1">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon1">
-                    <Image
-                      src="/assets/images/resource/service-icon6.png"
-                      height={50}
-                      width={50}
-                      alt=""
-                    />
-                  </div>
-                  <div className="em-service-title">
-                    <h3 className="text-xl font-semibold">Web Development</h3>
-                  </div>
-                  <div className="service-bar" />
-                  <div className="em-service-text">
-                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a className="flex items-center text-primary hover:underline">
-                        Read More <i className="bi bi-plus ml-1" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Service Box 4 */}
-            <div className="px-4 sm:pl-1">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon1">
-                    <Image
-                      src="/assets/images/resource/service-icon7.png"
-                      height={50}
-                      width={50}
-                      alt=""
-                    />
-                  </div>
-                  <div className="em-service-title">
-                    <h3 className="text-xl font-semibold">Leadership Work</h3>
-                  </div>
-                  <div className="service-bar" />
-                  <div className="em-service-text">
-                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a className="flex items-center text-primary hover:underline">
-                        Read More <i className="bi bi-plus ml-1" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Service Box 5 */}
-            <div className="px-4 sm:pl-1">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon1">
-                    <Image
-                      src="/assets/images/resource/service-icon7.png"
-                      height={50}
-                      width={50}
-                      alt=""
-                    />
-                  </div>
-                  <div className="em-service-title">
-                    <h3 className="text-xl font-semibold">Leadership Work</h3>
-                  </div>
-                  <div className="service-bar" />
-                  <div className="em-service-text">
-                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a className="flex items-center text-primary hover:underline">
-                        Read More <i className="bi bi-plus ml-1" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Service Box 6 */}
-            <div className="px-4 sm:pl-1">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon1">
-                    <Image
-                      src="/assets/images/resource/service-icon7.png"
-                      height={50}
-                      width={50}
-                      alt=""
-                    />
-                  </div>
-                  <div className="em-service-title">
-                    <h3 className="text-xl font-semibold">Leadership Work</h3>
-                  </div>
-                  <div className="service-bar" />
-                  <div className="em-service-text">
-                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a className="flex items-center text-primary hover:underline">
-                        Read More <i className="bi bi-plus ml-1" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
           <div className="w-full mt-6">
             <div className="service-bottom-text">
