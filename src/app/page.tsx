@@ -568,7 +568,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Service Box 1 */}
             {servicesData.map((service, i: any) => (
-              <div className="px-4 sm:pl-1 rounded-xl ">
+              <div
+                key={i}
+                className="px-4 sm:pl-1 rounded-xl ">
                 <div className="dreamit-service-box min-h-[24.25rem]">
                   <div className="service-box-inner flex flex-col justify-between gap-6">
                     <div>
