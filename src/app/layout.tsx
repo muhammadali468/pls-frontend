@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Poppins, Fira_Sans } from "next/font/google";
-import "./globals.css";
 import "../../public/assets/css/theme-default.css";
 import "../../public/assets/css/magnific-popup.css";
 import "../../public/assets/css/owl.transitions.css";
@@ -9,6 +8,7 @@ import "../../public/assets/css/bootstrap-icons.css";
 import "../../public/assets/css/responsive.css";
 import "../../public/assets/css/animate.css";
 import "../../public/assets/css/animated-text.css";
+import "./globals.css";
 // import 'react-tabs/style/react-tabs.css';
 import Preloader from "@/components/sections/Preloader";
 const poppins = Poppins({

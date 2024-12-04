@@ -3597,13 +3597,13 @@ p.choose-text1 {
 }
 
 /*team all hover*/
-.single_team:hover .single_team_icon {
+/* .single_team:hover .single_team_icon {
   transform: perspective(500px) rotateX(0deg);
-}
+} */
 
-.single_team:hover .team-title {
+/* .single_team:hover .team-title {
   transform: perspective(500px) rotateX(0deg);
-}
+} */
 
 .single_team_icon a:hover:before {
   transform: scale(1);

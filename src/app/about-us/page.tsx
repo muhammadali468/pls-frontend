@@ -4,12 +4,59 @@ import LandingHeader from "@/components/ui/LandingHeader";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { testimonial_list_slider } from "@/components/ui/sliderProps";
 import Counter from "@/components/ui/Counter";
-import Link from "next/link";
 
 const AboutUs = () => {
   return (
     <>
       <LandingHeader />
+      <section className="pt-40">
+        <div className="container mx-auto">
+          <h2>Our Story</h2>
+          <p className="mt-4">
+            Prime Logic Solutions began as a vision to bridge the gap between technology and transformative business outcomes. Driven by an unwavering
+            commitment to innovation and excellence, we have grown into a trusted partner for organizations seeking to stay ahead in a rapidly
+            evolving digital world. From crafting custom software to leveraging emerging technologies, our journey is one of empowerment,
+            collaboration, and a relentless pursuit of success. Today, Prime Logic Solutions stands as a symbol of possibility, turning complex
+            challenges into impactful solutions that redefine industries.
+          </p>
+        </div>
+      </section>
+      <section className="pt-16">
+        <div className="container mx-auto">
+          <h2>Our Vision</h2>
+          <p className="mt-4">
+            To empower businesses with cutting-edge technology and sustainable solutions, enabling them to lead with innovation, agility, and purpose
+            in a digitally connected future.
+          </p>
+        </div>
+      </section>
+      <section className="pt-16">
+        <div className="container mx-auto">
+          <h2>About Prime Logic Solutions</h2>
+          <p className="mt-4">
+            {`At Prime Logic Solutions, innovation is at the heart of everything we do. We are a technology-driven company committed to delivering
+            bespoke solutions that drive growth, enhance efficiency, and unlock new opportunities. With expertise spanning software development, data
+            analytics, cloud computing, and emerging technologies, we provide end-to-end services tailored to meet the dynamic needs of modern
+            businesses.`}
+          </p>
+          <p className="mt-4">
+            {`Our portfolio includes industry-leading capabilities in web development, mobile applications, SaaS platforms, and AI-driven
+            personalization, empowering businesses to innovate and grow. Through blockchain solutions, IoT integration, and advanced cloud services
+            like AWS and Azure, we ensure our clients are future-ready.`}
+          </p>
+          <p className="mt-4">
+            {`Beyond technology, we champion creativity with graphic and CAD design and amplify our clients' presence through e-commerce, digital
+            marketing, and media production services. Our commitment to sustainability drives us to integrate Green IT and future-oriented
+            technologies, enabling a balance between innovation and environmental stewardship.`}
+          </p>
+          <p className="mt-4">
+            {`As cybersecurity threats evolve, our robust cybersecurity solutions protect digital assets, while our quality control and IT support
+            services ensure reliability and excellence in every deliverable. At Prime Logic Solutions, we are not just a service provider; we are your
+            strategic partner in navigating the complexities of the digital age, building a sustainable and prosperous future. Together, we don’t just
+            adapt to the future—we shape it.`}
+          </p>
+        </div>
+      </section>
       {/* <section className="py-40">
                 <div className="container mx-auto">
                     <h1 className="text-center">About us</h1>
@@ -17,7 +64,7 @@ const AboutUs = () => {
             </section> */}
       {/* Start abouts area  */}
       {/* ========================================================= */}
-      <div className="abouts_areas">
+      {/* <div className="abouts_areas">
         <div className="container mx-auto pt-40">
           <div className="row flex justify-between flex-col sm:flex-row">
             <div className="col-lg-6 col-md-6">
@@ -60,11 +107,11 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/*=================================================*/}
       {/* START  feture-area Section */}
       {/*=================================================*/}
-      <div className="feature-area style-two">
+      {/* <div className="feature-area style-two">
         <div className="container mx-auto">
           <div className="row flex flex-col sm:flex-row p-4 sm:p-0">
             <div className="w-full lg:w-1/2">
@@ -93,142 +140,9 @@ const AboutUs = () => {
                 </ul>
               </div>
             </div>
-            {/* <div className="w-full lg:w-1/2">
-              
-              <Tab.Container defaultActiveKey={"t1"}>
-                <div className="tab">
-                  <Nav
-                    as="ul"
-                    className="tabs">
-                    <li>
-                      <Nav.Link
-                        className="c-pointer"
-                        as="a"
-                        eventKey={"t1"}>
-                        Full Satisfaction
-                      </Nav.Link>
-                    </li>
-                    <li>
-                      <Nav.Link
-                        className="c-pointer"
-                        as="a"
-                        eventKey={"t2"}>
-                        Expert Team
-                      </Nav.Link>
-                    </li>
-                    <li>
-                      <Nav.Link
-                        className="c-pointer"
-                        as="a"
-                        eventKey={"t3"}>
-                        Mission &amp; Vission
-                      </Nav.Link>
-                    </li>
-                  </Nav>{" "}
-                  
-                  <Tab.Content className="tab_content">
-                    <Tab.Pane
-                      eventKey={"t1"}
-                      className="tabs_item">
-                      <img
-                        src="assets/images/resource/img-1.png"
-                        alt="business image"
-                      />
-                      <ul className="tabs-inner-list">
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Rather than unique Idea.</span>
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Entums estibulum dignissim posuere</span>
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Quality users after Breed Applications.</span>
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Market Positioning Expertise.</span>
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Rather than unique Idea.</span>
-                        </li>
-                      </ul>
-                    </Tab.Pane>{" "}
-                    
-                    <Tab.Pane
-                      eventKey={"t2"}
-                      className="tabs_item">
-                      <img
-                        src="assets/images/resource/img-2.png"
-                        alt="Image"
-                      />
-                      <ul className="tabs-inner-list">
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Rather than unique Idea.</span>
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Entums estibulum dignissim posuere</span>
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Quality users after Breed Applications.</span>
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Market Positioning Expertise.</span>
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Rather than unique Idea.</span>
-                        </li>
-                      </ul>
-                    </Tab.Pane>{" "}
-                    
-                    <Tab.Pane
-                      eventKey={"t3"}
-                      className="tabs_item">
-                      <img
-                        src="assets/images/resource/img-3.png"
-                        alt="Image"
-                      />
-                      <ul className="tabs-inner-list">
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Rather than unique Idea.</span>
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Entums estibulum dignissim posuere</span>
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Quality users after Breed Applications.</span>
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Market Positioning Expertise.</span>
-                        </li>
-                        <li>
-                          <i className="fas fa-check" />
-                          <span>Rather than unique Idea.</span>
-                        </li>
-                      </ul>
-                    </Tab.Pane>{" "}
-                    
-                  </Tab.Content>{" "}
-                  
-                </div>
-              </Tab.Container>
-              
-            </div> */}
           </div>
         </div>
-      </div>
+      </div> */}
       {/*==================================================*/}
       {/* Start consen Testimonial Area */}
       {/*==================================================*/}
@@ -359,7 +273,7 @@ const AboutUs = () => {
       {/*==================================================*/}
       {/*  Start  Counter Section */}
       {/*===================================================*/}
-      <div className="counter-section style-33 pt-30 pb-80">
+      {/* <div className="counter-section style-33 pt-30 pb-80">
         <div className="container mx-auto">
           <div className="counter-container">
             <div className="row hr pt-40 flex justify-between p-4 sm:p-0">
@@ -420,7 +334,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/*==================================================*/}
       {/* Start consen Team Area */}
       {/*==================================================*/}
@@ -546,7 +460,7 @@ const AboutUs = () => {
       {/*==================================================*/}
       {/* Start  FAQ Section */}
       {/*===================================================*/}
-      <div className="faq-sectiions p-4 sm:p-0">
+      {/* <div className="faq-sectiions p-4 sm:p-0">
         <div className="container mx-auto">
           <div className="row">
             <div className="col-lg-6 col-md-12">
@@ -589,21 +503,23 @@ const AboutUs = () => {
               </div>
             </div>
             <div className="col-lg-6 col-md-12 pl-0">
-              {/* Start Accordion */}
-              <div className="tab_container pl-30 pt-20">{/* <Faqs /> */}</div>
-              {/* End Accordion */}
+              
+              <div className="tab_container pl-30 pt-20"></div>
+              
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/*==================================================*/}
       {/*Start  Brand Section */}
       {/*===================================================*/}
-      <div className="brand-section">
+      {/* <div className="brand-section">
         <div className="container">
-          <div className="row">{/* <LogoSlider /> */}</div>
+          <div className="row">
+            
+          </div>
         </div>
-      </div>
+      </div> */}
       {/*==================================================*/}
       {/* Start consen Subscribe Area */}
       {/*==================================================*/}

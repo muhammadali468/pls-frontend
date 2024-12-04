@@ -19,6 +19,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "@types/isotope-layout": "^3.0.14",
     "apexcharts": "^3.45.2",
+    "axios": "^1.7.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "flatpickr": "^4.6.13",
