@@ -178,7 +178,7 @@ const LandingHeader = () => {
         className="consen_nav_manu style-two header____">
         <div className="container mx-auto">
           <div className="row header-bg flex justify-between items-center">
-            <div className="w-[20%]">
+            <div className="w-[10%]">
               <div className="logo">
                 <Link
                   legacyBehavior
@@ -259,6 +259,9 @@ const LandingHeader = () => {
                   </li>
                   <li>
                     <Link href="/portfolio">Portfolio</Link>
+                  </li>
+                  <li>
+                    <Link href="/blogs">Blogs</Link>
                   </li>
                   <li>
                     <Link href="/contact">Contact</Link>

@@ -587,6 +587,6 @@ a.meanmenu-reveal {
 .react-tabs__tab--selected {
   @apply !bg-primary !text-white;
 }
-.font-default{
+.font-default {
   font-family: inherit;
 }

@@ -52,28 +52,26 @@ const AddServiceDetails = () => {
     setMaxLengthForEditableElements();
   }, []);
 
-  const [formData, setFormData] = useState(
-    {
-      tab1Name: "Custom Web Development",
-      tab1title: "Innovative Web Application Services With Next-Gen Technologies, Tailored for Your Business Needs",
-      tab1description: "Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving digital success with a robust technology stack.",
-      tab1Feature1Title: "Web Technologies:",
-      tab1Feature1Description: "React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js",
-      tab1Feature2Title: "Backend Technologies:",
-      tab1Feature2Description: "Node.js, Laravel (PHP), Django (Python), ASP .Net Core (C#), Springboot (Java), and Rails (Ruby)",
-      tab1Feature3Title: "Cloud Platforms:",
-      tab1Feature3Description: "Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)",
-      tab1Feature4Title: "CMS Platforms:",
-      tab1Feature4Description: "WordPress, Drupal, Custom CMS Solutions",
-      // Tab 2
-
-    }
-  )
+  const [formData, setFormData] = useState({
+    tab1Name: "Custom Web Development",
+    tab1title: "Innovative Web Application Services With Next-Gen Technologies, Tailored for Your Business Needs",
+    tab1description:
+      "Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving digital success with a robust technology stack.",
+    tab1Feature1Title: "Web Technologies:",
+    tab1Feature1Description: "React.js, Angular, Vue.js, Next.js, Nuxt.js, Svelte, and Solid.js",
+    tab1Feature2Title: "Backend Technologies:",
+    tab1Feature2Description: "Node.js, Laravel (PHP), Django (Python), ASP .Net Core (C#), Springboot (Java), and Rails (Ruby)",
+    tab1Feature3Title: "Cloud Platforms:",
+    tab1Feature3Description: "Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP)",
+    tab1Feature4Title: "CMS Platforms:",
+    tab1Feature4Description: "WordPress, Drupal, Custom CMS Solutions"
+    // Tab 2
+  });
   const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
       ...prevData, // Preserve other properties
-      [name]: value, // Dynamically update the field using its name
+      [name]: value // Dynamically update the field using its name
     }));
   };
   // const [content, setContent] = useState({
@@ -90,7 +88,6 @@ const AddServiceDetails = () => {
   //   tab1Feature4Title: "CMS Platforms:",
   //   tab1Feature4Description: "WordPress, Drupal, Custom CMS Solutions",
   // });
-
 
   return (
     <>
@@ -137,7 +134,7 @@ const AddServiceDetails = () => {
                             Innovative <span className="text-primary"> Web Application Services </span> With Next-Gen Technologies, Tailored for Your
                             Business Needs
                           </h1> */}
-                          
+
                           {/* <textarea name="title" onChange={handleChange} rows={3} maxLength={87} className="flex text-4xl text-black font-bold w-full p-2" value={formData.title} /> */}
                         </div>
                         <div className="serivce-details-desc">
@@ -668,19 +665,54 @@ const AddServiceDetails = () => {
                   <div className="widget-categories-menu">
                     <TabList as="ul">
                       <Tab as="li">
-                        <input name="tab1Name" className="w-full bg-transparent p-2" type="text" maxLength={50} onChange={handleChange} value={formData.tab1Name} />
+                        <input
+                          name="tab1Name"
+                          className="w-full bg-transparent p-2"
+                          type="text"
+                          maxLength={50}
+                          onChange={handleChange}
+                          value={formData.tab1Name}
+                        />
                       </Tab>
                       <Tab as="li">
-                        <input name="tab2Name" className="w-full bg-transparent p-2" type="text" maxLength={50} onChange={handleChange} value={formData.tab1Name} />
+                        <input
+                          name="tab2Name"
+                          className="w-full bg-transparent p-2"
+                          type="text"
+                          maxLength={50}
+                          onChange={handleChange}
+                          value={formData.tab1Name}
+                        />
                       </Tab>
                       <Tab as="li">
-                        <input name="tab3Name" className="w-full bg-transparent p-2" type="text" maxLength={50} onChange={handleChange} value={formData.tab1Name} />
+                        <input
+                          name="tab3Name"
+                          className="w-full bg-transparent p-2"
+                          type="text"
+                          maxLength={50}
+                          onChange={handleChange}
+                          value={formData.tab1Name}
+                        />
                       </Tab>
                       <Tab as="li">
-                        <input name="tab4Name" className="w-full bg-transparent p-2" type="text" maxLength={50} onChange={handleChange} value={formData.tab1Name} />
+                        <input
+                          name="tab4Name"
+                          className="w-full bg-transparent p-2"
+                          type="text"
+                          maxLength={50}
+                          onChange={handleChange}
+                          value={formData.tab1Name}
+                        />
                       </Tab>
                       <Tab as="li">
-                        <input name="tab5Name" className="w-full bg-transparent p-2" type="text" maxLength={50} onChange={handleChange} value={formData.tab1Name} />
+                        <input
+                          name="tab5Name"
+                          className="w-full bg-transparent p-2"
+                          type="text"
+                          maxLength={50}
+                          onChange={handleChange}
+                          value={formData.tab1Name}
+                        />
                       </Tab>
                     </TabList>
                   </div>

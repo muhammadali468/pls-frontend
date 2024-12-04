@@ -27,7 +27,6 @@ const ServiceDetail = () => {
     alert("Quote request submitted successfully!");
   };
 
-
   const [isEditing, setIsEditing] = useState(false);
 
   const handleToggleEdit = () => {
@@ -37,24 +36,27 @@ const ServiceDetail = () => {
     <>
       <LandingHeader />
       <div className="service-detials-area">
-        <div className="max-w-screen-2xl mx-auto">
-          <button className="bg-primary text-white px-8 py-4 rounded-xl mt-40 mb-20" onClick={handleToggleEdit}>
-            {isEditing ? 'Save' : 'Edit'}
+        <div className="max-w-screen-2xl mx-auto px-16">
+          <button
+            className="bg-primary text-white px-8 py-4 rounded-xl mt-40 mb-20"
+            onClick={handleToggleEdit}>
+            {isEditing ? "Save" : "Edit"}
           </button>
           <Tabs className="row grid grid-cols-1 lg:grid-cols-2 gap-8 ">
             <div className="col-lg-8 col-md-12">
               <div className="row">
                 <div className="col-lg-12 col-sm-12">
                   <div className="consen-service-details-box flex flex-col">
-                    <div className="consen-service-thumb relative w-[47rem] h-[27.5rem]">
+                    <div className="consen-service-thumb relative w-[47rem] max-w-full h-[27.5rem]">
                       <Image
                         src="/assets/images/resource/srd1.jpg"
                         alt=""
                         fill
+                        className="object-cover rounded-xl"
                       />
                     </div>
 
-                    <TabPanel className="service-details-content">
+                    <TabPanel className="service-details-content mt-8">
                       <div className="service-page-title">
                         <EditableContent
                           maxLength={87}
@@ -67,7 +69,9 @@ const ServiceDetail = () => {
                       <div className="serivce-details-desc">
                         <EditableContent
                           id={Number(Date.now())}
-                          description={"Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving digital success with a robust technology stack."}
+                          description={
+                            "Empowering businesses with powerful, future-ready technologies for web development, cloud, and CMS platforms. Driving digital success with a robust technology stack."
+                          }
                           isEditing={isEditing}
                           maxLength={187}
                         />
@@ -79,9 +83,8 @@ const ServiceDetail = () => {
                                 description={"Web Technologies:"}
                                 isEditing={isEditing}
                                 className="whitespace-nowrap"
-
-
-                              />&nbsp;
+                              />
+                              &nbsp;
                             </span>{" "}
                             <span className="italic w-full">
                               <EditableContent
@@ -98,7 +101,8 @@ const ServiceDetail = () => {
                                 id={Number(Date.now())}
                                 description={"Backend Technologies:"}
                                 isEditing={isEditing}
-                              />&nbsp;
+                              />
+                              &nbsp;
                             </span>
 
                             <span className="italic w-full">
@@ -106,7 +110,6 @@ const ServiceDetail = () => {
                                 id={Number(Date.now())}
                                 description={"Node.js, Laravel (PHP), Django (Python), ASP .Net Core (C#), Springboot (Java), and Rails (Ruby)"}
                                 isEditing={isEditing}
-
                               />
                             </span>
                           </li>
@@ -117,9 +120,9 @@ const ServiceDetail = () => {
                                 description={"Cloud Platforms:"}
                                 isEditing={isEditing}
                                 className="whitespace-nowrap"
-
                               />
-                              &nbsp;</span>
+                              &nbsp;
+                            </span>
                             <span className="italic w-full">
                               <EditableContent
                                 id={Number(Date.now())}
@@ -136,7 +139,8 @@ const ServiceDetail = () => {
                                 isEditing={isEditing}
                                 className="whitespace-nowrap"
                               />
-                              &nbsp;</span>
+                              &nbsp;
+                            </span>
                             <span className="italic w-full">
                               <EditableContent
                                 id={Number(Date.now())}
@@ -443,8 +447,6 @@ const ServiceDetail = () => {
                         maxLength={50}
                         rows={1}
                         className="bg-transparent"
-
-
                       />
                     </Tab>
                     <Tab as="li">
@@ -455,8 +457,6 @@ const ServiceDetail = () => {
                         maxLength={50}
                         rows={1}
                         className="bg-transparent"
-
-
                       />
                     </Tab>
                     <Tab as="li">
@@ -467,8 +467,6 @@ const ServiceDetail = () => {
                         maxLength={50}
                         rows={1}
                         className="bg-transparent"
-
-
                       />
                     </Tab>
                     <Tab as="li">
@@ -479,8 +477,6 @@ const ServiceDetail = () => {
                         maxLength={50}
                         rows={1}
                         className="bg-transparent"
-
-
                       />
                     </Tab>
                   </TabList>
@@ -503,7 +499,6 @@ const ServiceDetail = () => {
                       className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
                       disabled={isEditing}
-
                     />
                   </div>
                   <div>
@@ -517,7 +512,6 @@ const ServiceDetail = () => {
                       className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
                       disabled={isEditing}
-
                     />
                   </div>
                   <div>
@@ -531,7 +525,6 @@ const ServiceDetail = () => {
                       className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
                       disabled={isEditing}
-
                     />
                   </div>
                   <div>
@@ -545,7 +538,6 @@ const ServiceDetail = () => {
                       className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
                       disabled={isEditing}
-
                     />
                   </div>
                   <div>
@@ -594,7 +586,6 @@ const ServiceDetail = () => {
                         maxLength={100}
                         className="w-full"
                       />
-
                     </div>
                     <div className="flex gap-2">
                       <i className="bi bi-check-lg" />
@@ -605,10 +596,7 @@ const ServiceDetail = () => {
                         isEditing={isEditing}
                         maxLength={100}
                         className="w-full"
-
-
                       />
-
                     </div>
                     <div className="flex gap-2">
                       <i className="bi bi-check-lg" />
@@ -618,9 +606,7 @@ const ServiceDetail = () => {
                         isEditing={isEditing}
                         maxLength={100}
                         className="w-full"
-
                       />
-
                     </div>
                     <div className="flex gap-2">
                       <i className="bi bi-check-lg" />
@@ -630,9 +616,7 @@ const ServiceDetail = () => {
                         isEditing={isEditing}
                         maxLength={100}
                         className="w-full"
-
                       />
-
                     </div>
                     <div className="flex gap-2">
                       <i className="bi bi-check-lg" />
@@ -642,9 +626,7 @@ const ServiceDetail = () => {
                         isEditing={isEditing}
                         maxLength={100}
                         className="w-full"
-
                       />
-
                     </div>
                     <div className="flex gap-2">
                       <i className="bi bi-check-lg" />
@@ -654,9 +636,7 @@ const ServiceDetail = () => {
                         isEditing={isEditing}
                         maxLength={100}
                         className="w-full"
-
                       />
-
                     </div>
                     <div className="flex gap-2">
                       <i className="bi bi-check-lg" />
@@ -666,9 +646,7 @@ const ServiceDetail = () => {
                         isEditing={isEditing}
                         maxLength={100}
                         className="w-full"
-
                       />
-
                     </div>
                     <div className="flex gap-2">
                       <i className="bi bi-check-lg" />
@@ -678,9 +656,7 @@ const ServiceDetail = () => {
                         isEditing={isEditing}
                         maxLength={100}
                         className="w-full"
-
                       />
-
                     </div>
                     <div className="flex gap-2">
                       <i className="bi bi-check-lg" />
@@ -691,9 +667,7 @@ const ServiceDetail = () => {
                         isEditing={isEditing}
                         maxLength={100}
                         className="w-full"
-
                       />
-
                     </div>
                   </div>
                 </div>
@@ -720,7 +694,6 @@ const ServiceDetail = () => {
                     />
                   </div>
                   <div className="service-work-process-desc">
-
                     <EditableContent
                       id={Number(Date.now())}
                       description={"We Begin with Understanding Your Business & Goals"}
@@ -740,10 +713,11 @@ const ServiceDetail = () => {
                       <span className="font-bold"> Actions:</span>
                       <EditableContent
                         id={Number(Date.now())}
-                        description={"In-depth consultation with stakeholders, business analysis, and defining project milestones, timelines, and objectives."}
+                        description={
+                          "In-depth consultation with stakeholders, business analysis, and defining project milestones, timelines, and objectives."
+                        }
                         isEditing={isEditing}
                         maxLength={100}
-
                       />
                     </div>
                     <div className="mt-2 !text-left">
@@ -753,9 +727,7 @@ const ServiceDetail = () => {
                         description={`Clear project vision, defined goals, and a comprehensive roadmap for success.`}
                         isEditing={isEditing}
                         maxLength={100}
-
                       />
-
                     </div>
                   </div>
                 </div>
@@ -791,9 +763,7 @@ const ServiceDetail = () => {
                         description={"Wireframing, UI/UX design, backend development, frontend interfaces, and regular client feedback loops."}
                         isEditing={isEditing}
                         maxLength={100}
-
                       />
-
                     </p>
                     <p className="!text-left mt-2">
                       <span className="font-bold ">Outcome:&nbsp;</span>
@@ -802,14 +772,12 @@ const ServiceDetail = () => {
                         description={"A fully functional web application, designed to meet business goals."}
                         isEditing={isEditing}
                         maxLength={100}
-
                       />
-
                     </p>
                   </div>
                 </div>
               </div>
-              
+
               <div className="col-lg-4 col-sm-6">
                 <div className="service-work-process-box">
                   <div className="service-work-process-number">
@@ -838,12 +806,12 @@ const ServiceDetail = () => {
                       <span className="font-bold">Actions:&nbsp;</span>
                       <EditableContent
                         id={Number(Date.now())}
-                        description={" Comprehensive testing (functional, usability, performance), bug fixing, refining features, and final deployment."}
+                        description={
+                          " Comprehensive testing (functional, usability, performance), bug fixing, refining features, and final deployment."
+                        }
                         isEditing={isEditing}
                         maxLength={100}
-
                       />
-
                     </p>
                     <p className="!text-left mt-2">
                       <span className="font-bold ">Outcome:&nbsp;</span>
@@ -852,9 +820,7 @@ const ServiceDetail = () => {
                         description={" A polished and live web application, ready for users."}
                         isEditing={isEditing}
                         maxLength={100}
-
                       />
-
                     </p>
                   </div>
                 </div>
@@ -890,9 +856,7 @@ const ServiceDetail = () => {
                         description={"Routine updates, security patches, new features from feedback, and website optimization for performance."}
                         isEditing={isEditing}
                         maxLength={100}
-
                       />
-
                     </p>
                     <p className="!text-left mt-2">
                       <span className="font-bold ">Outcome:&nbsp;</span>
@@ -901,14 +865,11 @@ const ServiceDetail = () => {
                         description={"A reliable, secure, and high-performing website."}
                         isEditing={isEditing}
                         maxLength={100}
-
                       />
-
                     </p>
                   </div>
                 </div>
               </div>
-
             </div>
             <div className="container mx-auto">
               <h3 className="mt-32 text-primary text-right">Ready to Build Your Custom Web Application?</h3>

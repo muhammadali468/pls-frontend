@@ -387,14 +387,14 @@ const Services = () => {
             <div className="col-lg-12">
               <div className="call-do-action-video text-center mb-35">
                 <div className="video-icon-cda">
-                  <a
+                  <Link
                     className="video-vemo-icon venobox vbox-item"
                     data-vbtype="youtube"
                     data-autoplay="true"
                     href="https://youtu.be/BS4TUd7FJSg"
                     target="_blank">
                     <i className="bi bi-pause-circle-fill" />
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="call-do-action-content text-center">
