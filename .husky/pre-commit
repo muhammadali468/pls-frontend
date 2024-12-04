@@ -1,1 +1,1 @@
-yarn fmt && yarn lint && yarn type-check 
+yarn fmt && yarn lint && yarn type-check && git add .

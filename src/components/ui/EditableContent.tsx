@@ -32,7 +32,6 @@ const EditableContent = ({ id, description, className, maxLength, isEditing, row
               onChange={(e) => handleContentChange(item.id, e.target.value)}
               rows={rows ? rows : 3}
               className={className + " " + "w-full resize-none outline-none"}
-              
             />
           ) : (
             <text className={className + " " + "font-default block"}>{item.description}</text>
