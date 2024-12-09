@@ -11,6 +11,7 @@ import "../../public/assets/css/animated-text.css";
 import "./globals.css";
 // import 'react-tabs/style/react-tabs.css';
 import Preloader from "@/components/sections/Preloader";
+import { AppProvider } from "@/context/AppContext";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600"]
@@ -38,7 +39,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`dashboard-body ${poppins.className} ${firaSans.className}`}>
         <Preloader />
-        {children}
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   );

@@ -3,6 +3,9 @@ import Footer from "@/components/sections/Footer";
 import LandingHeader from "@/components/ui/LandingHeader";
 import Link from "next/link";
 import ProgressBar from "@/components/Progressbar";
+import { SlArrowRightCircle } from "react-icons/sl";
+import { FaPlus } from "react-icons/fa6";
+import { IoSettingsOutline } from "react-icons/io5";
 
 const Services = () => {
   return (
@@ -28,7 +31,7 @@ const Services = () => {
                   href="/service">
                   <a>
                     {" "}
-                    All Service <i className="bi bi-plus" />{" "}
+                    All Service <FaPlus />{" "}
                   </a>
                 </Link>
               </div>
@@ -59,7 +62,7 @@ const Services = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -90,7 +93,7 @@ const Services = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -121,7 +124,7 @@ const Services = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -152,7 +155,7 @@ const Services = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -185,7 +188,7 @@ const Services = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -216,7 +219,7 @@ const Services = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -247,7 +250,7 @@ const Services = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -278,7 +281,7 @@ const Services = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -335,11 +338,11 @@ const Services = () => {
                 <div className="dreamit-icon-list">
                   <ul className="list-disc pl-5">
                     <li className="flex items-center mb-2">
-                      <i className="bi bi-arrow-right-circle mr-2" />
+                      <SlArrowRightCircle />
                       <span>Communicate orthogonal process</span>
                     </li>
                     <li className="flex items-center">
-                      <i className="bi bi-arrow-right-circle mr-2" />
+                      <SlArrowRightCircle />
                       <span>Professionally grow cutting-edge paradigms</span>
                     </li>
                   </ul>
@@ -367,7 +370,7 @@ const Services = () => {
                   legacyBehavior
                   href="/about">
                   <a className="flex items-center text-lg text-primary hover:underline">
-                    <i className="bi bi-gear mr-2" /> More About
+                    <IoSettingsOutline /> More About
                   </a>
                 </Link>
               </div>

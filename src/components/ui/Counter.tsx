@@ -1,6 +1,6 @@
 import CountUp from "react-countup";
 import ReactVisibilitySensor from "react-visibility-sensor";
-const Counter = ({ end, decimals, tag }: any) => {
+const Counter = ({ end, decimals, tag, className }: any) => {
   return (
     <CountUp
       end={end ? end : 100}
@@ -11,7 +11,7 @@ const Counter = ({ end, decimals, tag }: any) => {
           onChange={start}
           delayedCall>
           <em
-            className="counter"
+            className={`${className} counter`}
             data-from="0"
             data-to={end}
             ref={countUpRef}>

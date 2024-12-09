@@ -35,6 +35,7 @@
     "react-contenteditable": "^3.3.7",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
+    "react-icons": "^5.4.0",
     "react-modal": "^3.16.1",
     "react-swiper": "^0.1.5",
     "react-tabs": "^6.0.2",

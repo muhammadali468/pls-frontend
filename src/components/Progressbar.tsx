@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 
-const ProgressBar = ({ value }: any) => {
+const ProgressBar = ({ value, hidePercentage }: any) => {
   return (
     <Fragment>
       <div
@@ -20,7 +20,7 @@ const ProgressBar = ({ value }: any) => {
         <div className="circle_inbox">
           <span className="percent_text">
             {value}
-            <span>%</span>
+            {!hidePercentage ? <span>%</span> : ""}
           </span>
         </div>
       </div>
