@@ -27,7 +27,7 @@ const HireFreelancer = () => {
                   href="/service">
                   <a>
                     {" "}
-                    All Service <i className="bi bi-plus" />{" "}
+                    All Service <FaPlus />{" "}
                   </a>
                 </Link>
               </div>

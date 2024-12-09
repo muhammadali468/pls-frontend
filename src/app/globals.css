@@ -587,6 +587,7 @@ a.meanmenu-reveal {
 .react-tabs__tab--selected {
   @apply !bg-primary !text-white;
 }
+<<<<<<< HEAD
 
 ::-webkit-scrollbar {
   width: 12px; /* width of the scrollbar */
@@ -606,4 +607,8 @@ a.meanmenu-reveal {
 }
 .calendly-inline-widget .calendly-loading-spinner {
   display: none !important;
+=======
+.font-default {
+  font-family: inherit;
+>>>>>>> frontend
 }

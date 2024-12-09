@@ -39,7 +39,7 @@ const Portfolio = () => {
           {portfolioData.map((project, i: any) => (
             <li
               key={i}
-              className="portfolio-card flex items-center gap-8">
+              className={`${i % 2 !== 0 ? "flex-row-reverse" : ""} portfolio-card flex items-center gap-8`}>
               <Image
                 src="/assets/images/portfolio/asmm.webp"
                 width={440}

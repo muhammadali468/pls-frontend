@@ -3,6 +3,9 @@ import Footer from "@/components/sections/Footer";
 import LandingHeader from "@/components/ui/LandingHeader";
 import Link from "next/link";
 import ProgressBar from "@/components/Progressbar";
+import { SlArrowRightCircle } from "react-icons/sl";
+import { FaPlus } from "react-icons/fa6";
+import { IoSettingsOutline } from "react-icons/io5";
 
 const Technology = () => {
   return (
@@ -34,7 +37,7 @@ const Technology = () => {
                   href="/service">
                   <a>
                     {" "}
-                    All Service <i className="bi bi-plus" />{" "}
+                    All Service <FaPlus />{" "}
                   </a>
                 </Link>
               </div>
@@ -65,7 +68,7 @@ const Technology = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -96,7 +99,7 @@ const Technology = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -127,7 +130,7 @@ const Technology = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -158,7 +161,7 @@ const Technology = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -191,7 +194,7 @@ const Technology = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -222,7 +225,7 @@ const Technology = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -253,7 +256,7 @@ const Technology = () => {
                       href="/service-details">
                       <a>
                         {" "}
-                        Read More <i className="bi bi-plus" />{" "}
+                        Read More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -310,11 +313,11 @@ const Technology = () => {
                 <div className="dreamit-icon-list">
                   <ul className="list-disc pl-5">
                     <li className="flex items-center mb-2">
-                      <i className="bi bi-arrow-right-circle mr-2" />
+                      <SlArrowRightCircle />
                       <span>Communicate orthogonal process</span>
                     </li>
                     <li className="flex items-center">
-                      <i className="bi bi-arrow-right-circle mr-2" />
+                      <SlArrowRightCircle />
                       <span>Professionally grow cutting-edge paradigms</span>
                     </li>
                   </ul>
@@ -342,7 +345,7 @@ const Technology = () => {
                   legacyBehavior
                   href="/about">
                   <a className="flex items-center text-lg text-primary hover:underline">
-                    <i className="bi bi-gear mr-2" /> More About
+                    <IoSettingsOutline /> More About
                   </a>
                 </Link>
               </div>
@@ -362,14 +365,14 @@ const Technology = () => {
             <div className="col-lg-12">
               <div className="call-do-action-video text-center mb-35">
                 <div className="video-icon-cda">
-                  <a
+                  <Link
                     className="video-vemo-icon venobox vbox-item"
                     data-vbtype="youtube"
                     data-autoplay="true"
                     href="https://youtu.be/BS4TUd7FJSg"
                     target="_blank">
                     <i className="bi bi-pause-circle-fill" />
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="call-do-action-content text-center">

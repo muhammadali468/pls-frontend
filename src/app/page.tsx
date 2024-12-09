@@ -11,8 +11,16 @@ import LandingHeader from "@/components/ui/LandingHeader";
 import Image from "next/image";
 import { InlineWidget } from "react-calendly";
 import BasicModal from "@/components/ui/BasicModal";
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
+=======
+import { useState } from "react";
+import { IoSettingsOutline } from "react-icons/io5";
+>>>>>>> frontend
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { MdOutlineEdit } from "react-icons/md";
+import { SlArrowRightCircle } from "react-icons/sl";
+import { FaPlus } from "react-icons/fa6";
 export default function Home() {
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -229,7 +237,7 @@ export default function Home() {
                         className="btn"
                         type="submit">
                         {" "}
-                        <i className="bi bi-gear" /> Hire Now!
+                        <IoSettingsOutline /> Hire Now!
                       </button>
                     </div>
                   </div>
@@ -251,12 +259,21 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <div className="w-full">
               <div className="slider-content">
+<<<<<<< HEAD
                 <h1 className="text-5xl font-bold !text-center sm:!text-left">Your Gateway to Powerful</h1>
                 <h1 className="text-4xl font-bold !text-center sm:!text-left">
                   Digital <span className="text-primary"> Experiences</span>
                 </h1>
                 <p className="mt-4 mx-auto sm:mx-0 !text-3xl !text-center sm:!text-left">
                   Transforming businesses with intuitive, scalable, and secure technology solutions{" "}
+=======
+                <h1 className="text-4xl font-bold !text-center sm:!text-left">One Stop</h1>
+                <h1 className="text-4xl font-bold !text-center sm:!text-left">
+                  Online <span className="text-primary">Solution!</span>
+                </h1>
+                <p className="mt-4 mx-auto sm:mx-0 text-lg !text-center sm:!text-left">
+                  Consult wisely: Plans flourish with seamless designs, user-friendly systems, and unified resources.
+>>>>>>> frontend
                 </p>
               </div>
               <div className="slider-button mt-8 flex flex-col sm:items-start items-center">
@@ -268,7 +285,7 @@ export default function Home() {
                   type="button"
                   className="flex items-center gap-2 text-lg text-primary">
                   <span className=" flex items-center bg-primary gap-2 text-lg text-white rounded-[32px] w-max px-6 py-4 hover:underline">
-                    <i className="bi bi-pencil" /> Free Consultation
+                    <MdOutlineEdit /> Free Consultation
                   </span>
                 </button>
                 <button
@@ -277,7 +294,7 @@ export default function Home() {
                     setModalName("hireUs");
                   }}>
                   <span className="mt-4 flex items-center bg-white gap-2 text-lg text-primary rounded-[32px] w-max px-6 py-4">
-                    <i className="bi bi-gear" /> Hire Us
+                    <IoSettingsOutline /> Hire Us
                   </span>
                 </button>
               </div>
@@ -359,10 +376,10 @@ export default function Home() {
                   />
                 </div>
                 <div className="feature-title mb-2">
-                  <h3 className="text-xl font-semibold">Business Planning</h3>
+                  <h3 className="text-xl font-semibold">Blockchain</h3>
                 </div>
                 <div className="feature-text mb-4">
-                  <p>Appropriately enhance principle-cent standards in platforms. Credibly orch popular services.</p>
+                  <p>We excels in developing blockchain technologies.</p>
                 </div>
                 <div className="feature-bar h-1 bg-primary" />
               </div>
@@ -393,10 +410,10 @@ export default function Home() {
                   />
                 </div>
                 <div className="feature-title mb-2">
-                  <h3 className="text-xl font-semibold">Cloud Solutions</h3>
+                  <h3 className="text-xl font-semibold">AI Innovation</h3>
                 </div>
                 <div className="feature-text mb-4">
-                  <p>Appropriately enhance principle-cent standards in platforms. Credibly orch popular services.</p>
+                  <p>We specializes in AI development and analysis.</p>
                 </div>
                 <div className="feature-bar h-1 bg-primary" />
               </div>
@@ -427,10 +444,10 @@ export default function Home() {
                   />
                 </div>
                 <div className="feature-title mb-2">
-                  <h3 className="text-xl font-semibold">Customers Support</h3>
+                  <h3 className="text-xl font-semibold">Data Experts</h3>
                 </div>
                 <div className="feature-text mb-4">
-                  <p>Appropriately enhance principle-cent standards in platforms. Credibly orch popular services.</p>
+                  <p>We curate and analyze big data and analysis.</p>
                 </div>
                 <div className="feature-bar h-1 bg-primary" />
               </div>
@@ -478,13 +495,7 @@ export default function Home() {
                   width={530}
                   alt=""
                 />
-                {/* about-shape */}
-                {/* <div className="about-shape-thumb1 bounce-animate2 ">
-                  <img
-                    src="assets/images/about/about-shpe.png"
-                    alt="About Shape 1"
-                  />
-                </div> */}
+
                 <div className="about-shape-thumb3 bounce-animate4">
                   <Image
                     src="/assets/images/about/about-shape4.png"
@@ -498,23 +509,23 @@ export default function Home() {
             <div className="lg:w-1/2 md:w-full">
               <div className="consen-section-title mb-6">
                 <h5 className="text-lg font-semibold !text-center">About Prime Logic Solutions</h5>
-                <h2 className="text-3xl font-bold !text-center">We Are Global Stakeholder</h2>
+                <h2 className="text-3xl font-bold !text-center">We are Award Winning AI powered Software Company</h2>
                 <h2 className="text-3xl font-bold !text-center">
-                  Over 2000+ <span className="text-primary">Companies</span>
+                  Over 2000+ <span className="text-primary">Clients</span>
                 </h2>
                 <p className="about-text1 mt-4 !text-center">
-                  Appropriately enhance principle-centered innovation rather than high standards in platforms. Credibly orchestrate functional.
+                  {`We excels at delivering and managing AI powered client curated and cloud solutions that cater our clientele's all business needs.`}
                 </p>
               </div>
               <div className="dreamit-icon-box mb-6">
                 <div className="dreamit-icon-list">
                   <ul className="list-disc pl-5">
-                    <li className="flex items-center mb-2">
-                      <i className="bi bi-arrow-right-circle mr-2" />
+                    <li className="flex items-center gap-2 mb-2">
+                      <SlArrowRightCircle />
                       <span>Communicate orthogonal process</span>
                     </li>
-                    <li className="flex items-center">
-                      <i className="bi bi-arrow-right-circle mr-2" />
+                    <li className="flex items-center gap-2">
+                      <SlArrowRightCircle />
                       <span>Professionally grow cutting-edge paradigms</span>
                     </li>
                   </ul>
@@ -529,10 +540,11 @@ export default function Home() {
                   </h4>
                 </div>
                 <div className="flex items-center">
-                  <ProgressBar value={95} />
-                  <h4 className="text-lg font-semibold">
-                    Finance <br /> Consulting
-                  </h4>
+                  <ProgressBar
+                    hidePercentage
+                    value={22}
+                  />
+                  <h4 className="text-lg font-semibold">Softwares we are managing</h4>
                 </div>
               </div>
               <div className="about-button">
@@ -540,7 +552,7 @@ export default function Home() {
                   legacyBehavior
                   href="/about">
                   <a className="flex items-center text-lg text-primary hover:underline">
-                    <i className="bi bi-gear mr-2" /> More About
+                    <IoSettingsOutline /> More About
                   </a>
                 </Link>
               </div>
@@ -567,6 +579,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Service Box 1 */}
+<<<<<<< HEAD
             {servicesData.map((service, i: any) => (
               <div
                 key={i}
@@ -603,6 +616,193 @@ export default function Home() {
                 </div>
               </div>
             ))}
+=======
+            <div className="px-4 sm:pl-1">
+              <div className="dreamit-service-box">
+                <div className="service-box-inner">
+                  <div className="em-service-icon1 upper">
+                    <Image
+                      src="/assets/images/resource/service-icon8.png"
+                      height={50}
+                      width={50}
+                      alt=""
+                    />
+                  </div>
+                  <div className="em-service-title">
+                    <h3 className="text-xl font-semibold">Cyber Security</h3>
+                  </div>
+                  <div className="service-bar" />
+                  <div className="em-service-text">
+                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
+                  </div>
+                  <div className="service-button">
+                    <Link
+                      legacyBehavior
+                      href="/service-details">
+                      <a className="flex items-center text-primary hover:underline">
+                        Read More <FaPlus className="ml-1" />
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Service Box 2 */}
+            <div className="px-4 sm:pl-1">
+              <div className="dreamit-service-box">
+                <div className="service-box-inner">
+                  <div className="em-service-icon1">
+                    <Image
+                      src="/assets/images/resource/service-icon5.png"
+                      height={50}
+                      width={50}
+                      alt=""
+                    />
+                  </div>
+                  <div className="em-service-title">
+                    <h3 className="text-xl font-semibold">IT Management</h3>
+                  </div>
+                  <div className="service-bar" />
+                  <div className="em-service-text">
+                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
+                  </div>
+                  <div className="service-button">
+                    <Link
+                      legacyBehavior
+                      href="/service-details">
+                      <a className="flex items-center text-primary hover:underline">
+                        Read More <FaPlus className="ml-1" />
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Service Box 3 */}
+            <div className="px-4 sm:pl-1">
+              <div className="dreamit-service-box">
+                <div className="service-box-inner">
+                  <div className="em-service-icon1">
+                    <Image
+                      src="/assets/images/resource/service-icon6.png"
+                      height={50}
+                      width={50}
+                      alt=""
+                    />
+                  </div>
+                  <div className="em-service-title">
+                    <h3 className="text-xl font-semibold">Web Development</h3>
+                  </div>
+                  <div className="service-bar" />
+                  <div className="em-service-text">
+                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
+                  </div>
+                  <div className="service-button">
+                    <Link
+                      legacyBehavior
+                      href="/service-details">
+                      <a className="flex items-center text-primary hover:underline">
+                        Read More <FaPlus className="ml-1" />
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Service Box 4 */}
+            <div className="px-4 sm:pl-1">
+              <div className="dreamit-service-box">
+                <div className="service-box-inner">
+                  <div className="em-service-icon1">
+                    <Image
+                      src="/assets/images/resource/service-icon7.png"
+                      height={50}
+                      width={50}
+                      alt=""
+                    />
+                  </div>
+                  <div className="em-service-title">
+                    <h3 className="text-xl font-semibold">Leadership Work</h3>
+                  </div>
+                  <div className="service-bar" />
+                  <div className="em-service-text">
+                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
+                  </div>
+                  <div className="service-button">
+                    <Link
+                      legacyBehavior
+                      href="/service-details">
+                      <a className="flex items-center text-primary hover:underline">
+                        Read More <FaPlus className="ml-1" />
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Service Box 5 */}
+            <div className="px-4 sm:pl-1">
+              <div className="dreamit-service-box">
+                <div className="service-box-inner">
+                  <div className="em-service-icon1">
+                    <Image
+                      src="/assets/images/resource/service-icon7.png"
+                      height={50}
+                      width={50}
+                      alt=""
+                    />
+                  </div>
+                  <div className="em-service-title">
+                    <h3 className="text-xl font-semibold">Leadership Work</h3>
+                  </div>
+                  <div className="service-bar" />
+                  <div className="em-service-text">
+                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
+                  </div>
+                  <div className="service-button">
+                    <Link
+                      legacyBehavior
+                      href="/service-details">
+                      <a className="flex items-center text-primary hover:underline">
+                        Read More <FaPlus className="ml-1" />
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Service Box 6 */}
+            <div className="px-4 sm:pl-1">
+              <div className="dreamit-service-box">
+                <div className="service-box-inner">
+                  <div className="em-service-icon1">
+                    <Image
+                      src="/assets/images/resource/service-icon7.png"
+                      height={50}
+                      width={50}
+                      alt=""
+                    />
+                  </div>
+                  <div className="em-service-title">
+                    <h3 className="text-xl font-semibold">Leadership Work</h3>
+                  </div>
+                  <div className="service-bar" />
+                  <div className="em-service-text">
+                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
+                  </div>
+                  <div className="service-button">
+                    <Link
+                      legacyBehavior
+                      href="/service-details">
+                      <a className="flex items-center text-primary hover:underline">
+                        Read More <FaPlus className="ml-1" />
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+>>>>>>> frontend
           </div>
           <div className="w-full mt-6">
             <div className="service-bottom-text">
@@ -654,27 +854,27 @@ export default function Home() {
               <div className="dreamit-icon-list">
                 <ul className="list-disc pl-5">
                   <li className="flex items-center mb-2">
-                    <i className="bi bi-arrow-right-circle mr-2" />
+                    <SlArrowRightCircle />
                     <span>Technology Consultancy</span>
                   </li>
                   <li className="flex items-center mb-2">
-                    <i className="bi bi-arrow-right-circle mr-2" />
+                    <SlArrowRightCircle />
                     <span>E-Commerce Development</span>
                   </li>
                   <li className="flex items-center mb-2">
-                    <i className="bi bi-arrow-right-circle mr-2" />
+                    <SlArrowRightCircle />
                     <span>Cloud Software Solutions</span>
                   </li>
                   <li className="flex items-center mb-2">
-                    <i className="bi bi-arrow-right-circle mr-2" />
+                    <SlArrowRightCircle />
                     <span>Brand Development</span>
                   </li>
                   <li className="flex items-center mb-2">
-                    <i className="bi bi-arrow-right-circle mr-2" />
+                    <SlArrowRightCircle />
                     <span>Enterprise App Development</span>
                   </li>
                   <li className="flex items-center mb-2">
-                    <i className="bi bi-arrow-right-circle mr-2" />
+                    <SlArrowRightCircle />
                     <span>Mobile Application Development</span>
                   </li>
                 </ul>
@@ -1241,7 +1441,7 @@ export default function Home() {
                             className="btn"
                             type="submit">
                             {" "}
-                            <i className="bi bi-gear" /> Free Consultant{" "}
+                            <IoSettingsOutline /> Free Consultant{" "}
                           </button>
                         </div>
                       </div>
@@ -1279,7 +1479,7 @@ export default function Home() {
                   href="/blog-grid">
                   <a>
                     {" "}
-                    <i className="bi bi-gear" /> View all Blog{" "}
+                    <IoSettingsOutline /> View all Blog{" "}
                   </a>
                 </Link>
               </div>
@@ -1332,7 +1532,7 @@ export default function Home() {
                       href="/blog-details">
                       <a>
                         {" "}
-                        Learn More <i className="bi bi-plus" />{" "}
+                        Learn More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -1385,7 +1585,7 @@ export default function Home() {
                       href="/blog-details">
                       <a>
                         {" "}
-                        Learn More <i className="bi bi-plus" />{" "}
+                        Learn More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>
@@ -1438,7 +1638,7 @@ export default function Home() {
                       href="/blog-details">
                       <a>
                         {" "}
-                        Learn More <i className="bi bi-plus" />{" "}
+                        Learn More <FaPlus />{" "}
                       </a>
                     </Link>
                   </div>

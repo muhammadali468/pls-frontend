@@ -3,12 +3,14 @@ import Link from "next/link";
 import { useState } from "react";
 import MobileMenu from "../sections/MobileMenu";
 import BasicModal from "./BasicModal";
+import { IoSettingsOutline } from "react-icons/io5";
 
 const LandingHeader = () => {
   const [toggle, setToggle] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
+  const aboutUsPages = ["Mission Vision & Core Values", "Leadership Team", "Awards and Recognition", "Global Presence", "Partners and Clients"];
   const servicesData = [
     "Web Development",
     "Mobile Application",
@@ -118,7 +120,7 @@ const LandingHeader = () => {
                       className="btn"
                       type="submit">
                       {" "}
-                      <i className="bi bi-gear" /> Free Consultant
+                      <IoSettingsOutline /> Free Consultant
                     </button>
                   </div>
                 </div>
@@ -178,7 +180,7 @@ const LandingHeader = () => {
         className="consen_nav_manu style-two header____">
         <div className="container mx-auto">
           <div className="row header-bg flex justify-between items-center">
-            <div className="w-[20%]">
+            <div className="w-[10%]">
               <div className="logo">
                 <Link
                   legacyBehavior
@@ -212,8 +214,20 @@ const LandingHeader = () => {
                   <li>
                     <Link href="/">Home</Link>
                   </li>
-                  <li>
-                    <Link href="/about-us">About Us</Link>
+                  <li className="relative group">
+                    <Link href="/about-us">
+                      About Us
+                      <i className="bi bi-chevron-down pl-2"></i>
+                    </Link>
+                    <ul className="absolute bg-white w-64 shadow-lg rounded-lg !hidden group-hover:!block transition-opacity duration-300  ">
+                      {aboutUsPages.map((page, i) => (
+                        <li
+                          key={i}
+                          className={`flex gap-2 items-center px-4 py-2 text-primary hover:bg-primary hover:text-white duration-300 cursor-default border-gray-200`}>
+                          {page}
+                        </li>
+                      ))}
+                    </ul>
                   </li>
                   <li className="relative group">
                     <Link href="/services">
@@ -259,6 +273,9 @@ const LandingHeader = () => {
                   </li>
                   <li>
                     <Link href="/portfolio">Portfolio</Link>
+                  </li>
+                  <li>
+                    <Link href="/blogs">Blogs</Link>
                   </li>
                   <li>
                     <Link href="/contact">Contact</Link>

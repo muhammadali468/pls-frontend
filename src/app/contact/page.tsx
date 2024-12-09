@@ -1,5 +1,6 @@
 import Footer from "@/components/sections/Footer";
 import LandingHeader from "@/components/ui/LandingHeader";
+import { IoSettingsOutline } from "react-icons/io5";
 
 const ContactUs = () => {
   return (
@@ -73,7 +74,7 @@ const ContactUs = () => {
                           className="btn"
                           type="submit">
                           {" "}
-                          <i className="bi bi-gear" /> Free Consultant
+                          <IoSettingsOutline /> Free Consultant
                         </button>
                       </div>
                     </div>
