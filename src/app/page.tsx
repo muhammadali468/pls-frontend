@@ -11,12 +11,8 @@ import LandingHeader from "@/components/ui/LandingHeader";
 import Image from "next/image";
 import { InlineWidget } from "react-calendly";
 import BasicModal from "@/components/ui/BasicModal";
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
-=======
-import { useState } from "react";
 import { IoSettingsOutline } from "react-icons/io5";
->>>>>>> frontend
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { MdOutlineEdit } from "react-icons/md";
 import { SlArrowRightCircle } from "react-icons/sl";
@@ -40,84 +36,84 @@ export default function Home() {
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
   const [modalName, setModalName] = useState("");
-  const servicesData = [
-    {
-      name: "Web Development",
-      description:
-        "Accelerate growth with cutting-edge, scalable web solutions that drive digital transformation and deliver seamless user experiences."
-    },
-    {
-      name: "Mobile Application",
-      description: "Empower businesses with intuitive, high-performance mobile apps that enhance engagement and expand your digital reach.  "
-    },
-    {
-      name: "Data Analysis",
-      description: "Uncover actionable insights from complex data to fuel strategic decisions and optimize operational efficiency."
-    },
-    {
-      name: "E-commerce",
-      description:
-        "Revolutionize your online presence with dynamic e-commerce platforms that maximize sales, enhance customer experience, and drive growth."
-    },
-    {
-      name: "SaaS Development",
-      description: "Innovate with custom SaaS solutions designed to streamline operations, reduce costs, and scale with your business needs."
-    },
-    {
-      name: "Digital Marketing",
-      description:
-        "Elevate your brand with precision-targeted digital marketing strategies that increase visibility, engagement, and conversion rates."
-    },
-    {
-      name: "Production Services",
-      description: "Deliver high-quality, impactful media production services that captivate audiences and enhance brand messaging."
-    },
-    {
-      name: "Graphic Design",
-      description: "Craft visually stunning, brand-aligned designs that resonate with audiences and strengthen your market position."
-    },
-    {
-      name: "Sound Engineering",
-      description: "Create immersive auditory experiences with expert sound engineering services that amplify your brand’s voice."
-    },
-    {
-      name: "DevOps and Automation Services",
-      description:
-        " Streamline workflows and enhance productivity with DevOps practices and automated solutions tailored to accelerate development cycles."
-    },
-    {
-      name: "Big Data Analytics",
-      description: "Harness the power of big data to drive predictive analytics, optimize performance, and unlock new growth opportunities."
-    },
-    {
-      name: "Blockchain Solutions",
-      description: "Disrupt industries with secure, transparent blockchain technologies that foster trust, security, and decentralization."
-    },
-    {
-      name: "Voice Technology Solutions",
-      description: "Transform customer interactions with advanced voice recognition systems that enhance service and streamline communication."
-    },
-    {
-      name: "API Development and Integration",
-      description: "Simplify complex systems with custom APIs that connect, streamline, and scale your digital infrastructure seamlessly."
-    },
-    {
-      name: "AI-Powered Personalization",
-      description: "Harness the power of AI to create hyper-personalized experiences that engage, convert, and retain your audience."
-    },
-    {
-      name: "Green IT and Sustainability Solutions",
-      description: "Drive innovation with sustainable IT solutions that reduce environmental impact and promote eco-friendly practices."
-    },
-    {
-      name: "Cyber Security Services",
-      description: "Drive innovation with sustainable IT solutions that reduce environmental impact and promote eco-friendly practices."
-    },
-    {
-      name: "Social Media Services",
-      description: "Drive innovation with sustainable IT solutions that reduce environmental impact and promote eco-friendly practices."
-    }
-  ];
+  // const servicesData = [
+  //   {
+  //     name: "Web Development",
+  //     description:
+  //       "Accelerate growth with cutting-edge, scalable web solutions that drive digital transformation and deliver seamless user experiences."
+  //   },
+  //   {
+  //     name: "Mobile Application",
+  //     description: "Empower businesses with intuitive, high-performance mobile apps that enhance engagement and expand your digital reach.  "
+  //   },
+  //   {
+  //     name: "Data Analysis",
+  //     description: "Uncover actionable insights from complex data to fuel strategic decisions and optimize operational efficiency."
+  //   },
+  //   {
+  //     name: "E-commerce",
+  //     description:
+  //       "Revolutionize your online presence with dynamic e-commerce platforms that maximize sales, enhance customer experience, and drive growth."
+  //   },
+  //   {
+  //     name: "SaaS Development",
+  //     description: "Innovate with custom SaaS solutions designed to streamline operations, reduce costs, and scale with your business needs."
+  //   },
+  //   {
+  //     name: "Digital Marketing",
+  //     description:
+  //       "Elevate your brand with precision-targeted digital marketing strategies that increase visibility, engagement, and conversion rates."
+  //   },
+  //   {
+  //     name: "Production Services",
+  //     description: "Deliver high-quality, impactful media production services that captivate audiences and enhance brand messaging."
+  //   },
+  //   {
+  //     name: "Graphic Design",
+  //     description: "Craft visually stunning, brand-aligned designs that resonate with audiences and strengthen your market position."
+  //   },
+  //   {
+  //     name: "Sound Engineering",
+  //     description: "Create immersive auditory experiences with expert sound engineering services that amplify your brand’s voice."
+  //   },
+  //   {
+  //     name: "DevOps and Automation Services",
+  //     description:
+  //       " Streamline workflows and enhance productivity with DevOps practices and automated solutions tailored to accelerate development cycles."
+  //   },
+  //   {
+  //     name: "Big Data Analytics",
+  //     description: "Harness the power of big data to drive predictive analytics, optimize performance, and unlock new growth opportunities."
+  //   },
+  //   {
+  //     name: "Blockchain Solutions",
+  //     description: "Disrupt industries with secure, transparent blockchain technologies that foster trust, security, and decentralization."
+  //   },
+  //   {
+  //     name: "Voice Technology Solutions",
+  //     description: "Transform customer interactions with advanced voice recognition systems that enhance service and streamline communication."
+  //   },
+  //   {
+  //     name: "API Development and Integration",
+  //     description: "Simplify complex systems with custom APIs that connect, streamline, and scale your digital infrastructure seamlessly."
+  //   },
+  //   {
+  //     name: "AI-Powered Personalization",
+  //     description: "Harness the power of AI to create hyper-personalized experiences that engage, convert, and retain your audience."
+  //   },
+  //   {
+  //     name: "Green IT and Sustainability Solutions",
+  //     description: "Drive innovation with sustainable IT solutions that reduce environmental impact and promote eco-friendly practices."
+  //   },
+  //   {
+  //     name: "Cyber Security Services",
+  //     description: "Drive innovation with sustainable IT solutions that reduce environmental impact and promote eco-friendly practices."
+  //   },
+  //   {
+  //     name: "Social Media Services",
+  //     description: "Drive innovation with sustainable IT solutions that reduce environmental impact and promote eco-friendly practices."
+  //   }
+  // ];
   // const industryData = [
   //   "Information Technology (IT)",
   //   "Healthcare",
@@ -259,21 +255,12 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <div className="w-full">
               <div className="slider-content">
-<<<<<<< HEAD
-                <h1 className="text-5xl font-bold !text-center sm:!text-left">Your Gateway to Powerful</h1>
-                <h1 className="text-4xl font-bold !text-center sm:!text-left">
-                  Digital <span className="text-primary"> Experiences</span>
-                </h1>
-                <p className="mt-4 mx-auto sm:mx-0 !text-3xl !text-center sm:!text-left">
-                  Transforming businesses with intuitive, scalable, and secure technology solutions{" "}
-=======
                 <h1 className="text-4xl font-bold !text-center sm:!text-left">One Stop</h1>
                 <h1 className="text-4xl font-bold !text-center sm:!text-left">
                   Online <span className="text-primary">Solution!</span>
                 </h1>
                 <p className="mt-4 mx-auto sm:mx-0 text-lg !text-center sm:!text-left">
                   Consult wisely: Plans flourish with seamless designs, user-friendly systems, and unified resources.
->>>>>>> frontend
                 </p>
               </div>
               <div className="slider-button mt-8 flex flex-col sm:items-start items-center">
@@ -579,44 +566,6 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Service Box 1 */}
-<<<<<<< HEAD
-            {servicesData.map((service, i: any) => (
-              <div
-                key={i}
-                className="px-4 sm:pl-1 rounded-xl ">
-                <div className="dreamit-service-box min-h-[24.25rem]">
-                  <div className="service-box-inner flex flex-col justify-between gap-6">
-                    <div>
-                      <div className="em-service-icon1 upper">
-                        <Image
-                          src="/assets/images/resource/service-icon8.png"
-                          height={50}
-                          width={50}
-                          alt=""
-                        />
-                      </div>
-                      <div className="em-service-title">
-                        <h3 className="text-xl font-semibold">{service.name}</h3>
-                      </div>
-                      <div className="service-bar" />
-                      <div className="em-service-text">
-                        <p>{service.description}</p>
-                      </div>
-                    </div>
-                    <div className="service-button">
-                      <Link
-                        legacyBehavior
-                        href="/service-details">
-                        <a className="flex items-center text-primary hover:underline">
-                          Read More <i className="bi bi-plus ml-1" />
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-=======
             <div className="px-4 sm:pl-1">
               <div className="dreamit-service-box">
                 <div className="service-box-inner">
@@ -802,7 +751,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
->>>>>>> frontend
           </div>
           <div className="w-full mt-6">
             <div className="service-bottom-text">
