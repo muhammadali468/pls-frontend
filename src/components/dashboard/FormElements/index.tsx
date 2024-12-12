@@ -1,18 +1,18 @@
 "use client";
-import Breadcrumb from "../../../components/dashboard/Breadcrumbs/Breadcrumb";
-import CheckboxFive from "../../../components/dashboard/Checkboxes/CheckboxFive";
-import CheckboxFour from "../../../components/dashboard/Checkboxes/CheckboxFour";
-import CheckboxOne from "../../../components/dashboard/Checkboxes/CheckboxOne";
-import CheckboxThree from "../../../components/dashboard/Checkboxes/CheckboxThree";
-import CheckboxTwo from "../../../components/dashboard/Checkboxes/CheckboxTwo";
-import SwitcherFour from "../../../components/dashboard/Switchers/SwitcherFour";
-import SwitcherOne from "../../../components/dashboard/Switchers/SwitcherOne";
-import SwitcherThree from "../../../components/dashboard/Switchers/SwitcherThree";
-import SwitcherTwo from "../../../components/dashboard/Switchers/SwitcherTwo";
-import DatePickerTwo from "../../../components/dashboard/FormElements/DatePicker/DatePickerTwo";
-import DatePickerOne from "../../../components/dashboard/FormElements/DatePicker/DatePickerOne";
-import MultiSelect from "../../../components/dashboard/FormElements/MultiSelect";
-import SelectGroupTwo from "../../../components/dashboard/SelectGroup/SelectGroupTwo";
+import Breadcrumb from "@/components/dashboard/Breadcrumbs/Breadcrumb";
+import CheckboxFive from "@/components/dashboard/Checkboxes/CheckboxFive";
+import CheckboxFour from "@/components/dashboard/Checkboxes/CheckboxFour";
+import CheckboxOne from "@/components/dashboard/Checkboxes/CheckboxOne";
+import CheckboxThree from "@/components/dashboard/Checkboxes/CheckboxThree";
+import CheckboxTwo from "@/components/dashboard/Checkboxes/CheckboxTwo";
+import SwitcherFour from "@/components/dashboard/Switchers/SwitcherFour";
+import SwitcherOne from "@/components/dashboard/Switchers/SwitcherOne";
+import SwitcherThree from "@/components/dashboard/Switchers/SwitcherThree";
+import SwitcherTwo from "@/components/dashboard/Switchers/SwitcherTwo";
+import DatePickerTwo from "@/components/dashboard/FormElements/DatePicker/DatePickerTwo";
+import DatePickerOne from "@/components/dashboard/FormElements/DatePicker/DatePickerOne";
+import MultiSelect from "@/components/dashboard/FormElements/MultiSelect";
+import SelectGroupTwo from "@/components/dashboard/SelectGroup/SelectGroupTwo";
 
 const FormElements = () => {
   return (

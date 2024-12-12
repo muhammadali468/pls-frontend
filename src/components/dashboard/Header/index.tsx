@@ -1,6 +1,6 @@
 import Link from "next/link";
-import DropdownMessage from "./DropdownMessage";
-import DropdownNotification from "./DropdownNotification";
+// import DropdownMessage from "./DropdownMessage";
+// import DropdownNotification from "./DropdownNotification";
 import DropdownUser from "./DropdownUser";
 import Image from "next/image";
 
@@ -101,11 +101,11 @@ const Header = (props: { sidebarOpen: string | boolean | undefined; setSidebarOp
             {/* <!-- Dark Mode Toggler --> */}
 
             {/* <!-- Notification Menu Area --> */}
-            <DropdownNotification />
+            {/* <DropdownNotification /> */}
             {/* <!-- Notification Menu Area --> */}
 
             {/* <!-- Chat Notification Area --> */}
-            <DropdownMessage />
+            {/* <DropdownMessage /> */}
             {/* <!-- Chat Notification Area --> */}
           </ul>
 

@@ -9,6 +9,7 @@ import "../../public/assets/css/responsive.css";
 import "../../public/assets/css/animate.css";
 import "../../public/assets/css/animated-text.css";
 import "./globals.css";
+import "react-step-progress/dist/index.css";
 // import 'react-tabs/style/react-tabs.css';
 import Preloader from "@/components/sections/Preloader";
 import { AppProvider } from "@/context/AppContext";

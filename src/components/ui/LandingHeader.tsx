@@ -4,24 +4,128 @@ import { useState } from "react";
 import MobileMenu from "../sections/MobileMenu";
 import BasicModal from "./BasicModal";
 import { IoSettingsOutline } from "react-icons/io5";
-
-const LandingHeader = () => {
+import { usePathname } from "next/navigation";
+//
+const LandingHeader = ({ res }: { res: ISERVICECATEGORY }) => {
   const [toggle, setToggle] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
+
+  const pathname = usePathname();
+
+  if (pathname.includes("/dashboard")) {
+    return null;
+  }
+
   const aboutUsPages = ["Mission Vision & Core Values", "Leadership Team", "Awards and Recognition", "Global Presence", "Partners and Clients"];
-  const servicesData = [
-    "Web Development",
-    "Mobile Application",
-    "Data Analysis",
-    "E-commerce",
-    "SaaS Development",
-    "Digital Marketing",
-    "Production Services",
-    "Graphic Design",
-    "Sound Engineering"
-  ];
+  // const servicesData = [
+  //   {
+  //     name: "Web Development",
+  //     subServices: ["Frontend", "Backend", "Full Stack"],
+  //   },
+  //   {
+  //     name: "SEO",
+  //     subServices: [],
+  //   },
+  //   {
+  //     name: "Content Writing",
+  //     subServices: ["Blog Writing", "Copywriting"],
+  //   },
+  // ];
+
+  // const servicesData = [
+  //   {
+  //     category: "Software Development",
+  //     services: [
+  //       "Web Development",
+  //       "Mobile Application",
+  //       "SaaS Development",
+  //       "API Development and Integration",
+  //       "Web 3.0",
+  //       "Salesforce Development",
+  //       "CMS Development",
+  //     ],
+  //   },
+  //   {
+  //     category: "Data and Analytics",
+  //     services: [
+  //       "Data Analysis",
+  //       "Big Data Analytics",
+  //       "AI/ML → Computer Vision",
+  //     ],
+  //   },
+  //   {
+  //     category: "Cloud and DevOps",
+  //     services: [
+  //       "DevOps and Automation Services",
+  //       "AWS and Azure",
+  //       "Docker and Kubernetes",
+  //     ],
+  //   },
+  //   {
+  //     category: "Emerging Technologies",
+  //     services: [
+  //       "Blockchain Solutions",
+  //       "Voice Technology Solutions",
+  //       "IoT",
+  //       "AI-Powered Personalization",
+  //     ],
+  //   },
+  //   {
+  //     category: "Creative and Design",
+  //     services: [
+  //       "Graphic Design",
+  //       "CAD Design",
+  //     ],
+  //   },
+  //   {
+  //     category: "Digital Commerce and Marketing",
+  //     services: [
+  //       "E-commerce",
+  //       "Digital Marketing",
+  //       "Social Media Services",
+  //       "Content Marketing",
+  //       "PR Marketing",
+  //     ],
+  //   },
+  //   {
+  //     category: "Production and Media",
+  //     services: [
+  //       "Production Services",
+  //       "Sound Engineering",
+  //     ],
+  //   },
+  //   {
+  //     category: "Cybersecurity",
+  //     services: [
+  //       "Cyber Security Services",
+  //     ],
+  //   },
+  //   {
+  //     category: "Sustainability and Future Tech",
+  //     services: [
+  //       "Green IT and Sustainability Solutions",
+  //     ],
+  //   },
+  //   {
+  //     category: "Quality Control and Testing",
+  //     services: [
+  //       "Quality Control/Testing",
+  //     ],
+  //   },
+  //   {
+  //     category: "Progress Technology Services",
+  //     services: [
+  //       "Progress Technology Service",
+  //     ],
+  //   },
+  //   {
+  //     category: "IT Support",
+  //     services: [],
+  //   },
+  // ];
+
   const industryData = [
     "Information Technology (IT)",
     "Healthcare",
@@ -180,7 +284,7 @@ const LandingHeader = () => {
         className="consen_nav_manu style-two header____">
         <div className="container mx-auto">
           <div className="row header-bg flex justify-between items-center">
-            <div className="w-[10%]">
+            <div className="w-[8%]">
               <div className="logo">
                 <Link
                   legacyBehavior
@@ -210,7 +314,7 @@ const LandingHeader = () => {
             </div>
             <div className="col-lg-9 pl-0 pr-0 flex items-center justify-around">
               <nav className="consen_menu">
-                <ul className="nav_scroll">
+                {/* <ul className="nav_scroll">
                   <li>
                     <Link href="/">Home</Link>
                   </li>
@@ -229,20 +333,47 @@ const LandingHeader = () => {
                       ))}
                     </ul>
                   </li>
+
                   <li className="relative group">
-                    <Link href="/services">
-                      Services <i className="bi bi-chevron-down"></i>
+                    <Link href="/services" className="flex items-center px-4 py-2 text-primary">
+                      Services <i className="bi bi-chevron-down ml-2"></i>
                     </Link>
-                    <ul className="absolute bg-white w-64 shadow-lg rounded-lg !hidden group-hover:!block transition-opacity duration-300  ">
-                      {servicesData.map((service, i: any) => (
+
+                    <ul className="absolute left-0 top-full bg-white w-64 shadow-lg rounded-lg !hidden group-hover:!block">
+                      {servicesData.map((service, index) => (
                         <li
-                          key={i}
-                          className={`flex gap-2 items-center px-4 py-2 text-primary hover:bg-primary hover:text-white duration-300 cursor-default ${i !== service.length ? "border-b" : ""} border-gray-200`}>
-                          {service}
+                          key={index}
+                        >
+                          <div className="">
+                            <div className="peer flex justify-between items-center px-4 py-2 text-primary hover:bg-primary hover:text-white duration-300 border-b border-gray-200 cursor-pointer">
+                              {service.category}
+                              {service.services && service.services.length > 0 && (
+                                <i className="bi bi-chevron-right"></i>
+                              )}
+                            </div>
+
+                            {service.services && service.services.length > 0 && (
+                              <ul className="absolute left-full top-0 bg-white w-64 shadow-lg rounded-lg !hidden peer-hover:!block">
+                                {service.services.map((subService, subIndex) => (
+                                  <li
+                                    key={subIndex}
+                                    className="px-4 py-2 text-primary hover:bg-primary hover:text-white duration-300 border-b border-gray-200 cursor-pointer"
+                                  >
+                                    {subService}
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
                         </li>
                       ))}
                     </ul>
+                    
+
                   </li>
+
+
+
                   <li className="relative group">
                     <Link href="/industry">
                       Industry <i className="bi bi-chevron-down"></i>
@@ -267,6 +398,89 @@ const LandingHeader = () => {
                           key={i}
                           className={`flex gap-2 items-center px-4 py-2 text-primary hover:bg-primary hover:text-white duration-300 cursor-default ${i !== technology.length ? "border-b" : ""} border-gray-200`}>
                           {technology}
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                  <li>
+                    
+                  </li>
+                  <li>
+                    
+                  </li>
+                  <li>
+                    
+                  </li>
+                </ul> */}
+
+                <ul className="menu">
+                  <li>
+                    <Link href="/">Home</Link>
+                  </li>
+                  <li className="dropdown">
+                    <Link href="/">About Us</Link>
+                    <ul className="submenu bg-white shadow-lg text-primary">
+                      {aboutUsPages.map((page, i) => (
+                        <li key={i}>
+                          <Link href={""}>{page}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                  <li className="dropdown">
+                    <Link href="/services">Services</Link>
+                    <ul className="submenu bg-white">
+                      {/* {servicesData.map((service, i) => (
+                        <li key={i} className="dropdown bg-white shadow-lg text-primary duration-300">
+                          <Link  href="/" className="px-4 py-2 hover:bg-primary shadow-lg text-primary hover:text-white duration-300">{service.category}</Link>
+                          <ul className="submenu bg-white shadow-lg text-primary">
+                            {service.services.map((subService,i)=>(
+                              <li key={i} className="px-4 py-2 bg-white hover:bg-primary text-primary hover:text-white duration-300 cursor-pointer">{subService}</li>
+                            ))}
+                          </ul>
+                        </li>
+                      ))} */}
+
+                      {res.data.allCategory.map((category, i) => (
+                        <li
+                          key={i}
+                          className="dropdown bg-white shadow-lg text-primary duration-300">
+                          <Link
+                            href="/"
+                            className="px-4 py-2 hover:bg-primary shadow-lg text-primary hover:text-white duration-300">
+                            {category.name}
+                          </Link>
+                          <ul className="submenu bg-white shadow-lg text-primary">
+                            {category.subcategories.map((service, i) => (
+                              <li
+                                key={i}
+                                className="px-4 py-2 bg-white hover:bg-primary text-primary hover:text-white duration-300 cursor-pointer">
+                                <Link href={"/services/" + service.slug}>{service.name}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                  <li className="dropdown">
+                    <Link href="/industry">Industry</Link>
+                    <ul className="submenu">
+                      {industryData.map((page, i) => (
+                        <li
+                          key={i}
+                          className="bg-white hover:bg-primary shadow-lg text-primary hover:text-white duration-300">
+                          <Link href="">{page}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                  <li className="dropdown">
+                    <Link href="/technology">Technology</Link>
+                    <ul className="submenu bg-white shadow-lg text-primary">
+                      {technologyData.map((page, i) => (
+                        <li key={i}>
+                          <Link href="">{page}</Link>
                         </li>
                       ))}
                     </ul>

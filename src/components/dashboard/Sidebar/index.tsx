@@ -3,8 +3,8 @@ import React from "react";
 // import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import SidebarItem from "../../../components/dashboard/Sidebar/SidebarItem";
-import ClickOutside from "../../../components/dashboard/ClickOutside";
+import SidebarItem from "@/components/dashboard/Sidebar/SidebarItem";
+import ClickOutside from "@/components/dashboard/ClickOutside";
 
 interface SidebarProps {
   sidebarOpen: boolean;

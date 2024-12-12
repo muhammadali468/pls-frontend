@@ -1,12 +1,11 @@
 "use client";
 import Footer from "@/components/sections/Footer";
-import LandingHeader from "@/components/ui/LandingHeader";
+
 import Image from "next/image";
 
 const IndustryDetail = () => {
   return (
     <>
-      <LandingHeader />
       <section className="py-32">
         <div className="container mx-auto p-5">
           {/* Main Layout */}
