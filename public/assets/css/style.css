@@ -1315,7 +1315,7 @@ ul.sub-menu li:hover a span {
 
 .style-three .em-service-title h3 {
   margin: 10px 0 20px;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 500;
   transition: 0.5s;
 }
@@ -7574,6 +7574,6 @@ ul.social-box li a:hover {
   top: -100%;
   opacity: 0;
 }
-a.logo_img img {
+/* a.logo_img img {
   width: 90px !important;
-}
+} */

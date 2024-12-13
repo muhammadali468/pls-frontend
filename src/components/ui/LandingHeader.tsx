@@ -5,6 +5,7 @@ import MobileMenu from "../sections/MobileMenu";
 import BasicModal from "./BasicModal";
 import { IoSettingsOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 //
 const LandingHeader = ({ res }: { res: ISERVICECATEGORY }) => {
   const [toggle, setToggle] = useState(false);
@@ -18,7 +19,28 @@ const LandingHeader = ({ res }: { res: ISERVICECATEGORY }) => {
     return null;
   }
 
-  const aboutUsPages = ["Mission Vision & Core Values", "Leadership Team", "Awards and Recognition", "Global Presence", "Partners and Clients"];
+  const aboutUsPages = [
+    {
+      name: "Mission Vision & Core Values",
+      url: "/"
+    },
+    {
+      name: "Leadership Team",
+      url: "/about-us/leadership-team"
+    },
+    {
+      name: "Awards and Recognition",
+      url: "/about-us/awards-and-recognition"
+    },
+    {
+      name: "Global Presence",
+      url: "/about-us/global-presence"
+    },
+    {
+      name: "Partners and Clients",
+      url: "/about-us/partners-and-clients"
+    },
+  ];
   // const servicesData = [
   //   {
   //     name: "Web Development",
@@ -156,9 +178,11 @@ const LandingHeader = ({ res }: { res: ISERVICECATEGORY }) => {
         onClose={closeModal}>
         <div className="max-w-5xl grid grid-cols-2 py-16">
           <div>
-            <img
+            <Image
+              width={400}
+              height={200}
               className="h-full object-cover"
-              src="./assets/images/resource/request-quote-modal.jpeg"
+              src="/assets/images/resource/request-quote-modal.jpeg"
               alt="request quote"
             />
           </div>
@@ -289,27 +313,24 @@ const LandingHeader = ({ res }: { res: ISERVICECATEGORY }) => {
                 <Link
                   legacyBehavior
                   href="/">
-                  <a
-                    className="logo_img"
-                    title="consen">
-                    <img
-                      src="assets/images/logo.png"
-                      alt="logo"
-                    />
-                  </a>
+                  <Image
+                    src="/assets/images/logo.png"
+                    alt="logo"
+                    height={100}
+                    width={100}
+                    className="cursor-pointer"
+                  />
                 </Link>
-                <Link
+                {/* <Link
                   legacyBehavior
                   href="/">
-                  <a
-                    className="main_sticky"
-                    title="consen">
-                    <img
-                      src="assets/images/logo.png"
-                      alt="logo"
-                    />
-                  </a>
-                </Link>
+                  <Image
+                    src="/assets/images/logo.png"
+                    height={100}
+                    width={100}
+                    alt="logo"
+                  />
+                </Link> */}
               </div>
             </div>
             <div className="col-lg-9 pl-0 pr-0 flex items-center justify-around">
@@ -422,7 +443,7 @@ const LandingHeader = ({ res }: { res: ISERVICECATEGORY }) => {
                     <ul className="submenu bg-white shadow-lg text-primary">
                       {aboutUsPages.map((page, i) => (
                         <li key={i}>
-                          <Link href={""}>{page}</Link>
+                          <Link href={page.url}>{page.name}</Link>
                         </li>
                       ))}
                     </ul>
@@ -488,8 +509,19 @@ const LandingHeader = ({ res }: { res: ISERVICECATEGORY }) => {
                   <li>
                     <Link href="/portfolio">Portfolio</Link>
                   </li>
-                  <li>
-                    <Link href="/blogs">Blogs</Link>
+                  <li className="dropdown">
+                    <Link href="/">Products</Link>
+                    <ul className="submenu bg-white shadow-lg text-primary">
+                      <li>
+                        <Link href="">Dummy Product 1</Link>
+                      </li>
+                      <li>
+                        <Link href="">Dummy Product 2</Link>
+                      </li>
+                      <li>
+                        <Link href="">Dummy Product 3</Link>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     <Link href="/contact">Contact</Link>
@@ -539,8 +571,10 @@ const LandingHeader = ({ res }: { res: ISERVICECATEGORY }) => {
                 <div className="content-inner">
                   <div className="nav-logo">
                     <Link href="index.html">
-                      <img
-                        src="assets/images/logo.png"
+                      <Image
+                        height={50}
+                        width={50}
+                        src="/assets/images/logo.png"
                         alt="logo"
                       />
                     </Link>

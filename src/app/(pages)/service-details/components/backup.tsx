@@ -1,6 +1,6 @@
 // "use client";
 // import { axios } from "@/axios";
-// import Footer from "@/components/sections/Footer";
+// 
 // import EditableContent from "@/components/ui/EditableContent";
 //
 // import { serviceDetailData } from "@/constants";
@@ -422,7 +422,7 @@
 //           </div>
 //         </div>
 //       </div>
-//       <Footer />
+//       
 //     </>
 //   );
 // };

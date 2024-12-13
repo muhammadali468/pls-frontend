@@ -1,5 +1,5 @@
 "use client";
-import Footer from "@/components/sections/Footer";
+
 
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Image from "next/image";
@@ -449,7 +449,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 };

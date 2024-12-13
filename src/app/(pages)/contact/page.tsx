@@ -1,4 +1,4 @@
-import Footer from "@/components/sections/Footer";
+
 
 import { IoSettingsOutline } from "react-icons/io5";
 
@@ -137,7 +137,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 };

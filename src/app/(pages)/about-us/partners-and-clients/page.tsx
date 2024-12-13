@@ -1,7 +1,8 @@
-import Footer from "@/components/sections/Footer";
 
+
+import Image from "next/image";
 import Link from "next/link";
-const LeadershipTeam = () => {
+const Partners = () => {
   return (
     <>
       <section className="py-48   ">
@@ -13,16 +14,20 @@ const LeadershipTeam = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             <div className="single-service-box">
               <div className="service-box-thumb">
-                <img
+                <Image
                   src="/assets/images/resource/team-1.jpg"
                   alt=""
+                  height={300}
+                  width={300}
                 />
               </div>
               <div className="service-icon-thumb">
-                <img
+              <Image
                   className="-mt-[3.25rem]"
                   src="/assets/images/resource/srv1.png"
                   alt=""
+                  height={32}
+                  width={32}
                 />
               </div>
               <div className="service-content">
@@ -33,16 +38,20 @@ const LeadershipTeam = () => {
             </div>
             <div className="single-service-box">
               <div className="service-box-thumb">
-                <img
+              <Image
                   src="/assets/images/resource/team-1.jpg"
                   alt=""
+                  height={300}
+                  width={300}
                 />
               </div>
               <div className="service-icon-thumb">
-                <img
+                <Image
                   className="-mt-[3.25rem]"
                   src="/assets/images/resource/srv1.png"
                   alt=""
+                  height={32}
+                  width={32}
                 />
               </div>
               <div className="service-content">
@@ -53,16 +62,20 @@ const LeadershipTeam = () => {
             </div>
             <div className="single-service-box">
               <div className="service-box-thumb">
-                <img
+              <Image
                   src="/assets/images/resource/team-1.jpg"
                   alt=""
+                  height={300}
+                  width={300}
                 />
               </div>
               <div className="service-icon-thumb">
-                <img
+              <Image
                   className="-mt-[3.25rem]"
                   src="/assets/images/resource/srv1.png"
                   alt=""
+                  height={32}
+                  width={32}
                 />
               </div>
               <div className="service-content">
@@ -74,8 +87,8 @@ const LeadershipTeam = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      
     </>
   );
 };
-export default LeadershipTeam;
+export default Partners;

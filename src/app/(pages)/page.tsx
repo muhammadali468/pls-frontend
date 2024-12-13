@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import Counter from "@/components/ui/Counter";
 import ProgressBar from "@/components/Progressbar";
-import CaseStudies from "@/components/sections/casestudies";
 import Image from "next/image";
 import { InlineWidget } from "react-calendly";
 import BasicModal from "@/components/ui/BasicModal";
@@ -15,6 +14,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { MdOutlineEdit } from "react-icons/md";
 import { SlArrowRightCircle } from "react-icons/sl";
 import { FaPlus } from "react-icons/fa6";
+import { dservice } from "@/constants";
 export default function Home() {
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -218,7 +218,6 @@ export default function Home() {
                     <div className="form_box mb-30">
                       <textarea
                         name="message"
-                        id="message"
                         cols={30}
                         rows={10}
                         placeholder="Your Message"
@@ -561,194 +560,51 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* Service Box 1 */}
-            <div className="px-4 sm:pl-1">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon1 upper">
-                    <Image
-                      src="/assets/images/resource/service-icon8.png"
-                      height={50}
-                      width={50}
-                      alt=""
-                    />
+          {dservice.map((category, i) => (
+            category.services.length > 0 ?
+            <div key={i}>
+              <h2 className="text-white font-bold mb-4 text-3xl">{category.name}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {/* Service Box 1 */}
+                {category.services.map((service,i) => (
+                  <div key={i} className="px-4 sm:pl-1">
+                    <div className="dreamit-service-box">
+                      <div className="service-box-inner">
+                        <div className="em-service-icon1 upper">
+                          <Image
+                            src="/assets/images/resource/service-icon8.png"
+                            height={50}
+                            width={50}
+                            alt=""
+                          />
+                        </div>
+                        <div className="em-service-title">
+                          <h3 className="text-xl font-semibold">{service.name}</h3>
+                        </div>
+                        <div className="service-bar" />
+                        <div className="em-service-text">
+                          <p>{service.description}</p>
+                        </div>
+                        <div className="service-button w-full mx-auto">
+                          <Link
+                            href="/service-details"
+                            className="">
+                            <div className="flex items-center gap-2">
+                              <p>
+                                Read More
+                              </p>
+                              <FaPlus />
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="em-service-title">
-                    <h3 className="text-xl font-semibold">Cyber Security</h3>
-                  </div>
-                  <div className="service-bar" />
-                  <div className="em-service-text">
-                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a className="flex items-center text-primary hover:underline">
-                        Read More <FaPlus className="ml-1" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
-            {/* Service Box 2 */}
-            <div className="px-4 sm:pl-1">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon1">
-                    <Image
-                      src="/assets/images/resource/service-icon5.png"
-                      height={50}
-                      width={50}
-                      alt=""
-                    />
-                  </div>
-                  <div className="em-service-title">
-                    <h3 className="text-xl font-semibold">IT Management</h3>
-                  </div>
-                  <div className="service-bar" />
-                  <div className="em-service-text">
-                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a className="flex items-center text-primary hover:underline">
-                        Read More <FaPlus className="ml-1" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Service Box 3 */}
-            <div className="px-4 sm:pl-1">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon1">
-                    <Image
-                      src="/assets/images/resource/service-icon6.png"
-                      height={50}
-                      width={50}
-                      alt=""
-                    />
-                  </div>
-                  <div className="em-service-title">
-                    <h3 className="text-xl font-semibold">Web Development</h3>
-                  </div>
-                  <div className="service-bar" />
-                  <div className="em-service-text">
-                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a className="flex items-center text-primary hover:underline">
-                        Read More <FaPlus className="ml-1" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Service Box 4 */}
-            <div className="px-4 sm:pl-1">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon1">
-                    <Image
-                      src="/assets/images/resource/service-icon7.png"
-                      height={50}
-                      width={50}
-                      alt=""
-                    />
-                  </div>
-                  <div className="em-service-title">
-                    <h3 className="text-xl font-semibold">Leadership Work</h3>
-                  </div>
-                  <div className="service-bar" />
-                  <div className="em-service-text">
-                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a className="flex items-center text-primary hover:underline">
-                        Read More <FaPlus className="ml-1" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Service Box 5 */}
-            <div className="px-4 sm:pl-1">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon1">
-                    <Image
-                      src="/assets/images/resource/service-icon7.png"
-                      height={50}
-                      width={50}
-                      alt=""
-                    />
-                  </div>
-                  <div className="em-service-title">
-                    <h3 className="text-xl font-semibold">Leadership Work</h3>
-                  </div>
-                  <div className="service-bar" />
-                  <div className="em-service-text">
-                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a className="flex items-center text-primary hover:underline">
-                        Read More <FaPlus className="ml-1" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Service Box 6 */}
-            <div className="px-4 sm:pl-1">
-              <div className="dreamit-service-box">
-                <div className="service-box-inner">
-                  <div className="em-service-icon1">
-                    <Image
-                      src="/assets/images/resource/service-icon7.png"
-                      height={50}
-                      width={50}
-                      alt=""
-                    />
-                  </div>
-                  <div className="em-service-title">
-                    <h3 className="text-xl font-semibold">Leadership Work</h3>
-                  </div>
-                  <div className="service-bar" />
-                  <div className="em-service-text">
-                    <p>Dramatically cultivate qualit user centric growth stratege enable emerging.</p>
-                  </div>
-                  <div className="service-button">
-                    <Link
-                      legacyBehavior
-                      href="/service-details">
-                      <a className="flex items-center text-primary hover:underline">
-                        Read More <FaPlus className="ml-1" />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            : ""
+          ))}
           <div className="w-full mt-6">
             <div className="service-bottom-text">
               <p>
@@ -1006,13 +862,13 @@ export default function Home() {
         </div>
       </div>
       {/* Section 6 */}
-      <div
+      {/* <div
         className="case-study-area style-three"
         id="portfolio">
         <div className="container mx-auto h-screen">
           <CaseStudies />
         </div>
-      </div>
+      </div> */}
       {/* Section 7 */}
       <div className="process-area style-two">
         <div className="container mx-auto">
@@ -1374,7 +1230,6 @@ export default function Home() {
                         <div className="form_box mb-20">
                           <textarea
                             name="message"
-                            id="message"
                             cols={30}
                             rows={10}
                             placeholder="Write a Message"

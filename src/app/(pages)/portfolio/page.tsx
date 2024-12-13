@@ -1,5 +1,5 @@
 "use client";
-import Footer from "@/components/sections/Footer";
+
 
 import Image from "next/image";
 import Link from "next/link";
@@ -65,7 +65,7 @@ const Portfolio = () => {
           ))}
         </ul>
       </section>
-      <Footer />
+      
     </>
   );
 };

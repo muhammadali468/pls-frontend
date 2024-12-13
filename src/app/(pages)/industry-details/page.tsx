@@ -1,6 +1,6 @@
 // Water Sector
 "use client";
-import Footer from "@/components/sections/Footer";
+
 
 import Image from "next/image";
 const IndustryDetail = () => {
@@ -390,7 +390,7 @@ const IndustryDetail = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      
     </>
   );
 };

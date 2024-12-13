@@ -1,3 +1,4 @@
+
 import Footer from "@/components/sections/Footer";
 import LandingHeader from "@/components/ui/LandingHeader";
 
@@ -21,7 +22,7 @@ export default async function PagesLayout({ children }: { children: React.ReactN
     <>
       <LandingHeader res={res as ISERVICECATEGORY} />
       {children}
-      <Footer />
+      <Footer/>
     </>
   );
 }

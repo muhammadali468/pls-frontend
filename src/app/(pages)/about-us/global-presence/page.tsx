@@ -1,5 +1,5 @@
 "use client";
-import Footer from "@/components/sections/Footer";
+
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -157,7 +157,7 @@ const GlobalPresence = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 };

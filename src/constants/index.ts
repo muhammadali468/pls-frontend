@@ -213,3 +213,246 @@ export const serviceDetailData = {
     }
   ]
 };
+export const dservice = [
+  {
+    name: "Software Development",
+    services: [
+      { name: "Web Development", description: "Dramatically cultivate quality user-centric growth." },
+      { name: "Mobile Application", description: "Enable emerging mobile-first strategies effectively." },
+      { name: "SaaS Development", description: "Cultivate scalable SaaS solutions for growth." },
+      { name: "API Development & Integration", description: "Enable seamless API integration experiences." },
+      { name: "Web 3.0", description: "Empower decentralized Web 3.0 technologies." },
+      { name: "Salesforce Development", description: "Deliver dynamic Salesforce solutions effectively." },
+      { name: "CMS Development", description: "Facilitate flexible CMS platforms for growth." },
+      { name: "Custom Software Development", descriptioin:"Tailored software solutions to meet specific business requirements across various industries." },
+    ],
+  },
+  {
+    name: "Data and Analytics",
+    services: [
+      { name: "Data Analysis", description: "Dramatically improve actionable data insights." },
+      { name: "Big Data Analytics", description: "Enable scalable big data-driven solutions." },
+      { name: "AI/ML → Computer Vision", description: "Revolutionize industries with computer vision AI." },
+    ],
+  },
+  {
+    name: "Cloud and DevOps",
+    services: [
+      { name: "DevOps & Automation Services", description: "Streamline growth with advanced DevOps tools." },
+      { name: "AWS and Azure", description: "Dramatically leverage AWS and Azure expertise." },
+      { name: "Docker & Kubernetes", description: "Empower scalability with Docker and Kubernetes." },
+    ],
+  },
+  {
+    name: "Emerging Technologies",
+    services: [
+      { name: "Blockchain Solutions", description: "Dramatically foster blockchain-based growth." },
+      { name: "Voice Technology Solutions", description: "Enable growth via voice-first technology." },
+      { name: "IoT", description: "Transform industries with IoT innovations." },
+      { name: "AI-Powered Personalization", description: "Drive user-centric AI personalization." },
+    ],
+  },
+  {
+    name: "Creative and Design",
+    services: [
+      { name: "Graphic Design", description: "Deliver creative, user-focused graphic solutions." },
+      { name: "CAD Design", description: "Innovate through dynamic CAD design workflows." },
+    ],
+  },
+  {
+    name: "Digital Commerce & Marketing",
+    services: [
+      { name: "E-commerce", description: "Grow with user-friendly e-commerce solutions." },
+      { name: "Digital Marketing", description: "Cultivate growth via digital marketing expertise." },
+      { name: "Social Media Services", description: "Enable social media growth-driven strategies." },
+      { name: "Content Marketing", description: "Deliver impactful content-driven campaigns." },
+      { name: "PR Marketing", description: "Dramatically enable public relations campaigns." },
+      { name: "Geotargeted Marketing", description: "Dramatically enable public relations campaigns." },
+    ],
+  },
+  {
+    name: "Production & Media",
+    services: [
+      { name: "Production Services", description: "Enable impactful production workflows and methods." },
+      { name: "Sound Engineering", description: "Cultivate quality sound engineering expertise." },
+    ],
+  },
+  {
+    name: "Cybersecurity",
+    services: [
+      { name: "Cyber Security Services", description: "Secure systems with advanced cybersecurity." },
+    ],
+  },
+  {
+    name: "Sustainability & Future Tech",
+    services: [
+      { name: "Green IT & Sustainability Solutions", description: "Promote growth with sustainable IT solutions." },
+    ],
+  },
+  {
+    name: "Quality Control & Testing",
+    services: [
+      { name: "Quality Control/Testing", description: "Ensure excellence through thorough testing." },
+    ],
+  },
+  {
+    name: "Progress Technology Services",
+    services: [
+      { name: "Progress Technology Service", description: "Drive innovation with progress technologies." },
+    ],
+  },
+  {
+    name: "IT Support",
+    services: [],
+  },
+];
+
+export const dtechnology = [
+  {
+    name: "Web Technology",
+    services: [
+      { name: "Web Development", description: "Dramatically cultivate quality user-centric growth." },
+      { name: "CMS Development", description: "Facilitate flexible CMS platforms for growth." },
+      { name: "Web 3.0", description: "Empower decentralized Web 3.0 technologies." },
+    ],
+  },
+  {
+    name: "Mobile Technology",
+    services: [
+      { name: "Mobile Application", description: "Enable emerging mobile-first strategies effectively." },
+    ],
+  },
+  {
+    name: "Backend Technology",
+    services: [
+      { name: "API Development & Integration", description: "Enable seamless API integration experiences." },
+      { name: "Custom Software Development", description: "Tailored software solutions to meet specific business requirements across various industries." },
+    ],
+  },
+  {
+    name: "Database",
+    services: [
+      { name: "Data Analysis", description: "Dramatically improve actionable data insights." },
+      { name: "Big Data Analytics", description: "Enable scalable big data-driven solutions." },
+    ],
+  },
+  {
+    name: "Cloud Infrastructure",
+    services: [
+      { name: "AWS and Azure", description: "Dramatically leverage AWS and Azure expertise." },
+      { name: "DevOps & Automation Services", description: "Streamline growth with advanced DevOps tools." },
+      { name: "Docker & Kubernetes", description: "Empower scalability with Docker and Kubernetes." },
+    ],
+  },
+  {
+    name: "Blockchain",
+    services: [
+      { name: "Blockchain Solutions", description: "Dramatically foster blockchain-based growth." },
+    ],
+  },
+  {
+    name: "Cybersecurity",
+    services: [
+      { name: "Cyber Security Services", description: "Secure systems with advanced cybersecurity." },
+    ],
+  },
+  {
+    name: "E-Commerce",
+    services: [
+      { name: "E-commerce", description: "Grow with user-friendly e-commerce solutions." },
+      { name: "Digital Marketing", description: "Cultivate growth via digital marketing expertise." },
+      { name: "Social Media Services", description: "Enable social media growth-driven strategies." },
+    ],
+  },
+];
+
+export const dindustry = [
+  {
+    name: "Information Technology (IT)",
+    services: [
+      { name: "Software Development", description: "Provide innovative software solutions for IT advancements." },
+      { name: "Cloud and DevOps", description: "Optimize IT infrastructure with cloud and DevOps services." },
+      { name: "Cybersecurity", description: "Secure IT systems with cutting-edge cybersecurity solutions." },
+    ],
+  },
+  {
+    name: "Healthcare",
+    services: [
+      { name: "Healthcare IT Solutions", description: "Revolutionize patient care with tailored IT systems." },
+      { name: "AI/ML in Healthcare", description: "Enhance diagnostics with AI-powered solutions." },
+      { name: "Data Analysis", description: "Enable data-driven healthcare insights for better decisions." },
+    ],
+  },
+  {
+    name: "Finance & Banking",
+    services: [
+      { name: "Fintech Solutions", description: "Drive innovation in financial services with technology." },
+      { name: "Blockchain Solutions", description: "Enable secure and transparent financial transactions." },
+      { name: "Data Analytics", description: "Improve banking insights with advanced analytics." },
+    ],
+  },
+  {
+    name: "Retail & E-commerce",
+    services: [
+      { name: "E-commerce Platforms", description: "Build robust e-commerce solutions for growth." },
+      { name: "Digital Marketing", description: "Boost online sales with targeted digital campaigns." },
+      { name: "Geotargeted Marketing", description: "Localize marketing efforts for better engagement." },
+    ],
+  },
+  {
+    name: "Tourism & Hospitality",
+    services: [
+      { name: "Booking Platforms", description: "Streamline travel bookings with custom platforms." },
+      { name: "Digital Marketing", description: "Attract more travelers with effective digital outreach." },
+      { name: "AI-Powered Personalization", description: "Deliver personalized experiences to customers." },
+    ],
+  },
+  {
+    name: "Education",
+    services: [
+      { name: "E-learning Platforms", description: "Develop interactive e-learning systems." },
+      { name: "Content Management Systems", description: "Facilitate flexible and efficient content delivery." },
+      { name: "AI in Education", description: "Enhance learning with intelligent educational tools." },
+    ],
+  },
+  {
+    name: "Media & Entertainment",
+    services: [
+      { name: "Production Services", description: "Deliver impactful media production workflows." },
+      { name: "Sound Engineering", description: "Cultivate expertise in high-quality sound design." },
+      { name: "AI-Powered Personalization", description: "Enhance user engagement with AI-driven recommendations." },
+    ],
+  },
+  {
+    name: "Construction",
+    services: [
+      { name: "CAD Design", description: "Streamline architectural workflows with CAD tools." },
+      { name: "IoT for Construction", description: "Monitor construction sites with IoT-enabled devices." },
+      { name: "Sustainability Solutions", description: "Implement green technologies for eco-friendly projects." },
+    ],
+  },
+  {
+    name: "Energy & Utility",
+    services: [
+      { name: "Green IT Solutions", description: "Promote sustainable energy with IT innovations." },
+      { name: "IoT for Utilities", description: "Optimize energy distribution with IoT technologies." },
+      { name: "Data Analytics", description: "Analyze energy usage for efficient resource management." },
+    ],
+  },
+  {
+    name: "Logistics & Transport",
+    services: [
+      { name: "IoT for Fleet Management", description: "Enhance fleet operations with IoT solutions." },
+      { name: "Blockchain in Logistics", description: "Ensure transparency in supply chains with blockchain." },
+      { name: "Data Analytics", description: "Improve transportation efficiency with data insights." },
+    ],
+  },
+  {
+    name: "Legal & Compliance",
+    services: [
+      { name: "Compliance Management Systems", description: "Streamline compliance processes with tailored tools." },
+      { name: "Cybersecurity", description: "Secure sensitive legal and compliance data effectively." },
+      { name: "AI for Legal Research", description: "Enhance legal research with AI-powered tools." },
+    ],
+  },
+];
